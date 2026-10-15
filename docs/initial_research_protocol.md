@@ -1,8 +1,9 @@
+This research outlay expands on an earlier version of this system that I originally pitched to AIC a few weeks ago, and it is defining what additions and new testing features are being put into play.
 # Initial research protocol
 
 ## Outcome
 
-Produce **15 independent stock/cash backtests**. Each stock selects its target, prediction horizon, factors, fitted relationships, parameters, and sizing settings. Every stock uses the same model ladder, research interfaces, experimental rules, accounting, and report format.
+The goal is to produce 15 individual stock backtests with no overarching portfolio layer for now. Each stock selects its target, prediction horizon, factors, fitted relationships, parameters, and sizing settings. Every stock uses the same model ladder, research interfaces, experimental rules, accounting, and report format.
 
 The current 90–120 minute session is dedicated to the user writing the chart generator, reviewing the resulting diagram, and pushing that bounded work to the fund repository. Data retrieval, cleaning, and model implementation move to later sessions.
 
@@ -48,7 +49,7 @@ Use the same economic backtest to compare different targets. Classification accu
 
 Training labels must finish and become available before each cutoff. Purge overlapping event intervals. All preprocessing, feature selection, calibration, and sizing choices stay in earlier windows.
 
-The weekly after-close/next-open clock is shared. A prediction horizon doesn't force the holding duration: positions persist until the next signal/sizing decision changes them. An independent exit model can be a later shared hypothesis once we understand that baseline.
+The weekly after-close/next-open clock is shared. A prediction horizon doesn't force the holding duration: positions persist until the next signal/sizing decision changes them. We can later test an independent exit model as a shared hypothesis once we understand that baseline.
 
 V2's old dates are replication/exploratory comparisons. Set new fold dates after auditing actual coverage and warm-up history. Reserve a future prospective interval after fixing the recipe; observed history cannot be re-sealed.
 
@@ -89,7 +90,7 @@ Start with fixed exposure versus volatility targeting. Proposed bounds: `0 <= we
 
 The efficient-frontier interpretation is one stock plus cash. With riskless cash, both expected excess return and volatility scale with weight; maximizing Sharpe alone does not identify a useful interior size. A mean-variance sizing test needs risk preference, consistent return/risk horizons, and costs. It comes after simpler controls.
 
-The accounting prototype can use independent starting NAV 1 with fractional exposure. That is a normalized research convention, not fund capital. Proposed costs are 5 bps one-way base and 10 bps stress, with zero for replication diagnostics; review them before a run. Specify cash yield and dividend treatment. Later share rounding needs actual capital/venue decisions.
+The accounting prototype can use an independent starting NAV 1 with fractional exposure. That is a normalized research convention, not fund capital. Proposed costs are 5 bps one-way base and 10 bps stress, with zero for replication diagnostics; review them before a run. Specify cash yield and dividend treatment. Later share rounding needs actual capital/venue decisions.
 
 There is no multi-stock optimizer, shared inventory, combined ledger, or combined portfolio Sharpe.
 
