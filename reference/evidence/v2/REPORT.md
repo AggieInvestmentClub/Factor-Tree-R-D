@@ -1,10 +1,11 @@
+This is the previous factor-tree version I mentioned. I tried a long/short system for a Treasury ETF, but it didn't work. 
 # Swing Decision Tree Research V2
 
 ## Design
 
-V2 retains SPY and NVDA as long-only weekly swing models and TLT as a weekly long/short model. Signals form after the final market close of each week and execute at the next session open. The official run assumes zero slippage; 5 and 10 basis point one-way sensitivities are reported separately.
+V2 retains SPY and NVDA as long-only weekly swing models and TLT as a weekly long/short model. Signals form after each week's final market close and execute at the next session open. The official run assumes zero slippage; we report 5- and 10-basis-point one-way sensitivities separately.
 
-Every candidate is selected using 2022-2023 only. The 2024-present interval is a frozen historical comparison against V1. It is not described as a pristine holdout because V1's later-period results were already known when V2 was designed. The next untouched forward sample begins after September 25, 2026.
+We select every candidate using 2022-2023 only. The 2024-present interval is a frozen historical comparison against V1. It is not described as a pristine holdout because V1's later-period results were already known when V2 was designed. The next untouched forward sample begins after September 25, 2026.
 
 ## Selected models
 
