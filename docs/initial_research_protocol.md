@@ -5,7 +5,6 @@ This research outlay builds on an earlier version of this system that I pitched 
 
 The goal is to produce 15 individual stock backtests with no overarching portfolio layer for now. Each stock selects its target, prediction horizon, factors, fitted relationships, parameters, and sizing settings. Every stock uses the same model ladder, research interfaces, experimental rules, accounting, and report format.
 
-The current 90–120 minute session is dedicated to the user writing the chart generator, reviewing the resulting diagram, and pushing that bounded work to the fund repository. Data retrieval, cleaning, and model implementation move to later sessions.
 
 ## Starting ML Stack
 
