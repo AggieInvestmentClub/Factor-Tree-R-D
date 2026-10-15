@@ -1,8 +1,6 @@
 # Proposed initial stock research workflow
 
-Proposed research workflow, not an implemented or validated trading system.
-Each of the 15 stocks follows this process independently as a long/cash
-backtest; there is no portfolio allocation layer.
+Each of the 15 stocks follows this process independently as a long/flat or cash backtest; there is no portfolio allocation layer.
 
 Branches show staged alternative experiments, not methods that must all be
 combined. Feedback loops advance to later cutoffs using matured outcomes
