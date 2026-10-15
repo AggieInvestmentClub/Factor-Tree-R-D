@@ -1,4 +1,4 @@
-This research outlay expands on an earlier version of this system that I originally pitched to AIC a few weeks ago, and it is defining what additions and new testing features are being put into play.
+This research outlay builds on an earlier version of this system that I pitched to AIC a few weeks ago, and it defines the additions and new testing features being implemented.
 # Initial research protocol
 
 ## Outcome
@@ -60,7 +60,7 @@ NVDA's V2 10-session case is the first engineering fixture. It teaches the mecha
 Then propose the same bounded discovery menu per stock:
 
 - 5, 10, 20 trading-session horizons.
-- Two targets: forward net return, or positive forward net return.
+- Two targets: forward net return or positive forward net return.
 - Four factor combos: technical; technical + relationships; technical + macro; all three.
 - One new-study CART setting initially: depth 3, minimum leaf fraction 0.08, fixed random seed 42. This is a proposed common control, not a claim of reproducing every original V2 setting.
 
@@ -98,9 +98,9 @@ There is no multi-stock optimizer, shared inventory, combined ledger, or combine
 
 FinBERT classifies financial text into sentiment features. The original paper evaluates sentiment tasks; its checkpoint outputs do not directly establish profitable trading. Pin the exact checkpoint, training provenance, model vintage, label mapping, and model/data usage rights. [FinBERT paper](https://arxiv.org/abs/1908.10063), [ProsusAI repository](https://github.com/ProsusAI/finBERT).
 
-Refinitiv/LSEG Workspace is the intended source for alternative and relationship candidates. Its library supports pricing/fundamental history and news access, while content depends on entitlements. Audit exact fields, returned history, revisions, relationship effective dates, and availability. [LSEG overview](https://developers.lseg.com/en/article-catalog/article/discover-data-library-part-1), [content/usage guidance](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python/documentation).
+Refinitiv/LSEG Workspace is the intended source for alternative and relationship candidates. Its library supports pricing/fundamental history, plus news access, though content depends on entitlements. Audit exact fields, returned history, revisions, relationship effective dates, and availability. [LSEG overview](https://developers.lseg.com/en/article-catalog/article/discover-data-library-part-1), [content/usage guidance](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python/documentation).
 
-Alpaca historical news is a candidate for deeper history; its documentation states history from 2015. Actual symbol coverage, versions, and permissions still require checking. [Alpaca news](https://docs.alpaca.markets/us/docs/historical-news-data).
+Alpaca historical news is a candidate for deeper history; its documentation states history from 2015. Symbol coverage, versions, and permissions still need checking. [Alpaca news](https://docs.alpaca.markets/us/docs/historical-news-data).
 
 Test factor-only versus factors-plus-FinBERT for the same stock recipe on identical dates/splits/costs. Preserve entity relevance, deduplication, original/updated article versions, publication/update/first-received times, and processing latency. No relevant news differs from a source outage. A small manually written text exercise can teach FinBERT without making a historical performance claim.
 
@@ -118,8 +118,7 @@ A refit changes a frozen specification's fitted state. Target/horizon/factor/siz
 
 Emit data quality, selected specification, dated predictions, factor usage, baseline rules, sizes/positions, trades/costs, cash/NAV ledger, and fold/annual results.
 
-Measure net return, drawdown, volatility, Sharpe with declared cash/risk-free convention, turnover, average exposure, trades/holding duration, calibration, coverage, and uncertainty. Compare against holding the stock, a matched-exposure/risk reference, and fixed-sizing control. SPY is additional context. Fifteen side-by-side results do not imply a funded portfolio.
-
+Measure net return, drawdown, volatility, Sharpe with declared cash/risk-free convention, turnover, average exposure, trades/holding duration, calibration, coverage, and uncertainty. Compare against holding the stock, a matched-exposure/risk reference, and fixed-sizing control. SPY provides additional context and will serve as an over- or underperformance baseline. 
 <!-- detailed-workflow:start -->
 ## Detailed initial testing workflow
 
@@ -130,7 +129,7 @@ RF/XGBoost, richer factors/FinBERT, payoff/frontier sizing, and adaptive layers
 in bounded, separately recorded stages. The original 24-recipe CART screen
 does not include all those later combinations.
 
-All model, factor, signal, sizing, calibration and update-policy comparisons
+All model, factor, signal, sizing, calibration, and update-policy comparisons
 replay earlier inner chronological folds. Freeze the selected recipe before
 refitting and predicting the next outer interval. The outer interval scores
 the complete procedure; it is not another tuning window. A common learner
@@ -291,16 +290,3 @@ flowchart TD
     REG --> END
 ```
 <!-- detailed-workflow:end -->
-
-## Tonight's order
-
-1. Confirm the intended existing interpreter and open the chart starter.
-2. User writes a tiny first version and runs it successfully.
-3. Teach dictionaries, arrow pairs, loops, strings, and function returns while the user implements the renderer.
-4. Expand the actual research graph and review its timing and sizing logic.
-5. Create a Markdown wrapper so GitHub displays the Mermaid chart.
-6. Review the exact chart-related files, commit, and push a feature branch.
-
-Data-schema and retrieval work follows in a later session. The expanded lesson has an explanation, small exercise, and expected result at each checkpoint.
-
-The copied price cache contains NVDA/SPY, not the remaining 14 traded symbols. It is useful for the first local exercise once Parquet support is ready. Archived engines and the futures environment do not participate.
