@@ -1,4 +1,4 @@
-# Initial research protocol — evening design
+# Initial research protocol
 
 ## Outcome
 
@@ -6,7 +6,7 @@ Produce **15 independent stock/cash backtests**. Each stock selects its target, 
 
 The current 90–120 minute session is dedicated to the user writing the chart generator, reviewing the resulting diagram, and pushing that bounded work to the fund repository. Data retrieval, cleaning, and model implementation move to later sessions.
 
-## Common ML stack
+## Starting ML Stack
 
 | Role | Common technique | Individual learned choices |
 |---|---|---|
@@ -18,9 +18,8 @@ The current 90–120 minute session is dedicated to the user writing the chart g
 | Adaptation | Scheduled refit, recency weighting, matured calibration updates, drift challenger | Stock-specific state and validated settings |
 | Individual sizing | Fixed exposure, volatility target, forecast/uncertainty sizing | Stock-specific risk/forecast estimates and settings |
 
-CART comes first for inspecting rules. RF is the proposed common ensemble family after the pipeline works, and XGBoost is a common challenger. Classifier versus regressor follows the target and uses the same fit/predict contract. Any later change of deployed learner family is a project-wide decision.
 
-A later HMM/state experiment can use that same procedure. Neural return predictors and RL have no initial slot. Prior adaptive engineering principles carry over conceptually: delayed feedback, stored predictions, model versions, and measurable updates.
+- A later HMM/state experiment can and may use that same procedure. Neural return predictors and RL have no initial slot, although I tested it with long/short futures trading systems. Prior adaptive engineering principles carry over conceptually: delayed feedback, stored predictions, model versions, and measurable updates.
 
 ## Shared library, separate stock specifications
 
@@ -32,7 +31,7 @@ Build a broad, versioned factor library in families:
 - **Alternative/fundamental:** entitled Workspace fields such as fundamentals, estimates/revisions, and industry metrics, after coverage/availability audit.
 - **Text/events:** FinBERT probabilities/balance, relevant-news intensity, disagreement, recency, missing-news flags, earnings/event context.
 
-NVDA could test semiconductor-relative features; JPM could test curve/credit features. These are hypotheses. Each stock may reject a factor family. Importance measures describe fitted predictive usage, not a proven causal driver.
+NVDA could test semiconductor-relative features; JPM could test curve/credit features. They are all hypotheses. Each stock may reject a factor family. Importance measures describe fitted predictive usage, not a proven causal driver.
 
 Each factor records inputs, unit, lookback, minimum history, availability, missingness, and version. Fit normalization, factor/peer selection, pruning, and calibration inside prior research windows. Present-day relationship maps cannot be assumed known historically.
 
@@ -49,19 +48,19 @@ Use the same economic backtest to compare different targets. Classification accu
 
 Training labels must finish and become available before each cutoff. Purge overlapping event intervals. All preprocessing, feature selection, calibration, and sizing choices stay in earlier windows.
 
-The weekly after-close/next-open clock is shared. A prediction horizon does not force the holding duration: positions persist until the subsequent signal/sizing decision changes them. An independent exit model can be a later shared hypothesis after that baseline is understood.
+The weekly after-close/next-open clock is shared. A prediction horizon doesn't force the holding duration: positions persist until the next signal/sizing decision changes them. An independent exit model can be a later shared hypothesis once we understand that baseline.
 
 V2's old dates are replication/exploratory comparisons. Set new fold dates after auditing actual coverage and warm-up history. Reserve a future prospective interval after fixing the recipe; observed history cannot be re-sealed.
 
 ## Finite first candidate menu
 
-NVDA's V2 10-session case is the first **engineering fixture**. It teaches the mechanics; it does not constrain the other stocks.
+NVDA's V2 10-session case is the first engineering fixture. It teaches the mechanics and does not constrain the other stocks.
 
 Then propose the same bounded discovery menu per stock:
 
 - 5, 10, 20 trading-session horizons.
 - Two targets: forward net return, or positive forward net return.
-- Four factor recipes: technical; technical + relationships; technical + macro; all three.
+- Four factor combos: technical; technical + relationships; technical + macro; all three.
 - One new-study CART setting initially: depth 3, minimum leaf fraction 0.08, fixed random seed 42. This is a proposed common control, not a claim of reproducing every original V2 setting.
 
 That is 24 recipes per stock, 360 across 15 stocks, before folds/refits. This is a design budget; nothing is run tonight. Recipes lacking qualified data remain ineligible.
