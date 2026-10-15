@@ -1,0 +1,29 @@
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+lseg-data.config.json
+refinitiv-data.config.json
+
+# Local caches and generated research output
+cache/
+reference/data/
+data/raw/
+data/processed/
+models/
+runs/
+reports/generated/
+
+# Python/editor state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+.venv_*/
+.vscode/settings.json
+
