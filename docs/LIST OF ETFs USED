@@ -1,0 +1,18 @@
+This is the ETF universe used for the original long-only tree backtest.
+
+| Ticker | Exposure |
+| XLK| Technology |
+| XLF| Financials |
+| XLE | Energy |
+| XLV | Health care |
+| XLI| Industrials |
+| XLY| Consumer discretionary |
+| XLP | Consumer staples |
+| XLU | Utilities |
+| XLB | Materials |
+| IEF | U.S. Treasury bonds, 7–10 years |
+| TLT| U.S. Treasury bonds, 20+ years |
+| TIP | U.S. Treasury inflation-protected bonds |
+| GLD | Gold |
+| DBC| Broad commodities |
+| VNQ | U.S. real estate / REITs |
