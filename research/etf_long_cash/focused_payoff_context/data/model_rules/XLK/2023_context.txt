@@ -1,0 +1,13 @@
+|--- tech_mom_252 <= -0.16
+|   |--- value: [-0.01]
+|--- tech_mom_252 >  -0.16
+|   |--- tech_reversal_5 <= 0.00
+|   |   |--- tech_vol_20 <= 0.25
+|   |   |   |--- value: [0.00]
+|   |   |--- tech_vol_20 >  0.25
+|   |   |   |--- value: [-0.01]
+|   |--- tech_reversal_5 >  0.00
+|   |   |--- ctx_sector_breadth50 <= 0.28
+|   |   |   |--- value: [0.02]
+|   |   |--- ctx_sector_breadth50 >  0.28
+|   |   |   |--- value: [0.00]

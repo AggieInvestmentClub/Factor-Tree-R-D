@@ -1,0 +1,13 @@
+|--- rel_market_beta_63 <= 1.61
+|   |--- ctx_sector_breadth50 <= 0.28
+|   |   |--- tech_shock <= -0.32
+|   |   |   |--- value: [0.02]
+|   |   |--- tech_shock >  -0.32
+|   |   |   |--- value: [0.00]
+|   |--- ctx_sector_breadth50 >  0.28
+|   |   |--- rel_strength_63 <= 0.05
+|   |   |   |--- value: [0.00]
+|   |   |--- rel_strength_63 >  0.05
+|   |   |   |--- value: [-0.01]
+|--- rel_market_beta_63 >  1.61
+|   |--- value: [-0.02]

@@ -1,0 +1,13 @@
+|--- rel_GLD_mom_20 <= 0.04
+|   |--- tech_downside_20 <= 0.24
+|   |   |--- rel_SPY_mom_63 <= -0.06
+|   |   |   |--- value: [-0.02]
+|   |   |--- rel_SPY_mom_63 >  -0.06
+|   |   |   |--- value: [0.01]
+|   |--- tech_downside_20 >  0.24
+|   |   |--- value: [0.03]
+|--- rel_GLD_mom_20 >  0.04
+|   |--- tech_vol_jump <= -0.16
+|   |   |--- value: [-0.00]
+|   |--- tech_vol_jump >  -0.16
+|   |   |--- value: [-0.04]

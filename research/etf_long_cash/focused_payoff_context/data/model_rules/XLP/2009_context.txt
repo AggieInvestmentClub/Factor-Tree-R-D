@@ -1,0 +1,16 @@
+|--- tech_shock <= -0.86
+|   |--- tech_volume_ratio <= -0.07
+|   |   |--- value: [0.00]
+|   |--- tech_volume_ratio >  -0.07
+|   |   |--- value: [0.02]
+|--- tech_shock >  -0.86
+|   |--- rel_SPY_mom_63 <= -0.05
+|   |   |--- tech_acceleration <= -0.00
+|   |   |   |--- value: [-0.03]
+|   |   |--- tech_acceleration >  -0.00
+|   |   |   |--- value: [0.00]
+|   |--- rel_SPY_mom_63 >  -0.05
+|   |   |--- tech_trend_50 <= -0.01
+|   |   |   |--- value: [0.01]
+|   |   |--- tech_trend_50 >  -0.01
+|   |   |   |--- value: [-0.00]

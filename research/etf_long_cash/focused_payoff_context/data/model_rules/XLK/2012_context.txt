@@ -1,0 +1,16 @@
+|--- tech_mom_5 <= -0.03
+|   |--- tech_vol_63 <= 0.34
+|   |   |--- value: [-0.01]
+|   |--- tech_vol_63 >  0.34
+|   |   |--- value: [-0.04]
+|--- tech_mom_5 >  -0.03
+|   |--- tech_mom_5 <= 0.01
+|   |   |--- ctx_own_cyclical_spread_corr63 <= 0.71
+|   |   |   |--- value: [0.00]
+|   |   |--- ctx_own_cyclical_spread_corr63 >  0.71
+|   |   |   |--- value: [0.02]
+|   |--- tech_mom_5 >  0.01
+|   |   |--- tech_mom_10 <= 0.01
+|   |   |   |--- value: [-0.02]
+|   |   |--- tech_mom_10 >  0.01
+|   |   |   |--- value: [0.00]

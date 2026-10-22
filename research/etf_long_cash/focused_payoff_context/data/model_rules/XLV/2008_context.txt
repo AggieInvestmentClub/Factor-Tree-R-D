@@ -1,0 +1,22 @@
+|--- tech_mom_126 <= 0.04
+|   |--- rel_IEF_mom_63 <= 0.00
+|   |   |--- tech_drawdown_252 <= -0.11
+|   |   |   |--- class: 1
+|   |   |--- tech_drawdown_252 >  -0.11
+|   |   |   |--- class: 0
+|   |--- rel_IEF_mom_63 >  0.00
+|   |   |--- tech_vol_jump <= 0.00
+|   |   |   |--- class: 1
+|   |   |--- tech_vol_jump >  0.00
+|   |   |   |--- class: 1
+|--- tech_mom_126 >  0.04
+|   |--- tech_mom_252 <= 0.08
+|   |   |--- tech_vol_20 <= 0.15
+|   |   |   |--- class: 1
+|   |   |--- tech_vol_20 >  0.15
+|   |   |   |--- class: 0
+|   |--- tech_mom_252 >  0.08
+|   |   |--- ctx_own_cyclical_spread_corr63 <= 0.12
+|   |   |   |--- class: 0
+|   |   |--- ctx_own_cyclical_spread_corr63 >  0.12
+|   |   |   |--- class: 0

@@ -1,0 +1,10 @@
+|--- tech_trend_200 <= 0.12
+|   |--- rel_IEF_available_63 <= 0.50
+|   |   |--- value: [-0.01]
+|   |--- rel_IEF_available_63 >  0.50
+|   |   |--- tech_mom_63 <= 0.04
+|   |   |   |--- value: [0.02]
+|   |   |--- tech_mom_63 >  0.04
+|   |   |   |--- value: [0.00]
+|--- tech_trend_200 >  0.12
+|   |--- value: [-0.02]

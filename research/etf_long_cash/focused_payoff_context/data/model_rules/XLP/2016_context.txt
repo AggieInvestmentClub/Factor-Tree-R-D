@@ -1,0 +1,16 @@
+|--- rel_market_beta_63 <= 0.50
+|   |--- tech_mom_5 <= 0.00
+|   |   |--- class: 1
+|   |--- tech_mom_5 >  0.00
+|   |   |--- class: 0
+|--- rel_market_beta_63 >  0.50
+|   |--- tech_mom_252 <= 0.14
+|   |   |--- rel_DBC_available_63 <= 0.50
+|   |   |   |--- class: 1
+|   |   |--- rel_DBC_available_63 >  0.50
+|   |   |   |--- class: 1
+|   |--- tech_mom_252 >  0.14
+|   |   |--- tech_mom_10 <= 0.01
+|   |   |   |--- class: 0
+|   |   |--- tech_mom_10 >  0.01
+|   |   |   |--- class: 1

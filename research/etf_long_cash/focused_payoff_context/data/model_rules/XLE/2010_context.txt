@@ -1,0 +1,22 @@
+|--- tech_mom_63 <= 0.05
+|   |--- rel_SPY_mom_63 <= -0.05
+|   |   |--- tech_mom_20 <= -0.04
+|   |   |   |--- class: 1
+|   |   |--- tech_mom_20 >  -0.04
+|   |   |   |--- class: 0
+|   |--- rel_SPY_mom_63 >  -0.05
+|   |   |--- tech_range_20 <= 0.02
+|   |   |   |--- class: 1
+|   |   |--- tech_range_20 >  0.02
+|   |   |   |--- class: 1
+|--- tech_mom_63 >  0.05
+|   |--- tech_vol_63 <= 0.20
+|   |   |--- tech_mom_252 <= 0.32
+|   |   |   |--- class: 1
+|   |   |--- tech_mom_252 >  0.32
+|   |   |   |--- class: 0
+|   |--- tech_vol_63 >  0.20
+|   |   |--- rel_SPY_mom_63 <= 0.01
+|   |   |   |--- class: 0
+|   |   |--- rel_SPY_mom_63 >  0.01
+|   |   |   |--- class: 0

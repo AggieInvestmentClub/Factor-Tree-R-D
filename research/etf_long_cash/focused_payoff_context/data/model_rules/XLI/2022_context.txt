@@ -1,0 +1,16 @@
+|--- rel_market_beta_63 <= 1.01
+|   |--- tech_fast_slow <= -0.02
+|   |   |--- value: [-0.01]
+|   |--- tech_fast_slow >  -0.02
+|   |   |--- tech_volume_ratio <= 0.12
+|   |   |   |--- value: [-0.00]
+|   |   |--- tech_volume_ratio >  0.12
+|   |   |   |--- value: [0.00]
+|--- rel_market_beta_63 >  1.01
+|   |--- tech_trend_200 <= -0.03
+|   |   |--- value: [0.02]
+|   |--- tech_trend_200 >  -0.03
+|   |   |--- ctx_sector_momentum_dispersion20 <= 0.02
+|   |   |   |--- value: [0.01]
+|   |   |--- ctx_sector_momentum_dispersion20 >  0.02
+|   |   |   |--- value: [-0.00]

@@ -1,0 +1,13 @@
+|--- tech_mom_252 <= -0.10
+|   |--- tech_gap_5 <= 0.00
+|   |   |--- class: 0
+|   |--- tech_gap_5 >  0.00
+|   |   |--- class: 1
+|--- tech_mom_252 >  -0.10
+|   |--- tech_mom_252 <= 0.01
+|   |   |--- class: 1
+|   |--- tech_mom_252 >  0.01
+|   |   |--- tech_fast_slow <= 0.04
+|   |   |   |--- class: 1
+|   |   |--- tech_fast_slow >  0.04
+|   |   |   |--- class: 0

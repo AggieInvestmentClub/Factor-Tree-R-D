@@ -1,0 +1,19 @@
+|--- tech_mom_63 <= 0.04
+|   |--- tech_trend_200 <= 0.01
+|   |   |--- tech_downside_20 <= 0.18
+|   |   |   |--- class: 0
+|   |   |--- tech_downside_20 >  0.18
+|   |   |   |--- class: 1
+|   |--- tech_trend_200 >  0.01
+|   |   |--- tech_vol_63 <= 0.22
+|   |   |   |--- class: 1
+|   |   |--- tech_vol_63 >  0.22
+|   |   |   |--- class: 1
+|--- tech_mom_63 >  0.04
+|   |--- tech_range_20 <= 0.02
+|   |   |--- ctx_own_cyclical_spread_corr63 <= 0.49
+|   |   |   |--- class: 0
+|   |   |--- ctx_own_cyclical_spread_corr63 >  0.49
+|   |   |   |--- class: 1
+|   |--- tech_range_20 >  0.02
+|   |   |--- class: 0

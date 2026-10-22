@@ -1,0 +1,16 @@
+|--- rel_IEF_mom_63 <= 0.04
+|   |--- rel_strength_63 <= 0.00
+|   |   |--- tech_mom_126 <= -0.06
+|   |   |   |--- class: 0
+|   |   |--- tech_mom_126 >  -0.06
+|   |   |   |--- class: 1
+|   |--- rel_strength_63 >  0.00
+|   |   |--- rel_strength_63 <= 0.04
+|   |   |   |--- class: 0
+|   |   |--- rel_strength_63 >  0.04
+|   |   |   |--- class: 1
+|--- rel_IEF_mom_63 >  0.04
+|   |--- ctx_sector_momentum_dispersion20 <= 0.03
+|   |   |--- class: 1
+|   |--- ctx_sector_momentum_dispersion20 >  0.03
+|   |   |--- class: 1

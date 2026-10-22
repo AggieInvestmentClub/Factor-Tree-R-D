@@ -1,0 +1,13 @@
+|--- ctx_gold_bond_corr63 <= -0.10
+|   |--- value: [0.03]
+|--- ctx_gold_bond_corr63 >  -0.10
+|   |--- tech_drawdown_252 <= -0.13
+|   |   |--- tech_mom_252 <= -0.09
+|   |   |   |--- value: [0.00]
+|   |   |--- tech_mom_252 >  -0.09
+|   |   |   |--- value: [0.02]
+|   |--- tech_drawdown_252 >  -0.13
+|   |   |--- tech_drawdown_252 <= -0.07
+|   |   |   |--- value: [-0.01]
+|   |   |--- tech_drawdown_252 >  -0.07
+|   |   |   |--- value: [0.01]

@@ -1,0 +1,10 @@
+|--- rel_SPY_mom_63 <= -0.07
+|   |--- value: [-0.01]
+|--- rel_SPY_mom_63 >  -0.07
+|   |--- rel_IEF_mom_20 <= 0.02
+|   |   |--- tech_reversal_5 <= -0.01
+|   |   |   |--- value: [-0.00]
+|   |   |--- tech_reversal_5 >  -0.01
+|   |   |   |--- value: [0.00]
+|   |--- rel_IEF_mom_20 >  0.02
+|   |   |--- value: [0.01]

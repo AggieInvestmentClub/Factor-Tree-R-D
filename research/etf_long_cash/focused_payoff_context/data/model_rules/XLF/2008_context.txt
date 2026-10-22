@@ -1,0 +1,16 @@
+|--- tech_shock <= 0.73
+|   |--- tech_volume_ratio <= -0.20
+|   |   |--- tech_mom_10 <= 0.01
+|   |   |   |--- class: 1
+|   |   |--- tech_mom_10 >  0.01
+|   |   |   |--- class: 0
+|   |--- tech_volume_ratio >  -0.20
+|   |   |--- tech_acceleration <= 0.04
+|   |   |   |--- class: 1
+|   |   |--- tech_acceleration >  0.04
+|   |   |   |--- class: 1
+|--- tech_shock >  0.73
+|   |--- tech_acceleration <= 0.00
+|   |   |--- class: 0
+|   |--- tech_acceleration >  0.00
+|   |   |--- class: 0

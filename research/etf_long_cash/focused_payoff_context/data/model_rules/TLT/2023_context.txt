@@ -1,0 +1,16 @@
+|--- ctx_equity_bond_corr63 <= -0.35
+|   |--- tech_vol_jump <= -0.20
+|   |   |--- value: [-0.00]
+|   |--- tech_vol_jump >  -0.20
+|   |   |--- ctx_equity_bond_corr63 <= -0.55
+|   |   |   |--- value: [0.00]
+|   |   |--- ctx_equity_bond_corr63 >  -0.55
+|   |   |   |--- value: [0.02]
+|--- ctx_equity_bond_corr63 >  -0.35
+|   |--- tech_vol_63 <= 0.16
+|   |   |--- ctx_nominal_duration_mom20 <= -0.01
+|   |   |   |--- value: [-0.01]
+|   |   |--- ctx_nominal_duration_mom20 >  -0.01
+|   |   |   |--- value: [0.01]
+|   |--- tech_vol_63 >  0.16
+|   |   |--- value: [-0.02]

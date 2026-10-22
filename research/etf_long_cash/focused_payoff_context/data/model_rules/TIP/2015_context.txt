@@ -1,0 +1,13 @@
+|--- tech_mom_20 <= 0.03
+|   |--- tech_vol_63 <= 0.04
+|   |   |--- tech_mom_63 <= 0.00
+|   |   |   |--- class: 1
+|   |   |--- tech_mom_63 >  0.00
+|   |   |   |--- class: 0
+|   |--- tech_vol_63 >  0.04
+|   |   |--- tech_mom_10 <= 0.01
+|   |   |   |--- class: 1
+|   |   |--- tech_mom_10 >  0.01
+|   |   |   |--- class: 1
+|--- tech_mom_20 >  0.03
+|   |--- class: 0

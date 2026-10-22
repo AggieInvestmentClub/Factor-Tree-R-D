@@ -1,0 +1,10 @@
+|--- tech_drawdown_252 <= -0.19
+|   |--- value: [0.03]
+|--- tech_drawdown_252 >  -0.19
+|   |--- ctx_own_cyclical_spread_corr63 <= 0.43
+|   |   |--- value: [-0.01]
+|   |--- ctx_own_cyclical_spread_corr63 >  0.43
+|   |   |--- tech_mom_5 <= -0.00
+|   |   |   |--- value: [0.02]
+|   |   |--- tech_mom_5 >  -0.00
+|   |   |   |--- value: [0.00]

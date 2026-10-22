@@ -1,0 +1,16 @@
+|--- tech_vol_jump <= -0.08
+|   |--- tech_vol_20 <= 0.13
+|   |   |--- tech_volume_ratio <= -0.08
+|   |   |   |--- value: [0.01]
+|   |   |--- tech_volume_ratio >  -0.08
+|   |   |   |--- value: [-0.00]
+|   |--- tech_vol_20 >  0.13
+|   |   |--- value: [-0.01]
+|--- tech_vol_jump >  -0.08
+|   |--- tech_vol_63 <= 0.17
+|   |   |--- rel_DBC_mom_20 <= 0.03
+|   |   |   |--- value: [0.00]
+|   |   |--- rel_DBC_mom_20 >  0.03
+|   |   |   |--- value: [0.01]
+|   |--- tech_vol_63 >  0.17
+|   |   |--- value: [0.02]

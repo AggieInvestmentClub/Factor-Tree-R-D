@@ -1,0 +1,10 @@
+|--- rel_DBC_mom_63 <= -0.13
+|   |--- value: [-0.05]
+|--- rel_DBC_mom_63 >  -0.13
+|   |--- tech_mom_252 <= -0.28
+|   |   |--- value: [0.04]
+|   |--- tech_mom_252 >  -0.28
+|   |   |--- ctx_property_vs_bonds_mom20 <= -0.03
+|   |   |   |--- value: [0.01]
+|   |   |--- ctx_property_vs_bonds_mom20 >  -0.03
+|   |   |   |--- value: [-0.00]

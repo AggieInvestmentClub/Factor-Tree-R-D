@@ -1,0 +1,19 @@
+|--- tech_range_20 <= 0.01
+|   |--- ctx_commodity_vs_energy_materials20 <= -0.01
+|   |   |--- tech_vol_jump <= -0.10
+|   |   |   |--- class: 1
+|   |   |--- tech_vol_jump >  -0.10
+|   |   |   |--- class: 0
+|   |--- ctx_commodity_vs_energy_materials20 >  -0.01
+|   |   |--- tech_trend_200 <= 0.01
+|   |   |   |--- class: 0
+|   |   |--- tech_trend_200 >  0.01
+|   |   |   |--- class: 0
+|--- tech_range_20 >  0.01
+|   |--- tech_range_20 <= 0.02
+|   |   |--- tech_drawdown_252 <= -0.28
+|   |   |   |--- class: 0
+|   |   |--- tech_drawdown_252 >  -0.28
+|   |   |   |--- class: 1
+|   |--- tech_range_20 >  0.02
+|   |   |--- class: 0

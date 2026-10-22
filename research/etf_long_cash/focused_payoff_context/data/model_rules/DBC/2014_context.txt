@@ -1,0 +1,19 @@
+|--- tech_acceleration <= 0.01
+|   |--- tech_gap_5 <= 0.00
+|   |   |--- tech_acceleration <= -0.03
+|   |   |   |--- class: 0
+|   |   |--- tech_acceleration >  -0.03
+|   |   |   |--- class: 1
+|   |--- tech_gap_5 >  0.00
+|   |   |--- ctx_commodity_usd_corr63 <= -0.51
+|   |   |   |--- class: 1
+|   |   |--- ctx_commodity_usd_corr63 >  -0.51
+|   |   |   |--- class: 1
+|--- tech_acceleration >  0.01
+|   |--- tech_range_20 <= 0.02
+|   |   |--- tech_range_20 <= 0.01
+|   |   |   |--- class: 0
+|   |   |--- tech_range_20 >  0.01
+|   |   |   |--- class: 1
+|   |--- tech_range_20 >  0.02
+|   |   |--- class: 0

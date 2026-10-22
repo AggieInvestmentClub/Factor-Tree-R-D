@@ -1,0 +1,16 @@
+|--- tech_downside_20 <= 0.02
+|   |--- tech_reversal_5 <= -0.00
+|   |   |--- class: 0
+|   |--- tech_reversal_5 >  -0.00
+|   |   |--- class: 0
+|--- tech_downside_20 >  0.02
+|   |--- tech_shock <= 0.13
+|   |   |--- tech_vol_63 <= 0.04
+|   |   |   |--- class: 0
+|   |   |--- tech_vol_63 >  0.04
+|   |   |   |--- class: 1
+|   |--- tech_shock >  0.13
+|   |   |--- tech_mom_252 <= 0.01
+|   |   |   |--- class: 0
+|   |   |--- tech_mom_252 >  0.01
+|   |   |   |--- class: 1

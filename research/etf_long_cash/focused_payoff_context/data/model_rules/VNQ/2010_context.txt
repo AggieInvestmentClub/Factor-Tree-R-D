@@ -1,0 +1,13 @@
+|--- tech_mom_20 <= -0.10
+|   |--- class: 0
+|--- tech_mom_20 >  -0.10
+|   |--- tech_mom_20 <= 0.06
+|   |   |--- ctx_property_vs_bonds_mom20 <= -0.07
+|   |   |   |--- class: 1
+|   |   |--- ctx_property_vs_bonds_mom20 >  -0.07
+|   |   |   |--- class: 1
+|   |--- tech_mom_20 >  0.06
+|   |   |--- tech_shock <= 0.34
+|   |   |   |--- class: 1
+|   |   |--- tech_shock >  0.34
+|   |   |   |--- class: 0

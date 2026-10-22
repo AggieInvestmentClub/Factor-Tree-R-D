@@ -1,0 +1,13 @@
+|--- tech_mom_63 <= -0.09
+|   |--- value: [0.01]
+|--- tech_mom_63 >  -0.09
+|   |--- tech_vol_20 <= 0.24
+|   |   |--- tech_gap_5 <= -0.00
+|   |   |   |--- value: [0.01]
+|   |   |--- tech_gap_5 >  -0.00
+|   |   |   |--- value: [0.00]
+|   |--- tech_vol_20 >  0.24
+|   |   |--- tech_acceleration <= 0.03
+|   |   |   |--- value: [-0.02]
+|   |   |--- tech_acceleration >  0.03
+|   |   |   |--- value: [0.00]

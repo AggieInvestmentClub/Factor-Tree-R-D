@@ -1,0 +1,10 @@
+|--- tech_fast_slow <= 0.05
+|   |--- ctx_property_ief_beta63 <= -2.16
+|   |   |--- class: 0
+|   |--- ctx_property_ief_beta63 >  -2.16
+|   |   |--- rel_SPY_mom_63 <= 0.03
+|   |   |   |--- class: 1
+|   |   |--- rel_SPY_mom_63 >  0.03
+|   |   |   |--- class: 1
+|--- tech_fast_slow >  0.05
+|   |--- class: 0

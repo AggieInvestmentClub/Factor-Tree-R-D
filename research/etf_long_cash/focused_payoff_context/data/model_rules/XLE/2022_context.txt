@@ -1,0 +1,10 @@
+|--- tech_acceleration <= -0.11
+|   |--- value: [0.01]
+|--- tech_acceleration >  -0.11
+|   |--- tech_acceleration <= -0.08
+|   |   |--- value: [-0.01]
+|   |--- tech_acceleration >  -0.08
+|   |   |--- ctx_cyclical_defensive_mom20 <= -0.03
+|   |   |   |--- value: [-0.01]
+|   |   |--- ctx_cyclical_defensive_mom20 >  -0.03
+|   |   |   |--- value: [0.00]

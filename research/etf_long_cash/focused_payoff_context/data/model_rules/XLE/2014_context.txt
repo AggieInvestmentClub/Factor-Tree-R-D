@@ -1,0 +1,10 @@
+|--- tech_acceleration <= -0.12
+|   |--- value: [0.04]
+|--- tech_acceleration >  -0.12
+|   |--- tech_range_20 <= 0.03
+|   |   |--- tech_fast_slow <= 0.02
+|   |   |   |--- value: [0.02]
+|   |   |--- tech_fast_slow >  0.02
+|   |   |   |--- value: [0.00]
+|   |--- tech_range_20 >  0.03
+|   |   |--- value: [-0.04]

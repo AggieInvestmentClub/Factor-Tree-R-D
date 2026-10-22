@@ -1,0 +1,22 @@
+|--- tech_range_20 <= 0.00
+|   |--- rel_market_correlation_63 <= 0.05
+|   |   |--- rel_SPY_mom_20 <= 0.03
+|   |   |   |--- class: 0
+|   |   |--- rel_SPY_mom_20 >  0.03
+|   |   |   |--- class: 1
+|   |--- rel_market_correlation_63 >  0.05
+|   |   |--- tech_vol_63 <= 0.05
+|   |   |   |--- class: 1
+|   |   |--- tech_vol_63 >  0.05
+|   |   |   |--- class: 1
+|--- tech_range_20 >  0.00
+|   |--- tech_mom_126 <= 0.01
+|   |   |--- ctx_nominal_duration_mom20 <= 0.00
+|   |   |   |--- class: 1
+|   |   |--- ctx_nominal_duration_mom20 >  0.00
+|   |   |   |--- class: 1
+|   |--- tech_mom_126 >  0.01
+|   |   |--- rel_market_beta_63 <= -0.10
+|   |   |   |--- class: 1
+|   |   |--- rel_market_beta_63 >  -0.10
+|   |   |   |--- class: 0

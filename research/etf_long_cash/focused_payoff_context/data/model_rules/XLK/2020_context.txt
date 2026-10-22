@@ -1,0 +1,10 @@
+|--- rel_market_beta_63 <= 1.60
+|   |--- rel_SPY_mom_20 <= -0.05
+|   |   |--- value: [0.01]
+|   |--- rel_SPY_mom_20 >  -0.05
+|   |   |--- rel_strength_63 <= 0.05
+|   |   |   |--- value: [0.00]
+|   |   |--- rel_strength_63 >  0.05
+|   |   |   |--- value: [-0.01]
+|--- rel_market_beta_63 >  1.60
+|   |--- value: [-0.02]

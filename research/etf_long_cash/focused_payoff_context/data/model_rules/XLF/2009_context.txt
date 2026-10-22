@@ -1,0 +1,10 @@
+|--- tech_shock <= 0.87
+|   |--- tech_vol_63 <= 0.38
+|   |   |--- tech_acceleration <= 0.04
+|   |   |   |--- class: 1
+|   |   |--- tech_acceleration >  0.04
+|   |   |   |--- class: 1
+|   |--- tech_vol_63 >  0.38
+|   |   |--- class: 0
+|--- tech_shock >  0.87
+|   |--- class: 0

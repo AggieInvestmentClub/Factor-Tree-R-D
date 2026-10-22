@@ -1,0 +1,19 @@
+|--- tech_vol_jump <= -0.12
+|   |--- tech_range_20 <= 0.01
+|   |   |--- tech_mom_252 <= 0.23
+|   |   |   |--- value: [-0.00]
+|   |   |--- tech_mom_252 >  0.23
+|   |   |   |--- value: [0.01]
+|   |--- tech_range_20 >  0.01
+|   |   |--- value: [-0.01]
+|--- tech_vol_jump >  -0.12
+|   |--- ctx_gold_bond_corr63 <= 0.14
+|   |   |--- tech_range_20 <= 0.01
+|   |   |   |--- value: [0.00]
+|   |   |--- tech_range_20 >  0.01
+|   |   |   |--- value: [0.01]
+|   |--- ctx_gold_bond_corr63 >  0.14
+|   |   |--- tech_trend_50 <= 0.04
+|   |   |   |--- value: [0.00]
+|   |   |--- tech_trend_50 >  0.04
+|   |   |   |--- value: [-0.01]

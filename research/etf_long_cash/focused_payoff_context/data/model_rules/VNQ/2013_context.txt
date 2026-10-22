@@ -1,0 +1,10 @@
+|--- ctx_property_ief_beta63 <= -3.35
+|   |--- value: [-0.09]
+|--- ctx_property_ief_beta63 >  -3.35
+|   |--- tech_mom_252 <= -0.29
+|   |   |--- value: [0.09]
+|   |--- tech_mom_252 >  -0.29
+|   |   |--- tech_fast_slow <= 0.04
+|   |   |   |--- value: [0.01]
+|   |   |--- tech_fast_slow >  0.04
+|   |   |   |--- value: [-0.02]

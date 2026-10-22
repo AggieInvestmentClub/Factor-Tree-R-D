@@ -1,0 +1,13 @@
+|--- tech_fast_slow <= -0.04
+|   |--- value: [-0.02]
+|--- tech_fast_slow >  -0.04
+|   |--- tech_range_20 <= 0.01
+|   |   |--- rel_GLD_mom_20 <= -0.00
+|   |   |   |--- value: [0.00]
+|   |   |--- rel_GLD_mom_20 >  -0.00
+|   |   |   |--- value: [-0.02]
+|   |--- tech_range_20 >  0.01
+|   |   |--- ctx_commodity_usd_corr63 <= -0.46
+|   |   |   |--- value: [-0.00]
+|   |   |--- ctx_commodity_usd_corr63 >  -0.46
+|   |   |   |--- value: [0.01]

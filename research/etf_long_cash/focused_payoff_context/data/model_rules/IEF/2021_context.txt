@@ -1,0 +1,19 @@
+|--- tech_downside_20 <= 0.04
+|   |--- ctx_inflation_linked_mom20 <= 0.00
+|   |   |--- tech_mom_126 <= 0.04
+|   |   |   |--- class: 1
+|   |   |--- tech_mom_126 >  0.04
+|   |   |   |--- class: 0
+|   |--- ctx_inflation_linked_mom20 >  0.00
+|   |   |--- rel_IEF_mom_63 <= 0.01
+|   |   |   |--- class: 0
+|   |   |--- rel_IEF_mom_63 >  0.01
+|   |   |   |--- class: 1
+|--- tech_downside_20 >  0.04
+|   |--- tech_vol_jump <= -0.16
+|   |   |--- class: 0
+|   |--- tech_vol_jump >  -0.16
+|   |   |--- ctx_bond_equity_relative20 <= -0.01
+|   |   |   |--- class: 1
+|   |   |--- ctx_bond_equity_relative20 >  -0.01
+|   |   |   |--- class: 1

@@ -1,0 +1,10 @@
+|--- tech_drawdown_252 <= -0.15
+|   |--- value: [0.03]
+|--- tech_drawdown_252 >  -0.15
+|   |--- rel_SPY_mom_63 <= -0.04
+|   |   |--- value: [-0.02]
+|   |--- rel_SPY_mom_63 >  -0.04
+|   |   |--- tech_mom_126 <= 0.09
+|   |   |   |--- value: [0.00]
+|   |   |--- tech_mom_126 >  0.09
+|   |   |   |--- value: [-0.01]

@@ -1,0 +1,10 @@
+|--- ctx_own_cyclical_spread_corr63 <= 0.85
+|   |--- tech_vol_20 <= 0.44
+|   |   |--- tech_mom_252 <= -0.12
+|   |   |   |--- value: [0.03]
+|   |   |--- tech_mom_252 >  -0.12
+|   |   |   |--- value: [-0.00]
+|   |--- tech_vol_20 >  0.44
+|   |   |--- value: [-0.06]
+|--- ctx_own_cyclical_spread_corr63 >  0.85
+|   |--- value: [0.04]

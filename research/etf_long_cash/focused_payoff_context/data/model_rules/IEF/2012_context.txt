@@ -1,0 +1,19 @@
+|--- tech_mom_126 <= 0.03
+|   |--- tech_range_20 <= 0.00
+|   |   |--- ctx_equity_bond_corr63 <= 0.05
+|   |   |   |--- class: 0
+|   |   |--- ctx_equity_bond_corr63 >  0.05
+|   |   |   |--- class: 1
+|   |--- tech_range_20 >  0.00
+|   |   |--- tech_vol_63 <= 0.08
+|   |   |   |--- class: 1
+|   |   |--- tech_vol_63 >  0.08
+|   |   |   |--- class: 1
+|--- tech_mom_126 >  0.03
+|   |--- tech_mom_63 <= 0.01
+|   |   |--- class: 0
+|   |--- tech_mom_63 >  0.01
+|   |   |--- tech_downside_20 <= 0.04
+|   |   |   |--- class: 0
+|   |   |--- tech_downside_20 >  0.04
+|   |   |   |--- class: 1

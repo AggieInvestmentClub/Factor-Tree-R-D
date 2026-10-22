@@ -1,0 +1,16 @@
+|--- tech_vol_jump <= -0.11
+|   |--- tech_downside_20 <= 0.08
+|   |   |--- tech_shock <= 0.32
+|   |   |   |--- value: [0.00]
+|   |   |--- tech_shock >  0.32
+|   |   |   |--- value: [0.01]
+|   |--- tech_downside_20 >  0.08
+|   |   |--- value: [-0.01]
+|--- tech_vol_jump >  -0.11
+|   |--- tech_volume_ratio <= 0.30
+|   |   |--- ctx_inflation_linked_mom20 <= -0.01
+|   |   |   |--- value: [0.02]
+|   |   |--- ctx_inflation_linked_mom20 >  -0.01
+|   |   |   |--- value: [0.01]
+|   |--- tech_volume_ratio >  0.30
+|   |   |--- value: [-0.00]

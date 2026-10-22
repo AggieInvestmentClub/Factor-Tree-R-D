@@ -1,0 +1,16 @@
+|--- rel_market_correlation_63 <= 0.88
+|   |--- tech_mom_63 <= -0.07
+|   |   |--- value: [0.02]
+|   |--- tech_mom_63 >  -0.07
+|   |   |--- tech_range_20 <= 0.01
+|   |   |   |--- value: [0.00]
+|   |   |--- tech_range_20 >  0.01
+|   |   |   |--- value: [-0.04]
+|--- rel_market_correlation_63 >  0.88
+|   |--- ctx_sector_breadth50 <= 0.17
+|   |   |--- value: [0.05]
+|   |--- ctx_sector_breadth50 >  0.17
+|   |   |--- rel_market_beta_63 <= 1.13
+|   |   |   |--- value: [0.01]
+|   |   |--- rel_market_beta_63 >  1.13
+|   |   |   |--- value: [0.04]

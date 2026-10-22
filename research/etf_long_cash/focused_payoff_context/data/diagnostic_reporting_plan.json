@@ -1,0 +1,24 @@
+{
+  "declared_utc": "2026-10-20T22:25:53.052387+00:00",
+  "purpose": "Descriptive reporting extension of saved v3.1 payoff_context; no new strategy or selection",
+  "reserved_start": "2024-01-01",
+  "reserved_scored": false,
+  "forecast_labels": "Cached adjusted open at saved label_end / saved entry open -1 - original fixed0.001hurdle. Crop prices before2024 before deriving outcomes; missing reserved/trailing outcomes remain unavailable.",
+  "policy_intervals": "Consecutive saved pre-trade execution-opening NAV ratios; final partial interval uses final net close NAV. All starting rebalance fees enter once; compound to the full saved account return.",
+  "reliability": "Outer saved predictions only, split by classification/regression and horizon. Labels overlap; no IID accuracy intervals or promotion. Prior OOF fit records remain a separate artifact.",
+  "payoff_display_bins": [
+    -0.01,
+    -0.002,
+    0,
+    0.002,
+    0.01
+  ],
+  "payoff_display_bins_used_for_trading": false,
+  "metrics": "Net daily Sharpe primary; zero cash/risk-free convention; annual and monthly compounding retains carry-in and saved costs.",
+  "inference": "Existing225-family baseline comparison preserved; new30ETF/SPY paired intervals are descriptive fixed-fit and have no pvalues.",
+  "equity_curves_per_etf": [
+    "payoff_context",
+    "etf_hold",
+    "spy_hold"
+  ]
+}

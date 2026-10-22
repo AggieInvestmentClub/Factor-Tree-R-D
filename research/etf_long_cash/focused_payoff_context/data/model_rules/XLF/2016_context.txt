@@ -1,0 +1,16 @@
+|--- rel_market_correlation_63 <= 0.90
+|   |--- tech_shock <= 0.73
+|   |   |--- rel_strength_63 <= -0.05
+|   |   |   |--- class: 0
+|   |   |--- rel_strength_63 >  -0.05
+|   |   |   |--- class: 1
+|   |--- tech_shock >  0.73
+|   |   |--- class: 0
+|--- rel_market_correlation_63 >  0.90
+|   |--- ctx_cyclical_defensive_mom20 <= 0.01
+|   |   |--- tech_shock <= 0.11
+|   |   |   |--- class: 1
+|   |   |--- tech_shock >  0.11
+|   |   |   |--- class: 1
+|   |--- ctx_cyclical_defensive_mom20 >  0.01
+|   |   |--- class: 1

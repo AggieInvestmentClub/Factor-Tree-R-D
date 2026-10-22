@@ -1,0 +1,16 @@
+|--- rel_DBC_mom_20 <= -0.03
+|   |--- tech_acceleration <= 0.00
+|   |   |--- value: [0.00]
+|   |--- tech_acceleration >  0.00
+|   |   |--- value: [0.01]
+|--- rel_DBC_mom_20 >  -0.03
+|   |--- rel_market_beta_63 <= -0.19
+|   |   |--- tech_vol_63 <= 0.06
+|   |   |   |--- value: [0.00]
+|   |   |--- tech_vol_63 >  0.06
+|   |   |   |--- value: [0.00]
+|   |--- rel_market_beta_63 >  -0.19
+|   |   |--- ctx_own_vs_other_bonds_mom20 <= 0.01
+|   |   |   |--- value: [-0.00]
+|   |   |--- ctx_own_vs_other_bonds_mom20 >  0.01
+|   |   |   |--- value: [-0.01]

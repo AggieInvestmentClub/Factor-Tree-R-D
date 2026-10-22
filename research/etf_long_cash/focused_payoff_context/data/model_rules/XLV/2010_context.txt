@@ -1,0 +1,19 @@
+|--- tech_drawdown_252 <= -0.11
+|   |--- ctx_own_cyclical_spread_corr63 <= 0.13
+|   |   |--- value: [0.04]
+|   |--- ctx_own_cyclical_spread_corr63 >  0.13
+|   |   |--- tech_mom_63 <= -0.05
+|   |   |   |--- value: [0.02]
+|   |   |--- tech_mom_63 >  -0.05
+|   |   |   |--- value: [-0.01]
+|--- tech_drawdown_252 >  -0.11
+|   |--- tech_vol_63 <= 0.15
+|   |   |--- tech_vol_20 <= 0.12
+|   |   |   |--- value: [-0.00]
+|   |   |--- tech_vol_20 >  0.12
+|   |   |   |--- value: [0.02]
+|   |--- tech_vol_63 >  0.15
+|   |   |--- ctx_sector_breadth50 <= 0.50
+|   |   |   |--- value: [-0.05]
+|   |   |--- ctx_sector_breadth50 >  0.50
+|   |   |   |--- value: [-0.01]

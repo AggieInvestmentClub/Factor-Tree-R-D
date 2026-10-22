@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "source_sha256": "c52486076cef4aa46b4c291a94432191fcdfdb731b50e6d896328bba15da2e00",
+  "config_sha256": "686cc503a259d444e5eaa7e91eeb94a2097cb47d4ea99d1171b1fe3728c96427",
+  "reserved_scored": false,
+  "completed_instruments": 15,
+  "declared_variants": 16,
+  "run_directory": "runs/v3_1",
+  "generated_utc": "2026-10-20T05:02:41.156011+00:00"
+}

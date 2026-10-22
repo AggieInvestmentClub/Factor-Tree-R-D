@@ -1,0 +1,13 @@
+|--- rel_market_beta_63 <= 1.59
+|   |--- rel_strength_63 <= 0.04
+|   |   |--- rel_market_correlation_63 <= 0.87
+|   |   |   |--- class: 0
+|   |   |--- rel_market_correlation_63 >  0.87
+|   |   |   |--- class: 1
+|   |--- rel_strength_63 >  0.04
+|   |   |--- class: 0
+|--- rel_market_beta_63 >  1.59
+|   |--- ctx_own_vs_other_sectors_mom20 <= -0.03
+|   |   |--- class: 0
+|   |--- ctx_own_vs_other_sectors_mom20 >  -0.03
+|   |   |--- class: 0

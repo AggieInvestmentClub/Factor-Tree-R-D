@@ -1,0 +1,1412 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-20T05:03:38.690842+00:00",
+  "status": "PASS",
+  "scope": "Saved historical ledgers only; no fitting, source/config alteration, reserve observations, resimulation, winner selection or promotion",
+  "actual_run_directory": "runs/v3_1",
+  "source_code_sha256": "de66e13a923f11664b00aa08d1bab7e6e857e54f3afc998b4b50c6e1ca72ebab",
+  "config_sha256": "686cc503a259d444e5eaa7e91eeb94a2097cb47d4ea99d1171b1fe3728c96427",
+  "annual_rows": 3680,
+  "common_period_rows": 405,
+  "independent_ETFs": 15,
+  "variants": 16,
+  "cost_bps": 5,
+  "common_period_requested": {
+    "common_full": [
+      "2012-01-09",
+      "2023-12-29"
+    ],
+    "common_early": [
+      "2012-01-09",
+      "2017-12-29"
+    ],
+    "common_late": [
+      "2018-01-01",
+      "2023-12-29"
+    ]
+  },
+  "reserved_rows_used": 0,
+  "saved_whole_period_metric_checks_passed": 1680,
+  "continuing_strategy_measurement": {
+    "NAV": "Set measurement NAV to 1 immediately before the first included return; compound the existing saved net daily returns without resetting the strategy.",
+    "carry_in": "Prior ledger NAV, shares, cash fraction and exposure are reported. The first included daily return retains overnight movement, original trades and actual costs.",
+    "boundaries": "No fresh initial allocation or artificial liquidation at year/subperiod boundaries. Existing final liquidation at the original 2023 endpoint remains included.",
+    "fees": "Raw fees retain original-account NAV-1 currency. fees_per_window_start_NAV divides those recorded fees by actual prior-session account NAV; it is a measurement normalization, not a recomputed execution cost or return drag.",
+    "drawdown": "Window drawdown resets only the measurement high-water mark to initial normalized NAV 1; it does not alter source positions or trades.",
+    "Sharpe": "sqrt(252)*mean(existing net simple daily return)/sample std(ddof=1), zero risk-free/cash convention.",
+    "tail": "Worst daily return, empirical 5th percentile and mean of the worst ceil(5%*n) daily returns. The latter is reported as a signed daily-return CVaR/expected-shortfall estimate; no independent-sample or tail-model claim."
+  },
+  "primary_four_arm_summaries": [
+    {
+      "variant": "baseline",
+      "windows": [
+        {
+          "window": "common_full",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 0,
+          "below_baseline_sharpe_count": 0,
+          "above_causal_vol_reference_sharpe_count": 6,
+          "median_individual_delta_sharpe_vs_baseline": 0.0,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.10869063486427966,
+          "median_individual_exposure": 0.5983685066347462,
+          "median_individual_annual_turnover": 8.860426455650746,
+          "median_individual_delta_exposure_vs_causal_vol_reference": -0.10253252358566806,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 7.517099244982157,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.060171010496574286,
+          "median_individual_worst_daily_return": -0.0778443875186201,
+          "median_individual_cvar5_daily_return": -0.020263985607256858,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        },
+        {
+          "window": "common_early",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 0,
+          "below_baseline_sharpe_count": 0,
+          "above_causal_vol_reference_sharpe_count": 6,
+          "median_individual_delta_sharpe_vs_baseline": 0.0,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.0644923838927558,
+          "median_individual_exposure": 0.6575105188046656,
+          "median_individual_annual_turnover": 7.700400962309545,
+          "median_individual_delta_exposure_vs_causal_vol_reference": -0.10044117568263133,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 6.273073502461319,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.02357889991902066,
+          "median_individual_worst_daily_return": -0.0399412137568846,
+          "median_individual_cvar5_daily_return": -0.017336462447864548,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        },
+        {
+          "window": "common_late",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 0,
+          "below_baseline_sharpe_count": 0,
+          "above_causal_vol_reference_sharpe_count": 5,
+          "median_individual_delta_sharpe_vs_baseline": 0.0,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.067696446068782,
+          "median_individual_exposure": 0.5651890831503521,
+          "median_individual_annual_turnover": 10.064844155150277,
+          "median_individual_delta_exposure_vs_causal_vol_reference": -0.021719275484377465,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 8.757827371220637,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.02780840981736271,
+          "median_individual_worst_daily_return": -0.0666826579440689,
+          "median_individual_cvar5_daily_return": -0.0226163450179515,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        }
+      ],
+      "split_delta_sharpe_signs": {
+        "positive_in_both_ETFs": [],
+        "negative_in_both_ETFs": [],
+        "positive_early_negative_late_ETFs": [],
+        "negative_early_positive_late_ETFs": [],
+        "near_zero_in_either_ETFs": [
+          "XLK",
+          "XLF",
+          "XLE",
+          "XLV",
+          "XLI",
+          "XLY",
+          "XLP",
+          "XLU",
+          "XLB",
+          "IEF",
+          "TLT",
+          "TIP",
+          "GLD",
+          "DBC",
+          "VNQ"
+        ]
+      }
+    },
+    {
+      "variant": "payoff_only",
+      "windows": [
+        {
+          "window": "common_full",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 6,
+          "below_baseline_sharpe_count": 9,
+          "above_causal_vol_reference_sharpe_count": 4,
+          "median_individual_delta_sharpe_vs_baseline": -0.03108876194583038,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.13256125130249696,
+          "median_individual_exposure": 0.6911081619110816,
+          "median_individual_annual_turnover": 4.35372800814898,
+          "median_individual_delta_exposure_vs_causal_vol_reference": -0.05598661554630846,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 3.1064936691976595,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.02884812988897438,
+          "median_individual_worst_daily_return": -0.0878082643808129,
+          "median_individual_cvar5_daily_return": -0.021505482171491973,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        },
+        {
+          "window": "common_early",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 6,
+          "below_baseline_sharpe_count": 9,
+          "above_causal_vol_reference_sharpe_count": 4,
+          "median_individual_delta_sharpe_vs_baseline": -0.06136845562676574,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.13010265625202583,
+          "median_individual_exposure": 0.7395348837209302,
+          "median_individual_annual_turnover": 3.3480004183954564,
+          "median_individual_delta_exposure_vs_causal_vol_reference": -0.09420130846044084,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 1.9206729585472306,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.0063761492000656735,
+          "median_individual_worst_daily_return": -0.0399412137568847,
+          "median_individual_cvar5_daily_return": -0.017565227296537263,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        },
+        {
+          "window": "common_late",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 6,
+          "below_baseline_sharpe_count": 9,
+          "above_causal_vol_reference_sharpe_count": 6,
+          "median_individual_delta_sharpe_vs_baseline": -0.008178907226035037,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.060560639205198497,
+          "median_individual_exposure": 0.6613651424784626,
+          "median_individual_annual_turnover": 5.653301631178124,
+          "median_individual_delta_exposure_vs_causal_vol_reference": -0.014800275311003808,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 4.189101191133681,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.015739716705783367,
+          "median_individual_worst_daily_return": -0.0794442125583186,
+          "median_individual_cvar5_daily_return": -0.024104842818371316,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        }
+      ],
+      "split_delta_sharpe_signs": {
+        "positive_in_both_ETFs": [
+          "XLI"
+        ],
+        "negative_in_both_ETFs": [
+          "XLV",
+          "XLY",
+          "TIP",
+          "GLD"
+        ],
+        "positive_early_negative_late_ETFs": [
+          "XLK",
+          "XLP",
+          "XLU",
+          "XLB",
+          "VNQ"
+        ],
+        "negative_early_positive_late_ETFs": [
+          "XLF",
+          "XLE",
+          "IEF",
+          "TLT",
+          "DBC"
+        ],
+        "near_zero_in_either_ETFs": []
+      }
+    },
+    {
+      "variant": "context_only",
+      "windows": [
+        {
+          "window": "common_full",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 6,
+          "below_baseline_sharpe_count": 9,
+          "above_causal_vol_reference_sharpe_count": 5,
+          "median_individual_delta_sharpe_vs_baseline": -0.02849985329263327,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.17173235139103105,
+          "median_individual_exposure": 0.572482471241869,
+          "median_individual_annual_turnover": 8.913055555341186,
+          "median_individual_delta_exposure_vs_causal_vol_reference": -0.11316246364677612,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 7.650018512360326,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.05309373971265425,
+          "median_individual_worst_daily_return": -0.0794442125583189,
+          "median_individual_cvar5_daily_return": -0.020651538273230786,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        },
+        {
+          "window": "common_early",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 6,
+          "below_baseline_sharpe_count": 7,
+          "above_causal_vol_reference_sharpe_count": 7,
+          "median_individual_delta_sharpe_vs_baseline": 0.0,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.159067403427229,
+          "median_individual_exposure": 0.5967787201823971,
+          "median_individual_annual_turnover": 8.035201004149092,
+          "median_individual_delta_exposure_vs_causal_vol_reference": -0.18399498461178232,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 6.607873544300867,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.02076020728164012,
+          "median_individual_worst_daily_return": -0.0399412137568847,
+          "median_individual_cvar5_daily_return": -0.016954259201894084,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        },
+        {
+          "window": "common_late",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 7,
+          "below_baseline_sharpe_count": 7,
+          "above_causal_vol_reference_sharpe_count": 5,
+          "median_individual_delta_sharpe_vs_baseline": -1.0769163338864018e-14,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.07104739385280301,
+          "median_individual_exposure": 0.5370605675276184,
+          "median_individual_annual_turnover": 9.962983982656404,
+          "median_individual_delta_exposure_vs_causal_vol_reference": -0.045621762613446526,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 8.585764493710183,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.029065474890696236,
+          "median_individual_worst_daily_return": -0.0723866947324995,
+          "median_individual_cvar5_daily_return": -0.0226163450179515,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        }
+      ],
+      "split_delta_sharpe_signs": {
+        "positive_in_both_ETFs": [
+          "XLK",
+          "GLD"
+        ],
+        "negative_in_both_ETFs": [
+          "XLY",
+          "TLT"
+        ],
+        "positive_early_negative_late_ETFs": [
+          "XLI",
+          "XLB",
+          "IEF",
+          "VNQ"
+        ],
+        "negative_early_positive_late_ETFs": [
+          "XLF",
+          "XLE",
+          "XLU",
+          "DBC"
+        ],
+        "near_zero_in_either_ETFs": [
+          "XLV",
+          "XLP",
+          "TIP"
+        ]
+      }
+    },
+    {
+      "variant": "payoff_context",
+      "windows": [
+        {
+          "window": "common_full",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 9,
+          "below_baseline_sharpe_count": 6,
+          "above_causal_vol_reference_sharpe_count": 3,
+          "median_individual_delta_sharpe_vs_baseline": 0.04545613293484563,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.10934872851129317,
+          "median_individual_exposure": 0.7392905471213665,
+          "median_individual_annual_turnover": 4.283894773999425,
+          "median_individual_delta_exposure_vs_causal_vol_reference": 0.035978675501107005,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 2.9379825701929705,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.030170105813901713,
+          "median_individual_worst_daily_return": -0.0783054653248609,
+          "median_individual_cvar5_daily_return": -0.020456021281714996,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        },
+        {
+          "window": "common_early",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 6,
+          "below_baseline_sharpe_count": 9,
+          "above_causal_vol_reference_sharpe_count": 3,
+          "median_individual_delta_sharpe_vs_baseline": -0.04774982087793378,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.16293246833258407,
+          "median_individual_exposure": 0.7394025871395506,
+          "median_individual_annual_turnover": 3.7198462546934463,
+          "median_individual_delta_exposure_vs_causal_vol_reference": -0.04203583400914668,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 2.501334010568721,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.009350439143333607,
+          "median_individual_worst_daily_return": -0.0403452514211055,
+          "median_individual_cvar5_daily_return": -0.017250826492348627,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        },
+        {
+          "window": "common_late",
+          "independent_ETFs": 15,
+          "above_baseline_sharpe_count": 9,
+          "below_baseline_sharpe_count": 6,
+          "above_causal_vol_reference_sharpe_count": 7,
+          "median_individual_delta_sharpe_vs_baseline": 0.07059534315678084,
+          "median_individual_delta_sharpe_vs_causal_vol_reference": -0.061200308364041556,
+          "median_individual_exposure": 0.7017556162282435,
+          "median_individual_annual_turnover": 7.1791619100986335,
+          "median_individual_delta_exposure_vs_causal_vol_reference": 0.10824090232200523,
+          "median_individual_delta_turnover_vs_causal_vol_reference": 5.9703239707568745,
+          "median_individual_delta_fees_per_start_NAV_vs_causal_vol_reference": 0.021468647359069136,
+          "median_individual_worst_daily_return": -0.077251648206717,
+          "median_individual_cvar5_daily_return": -0.022984406133010407,
+          "interpretation": "Descriptive summary of 15 independent accounts; never a portfolio return or portfolio Sharpe"
+        }
+      ],
+      "split_delta_sharpe_signs": {
+        "positive_in_both_ETFs": [
+          "XLK",
+          "XLI",
+          "XLY"
+        ],
+        "negative_in_both_ETFs": [
+          "XLV",
+          "IEF",
+          "TIP"
+        ],
+        "positive_early_negative_late_ETFs": [
+          "XLU",
+          "XLB",
+          "VNQ"
+        ],
+        "negative_early_positive_late_ETFs": [
+          "XLF",
+          "XLE",
+          "XLP",
+          "TLT",
+          "GLD",
+          "DBC"
+        ],
+        "near_zero_in_either_ETFs": []
+      }
+    }
+  ],
+  "findings": [
+    "baseline: common-period net Sharpe exceeds v3 baseline in 0/15 separate ETF accounts and causal always-long vol reference in 6/15. 0/15 show positive delta versus baseline in both early and late subperiods. These are descriptive counts, not promotions or significance claims.",
+    "payoff_only: common-period net Sharpe exceeds v3 baseline in 6/15 separate ETF accounts and causal always-long vol reference in 4/15. 1/15 show positive delta versus baseline in both early and late subperiods. These are descriptive counts, not promotions or significance claims.",
+    "context_only: common-period net Sharpe exceeds v3 baseline in 6/15 separate ETF accounts and causal always-long vol reference in 5/15. 2/15 show positive delta versus baseline in both early and late subperiods. These are descriptive counts, not promotions or significance claims.",
+    "payoff_context: common-period net Sharpe exceeds v3 baseline in 9/15 separate ETF accounts and causal always-long vol reference in 3/15. 3/15 show positive delta versus baseline in both early and late subperiods. These are descriptive counts, not promotions or significance claims."
+  ],
+  "limitations": [
+    "All pre-2024 history is exploratory and repeatedly inspected; subperiods are stability diagnostics, not new untouched holdouts.",
+    "No aggregate portfolio returns, portfolio Sharpe or shared-capital account is constructed. Cross-ETF counts and medians summarize separate accounts only.",
+    "Annual and split samples are short and serially dependent; these diagnostics add no multiplicity correction or statistical significance.",
+    "Historical Sharpe changes can reflect exposure and cost differences; compare the recorded exposure, turnover, fees, drawdown and tail outcomes.",
+    "The causal always-long vol reference is the saved v2 benchmark with original weekly volatility sizing; it is not a new fit or optimized risk match."
+  ],
+  "outputs": [
+    {
+      "path": "reports/v3_annual_stability.csv",
+      "sha256": "179840103a9238d97441463565e554345fe0a21a5aaeaf838ea8d2a0d95b1ca7"
+    },
+    {
+      "path": "reports/v3_common_period.csv",
+      "sha256": "7c27591fadabd85af9dcd3ae5c1c2fe2b26672066531a1929899d3ec95d8486c"
+    }
+  ],
+  "source_ledgers": [
+    {
+      "path": "runs/v3_1/XLK/ledger_baseline_5bps.csv",
+      "sha256": "49f801379d573ae824798b9a417cce1755d074eb290522146973946b26fbc0b0"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_payoff_only_5bps.csv",
+      "sha256": "98909963bf9b89aaf6422b63f437a876b26d3d4894e770360a5409d5c0e68b84"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_context_only_5bps.csv",
+      "sha256": "da210ec7602393380d734e1d0eb3397ceb74e153889a4858ec5b7f0de2b23735"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_payoff_context_5bps.csv",
+      "sha256": "2da49a308d7cf2318e52770cc4a5f59f24f59aa687d62df85194e7e7c187e64c"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_payoff_buffer_5bps.csv",
+      "sha256": "0a2813c5e45227d1ded4d852e1a8da7b2fa63a75293187b8826e4fee77e49a52"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_weekly_target_5bps.csv",
+      "sha256": "a720a95d3f9855caae5d634c2bf273925405a759f8dc7f9a2d461bdafafe9882"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "892c51fad6c7ed84f452738aaaf034a8e25dcd6bd4d122d18a00974033e037b4"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_recency_weighted_5bps.csv",
+      "sha256": "800a5f8e2d6d3c09e463c7272da00da78e984e31922427eb245c428d18a56e73"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_quarterly_refit_5bps.csv",
+      "sha256": "df1e0f1d0e3ea38d8d44ab541fa47bdd9c41798cb4146fe29b3203ef8a56a135"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_ewma_vol_5bps.csv",
+      "sha256": "3a38e917b77ca54d9938f3d86a5a59ee9ced9f6ff5c8b293398f433af6cb679a"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_turnover_buffer_5bps.csv",
+      "sha256": "1a07eb6b7a85a9476a836a4e918dd0c94893933841da5786fd4868f313123ee8"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "9f41587a06ce032456ed193f90a7752d3b9404eaa70d83c1d41da4c9ec2338ca"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "8147f530516d4983a13b92a3aa1eadf229377a1adcf98bfdee0fbe042c1dc408"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "41ea072a44473b9b796964a088d635e305dfc78bdae74359d51529d9d39a5645"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "26e297cb2f6abd451f2ac3f68dfd142b5d56de8b2091018d598cb21e4c26f2bc"
+    },
+    {
+      "path": "runs/v3_1/XLK/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "cc3e17111dbc2432de101e2dbf952332a8f58273dbc1bfbeecc356bc3833bb0d"
+    },
+    {
+      "path": "runs/v2/XLK/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "63513a1b3852c400b235607befd14fa6faeab0292e36c2720b404e8cbbecc0db"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_baseline_5bps.csv",
+      "sha256": "8d3e03dc03258b60a22f7086f6ecaa92e959a27ab47d4bbab942bb148a2ec945"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_payoff_only_5bps.csv",
+      "sha256": "cf17dee71ca9bcbbf5f82f331c6e8e6faa804812bded1d9938242cbec56c2d3f"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_context_only_5bps.csv",
+      "sha256": "eb5beb040bd8e8670f5e99bc21e10067eb4c0f9e81ee75bb626867945f3e85d5"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_payoff_context_5bps.csv",
+      "sha256": "4227c54adb2c819236d9576f3f2b79f1a1f4f4a8eb445ac7cc0047aa03601d2b"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_payoff_buffer_5bps.csv",
+      "sha256": "fcfd3287252b3ad2ae34f923b56522e85da3864aa0f03e73611274ee0e30e582"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_weekly_target_5bps.csv",
+      "sha256": "6327c59eac11f73ebe8af4d834f6d5cf999d479fa665592f4d627506551fcba5"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "cde1f647caa6d91d83300d0ffa3c7de51d79332565de400601ea19f784b79f40"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_recency_weighted_5bps.csv",
+      "sha256": "fc281646fba7faec81fe3ec6bd7145a31ab338b434367fb4792042d812948764"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_quarterly_refit_5bps.csv",
+      "sha256": "77ff9e877b4610a5e8a636a4484e16f7c53adc0f338ae70a662db42593513218"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_ewma_vol_5bps.csv",
+      "sha256": "a797a93f8ad4ae51f1129e10475076ad5fbfd64995d4e71485970b9fc2ffbebb"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_turnover_buffer_5bps.csv",
+      "sha256": "3eb75cb83b6411f0f8ab2390fd9fd72683e3c57ef1daf532a7bb773e29f1bf17"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "c232f2729d819188db56feb7eeb75a9d0e22ba46b25bd6ce723f05625c2699ff"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "ec47b81359fef15aae02913e1f6c306eb76311d45b271d0a0a37c1747af5280a"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "22e19394e7fd5c9ea06d4e52ae826d58f624946ced5239f3fd69fc34d333e10f"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "975be71c531a5fa1aa55f050b65a7df45f39e59bced4ee1e7a9cc491cc84e1fe"
+    },
+    {
+      "path": "runs/v3_1/XLF/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "23b930af5d5d9ae71e4063aad734e6e5543d38da005329f664c2f2c35e37951e"
+    },
+    {
+      "path": "runs/v2/XLF/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "3885eab467843cb19950aaf9c384fab64b76046998c127958d92deb02fb9a03d"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_baseline_5bps.csv",
+      "sha256": "df09334c0874219d2d4a9ffafbd0faa6996b93894c5bfdb4f299fa71acc411c8"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_payoff_only_5bps.csv",
+      "sha256": "96ae6ae240ce84e39bda04a23852dc8e456f2bb41d9a12e124066c66258f84a3"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_context_only_5bps.csv",
+      "sha256": "f17219422358855c107e93060e2dbb3833452d560b1441783cb0a2584d37790b"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_payoff_context_5bps.csv",
+      "sha256": "5823ef2075ba93bd506928a7e7f094723dd3159c52fc59ea497b88edd19000d7"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_payoff_buffer_5bps.csv",
+      "sha256": "c35905419564e8acd44abfe82fea11afde39c563ce70b85f402168d496406c7c"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_weekly_target_5bps.csv",
+      "sha256": "015943a418f79262454dc8f4c95da836007c0fae0e9df6b7c42c7a7b1aeb6db6"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "10f069f68229b096f70382e43433efa280d38c79f82d171fc9bf9bb38e7f8cdb"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_recency_weighted_5bps.csv",
+      "sha256": "45cefedb51fa18e30ee293fe336bc65435289247571b63b8aea8289c8345f0f2"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_quarterly_refit_5bps.csv",
+      "sha256": "dd56cb6acea14cc8e6905aca1a4a38988e3da46aeebf4c611a97e0ab9a18f366"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_ewma_vol_5bps.csv",
+      "sha256": "2e3e5fdfb2c337a59ba136a3f1c2973029defd9af71634b14f126d49bdd26daf"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_turnover_buffer_5bps.csv",
+      "sha256": "6948748dad441af563bfa9d50b71d4b85b03a094560ff0685bbcb1f1196a9508"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "3dcab184b5af0395d5b96a8272061c2caad1dc7b93352d80185730e5df7d1c33"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "145889113710bcc22e6120d5cac635a83c2f9cdc3e6af868bac1d8caf85d0b0b"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "6fd095636d0affc378b22d325e6f822d2122f6a3db213bb6ce44c3f6a47b514e"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "896b4950eeb369855e9e478f0c775140f703686c27a4f5917f55395180e38d75"
+    },
+    {
+      "path": "runs/v3_1/XLE/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "5ed4b03478049cdd12e3191d9713b10e5a8ed84db8f50448ca074390d7dc6c3b"
+    },
+    {
+      "path": "runs/v2/XLE/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "88c0509b996eb78ac896b326d61acb7928df95ad62cfe9a26e9d522698bfe468"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_baseline_5bps.csv",
+      "sha256": "7838577330342d21efe757d120fb054961dcf3f6089d1b3b535a22931cf8aa77"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_payoff_only_5bps.csv",
+      "sha256": "630dd31daed01e4c37f997b8d1f4de9d99a469afa1b126e6a20d51c918c92c8a"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_context_only_5bps.csv",
+      "sha256": "b4e465a9ab580f36bc55b12fc1a9410b148e13a3576c26fb9580b62c25c0b896"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_payoff_context_5bps.csv",
+      "sha256": "d4f548912976fb4ce25d35324b791e1d90ecce40061dc8252572ef0d37340e6b"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_payoff_buffer_5bps.csv",
+      "sha256": "5e1feb9bbb3b012e419f34fe857bd0fc5aeb8037d21205b887eebd8ea4f451a8"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_weekly_target_5bps.csv",
+      "sha256": "fc51f25f9b88136fd46ff4d41173c73cb1da4444232db9c0056d751a97d31668"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "9fee893c5e9a773655f56658c2dff80d9554c099be5199eca6d4ec0a19f8b1c9"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_recency_weighted_5bps.csv",
+      "sha256": "4f5a4e994fef1d5ba15a30bf7c7ff92cf14d7550514af386e2876546d5495714"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_quarterly_refit_5bps.csv",
+      "sha256": "ce5aa4c42591986d9e3988d12bfc5cf04b698bdd37e3073f04048c774dd70c8a"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_ewma_vol_5bps.csv",
+      "sha256": "ca2efd96eeb8047e20b7e5db614cc2c08a3fbba514320e5090de59d97f7661d4"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_turnover_buffer_5bps.csv",
+      "sha256": "00121cae6d5a90b3d6aa6c646bbab739f68556179dec6aa7386b22623ffbdd4c"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "d5f65951586bf08edbaa3696cd8f4e2ea6154dc3a1399e2da0b5d46674a58a53"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "f14127c0880972512333bc128428f0d9718288afcf1c8dba84df1bd4aca9e394"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "2b2083bc4617af491cf9c771a78e1d6f26e671fc4ed35fb3633063fd336ab02d"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "b00022d9d3afcce0201930137c7534df6872ee9dccbbd045bdc6e298200e62ff"
+    },
+    {
+      "path": "runs/v3_1/XLV/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "ff094c3d42a0706989bcda184a549104a5e5d04f95d84d2a6d0cd751d8686788"
+    },
+    {
+      "path": "runs/v2/XLV/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "423e61e3bbde19bf357b6880d9d5db1fa26cdb573567d6d94b5d7ca5e623f992"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_baseline_5bps.csv",
+      "sha256": "28387f9d91511fb8f5e2128758bb94b604ff91f7d90c4423a6c78c84c322e70e"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_payoff_only_5bps.csv",
+      "sha256": "068a3bec0e7cdc5f1ef5a82843ce4e16e2ba453adaa80a2568d376018ec7d291"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_context_only_5bps.csv",
+      "sha256": "8134b07e8651ab201bfb78fda2329d385c1e46437932512282739faa2920c2c1"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_payoff_context_5bps.csv",
+      "sha256": "973d28d08d30a22b5904fe94d29f47f44dc4d18baa5aef785cdcee9c99775b0f"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_payoff_buffer_5bps.csv",
+      "sha256": "000fb3a1c789654fdef8b30c6393f5cbc9690d8dfd5fa0c7b2453bd7e305e528"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_weekly_target_5bps.csv",
+      "sha256": "93f9e9b5efa0427099d36672df97f98a18a69d1cd82fbd3fa894ab4f42009284"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "3db735e92adf7d84fab164abed8840da410e49cec5986bc47dd82e5c299b46b2"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_recency_weighted_5bps.csv",
+      "sha256": "a50b3bea208475464c9443b70b3a662b9cc5a76fb94c8ef736c1e1d3b8b0bda6"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_quarterly_refit_5bps.csv",
+      "sha256": "e58f1d0f7033895fb2f877253567e0957f049f4408e231fa3ad1be5b18d57932"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_ewma_vol_5bps.csv",
+      "sha256": "d1cee4f99dc1c3ffa3d891f8332260b00b453e259218c1f3cd1f339018b5c6f7"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_turnover_buffer_5bps.csv",
+      "sha256": "b5b8e641c8fc6ea2880f0bee663d4a3fb0a81dd31edc94b4f4ac489d3aa74831"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "b5d9e8d6fbc4dfdd76f93ab4284b83222ecebb1c4023342d5938274d807f3853"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "44db789a9e6d64e582bf678fdd63f454cc354aa214ed7f73dfdcf4359e1ff06e"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "d149321cabea40693325b7b39f063890d0e8aab76594f58c8d51284559338640"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "3364ecf8aa8c6ebfac207d0f31ad232252a6e69a46e8b59339116a0b805524d2"
+    },
+    {
+      "path": "runs/v3_1/XLI/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "f7a5e14587cd3afeea2d085881532685df8734b6ccbea51bd3a754e5d0163a75"
+    },
+    {
+      "path": "runs/v2/XLI/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "3d2c3da8b06e089c9aea40112e992573fab61a7e6c5e1706b698535ca426051b"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_baseline_5bps.csv",
+      "sha256": "23866a36240dd780c482dcf127d592496c2cab969a473f1ffd4815eb1cc8b256"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_payoff_only_5bps.csv",
+      "sha256": "ed3a0b3c79b55329deb37a4759b716c887f3a82463b2159b24d8e1b851371900"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_context_only_5bps.csv",
+      "sha256": "e7728b57ff7c377a52b48a3faaf6cf2c442095eeb93fd30ff875aaccff68d1ab"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_payoff_context_5bps.csv",
+      "sha256": "857373505865c77345a3bd429cf1be37aacb26103020398014b611049382ac32"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_payoff_buffer_5bps.csv",
+      "sha256": "669cad244a405fc9d97e8cfe8183ea590e4104d88162c2727cfee4a6601d35aa"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_weekly_target_5bps.csv",
+      "sha256": "e3225280481aad75de4cb10a2caf27899d62e519acf29bfaa2b1e228db0a5b99"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "8bad34e931e0e1d01e47b52d640163a48a13c52a0cd4d91e1e7bc175aceb46c9"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_recency_weighted_5bps.csv",
+      "sha256": "764fefc61a2c756216f3e859f7d659b851aaac79ab5e4841b495b5d057ecc312"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_quarterly_refit_5bps.csv",
+      "sha256": "56265732e8440373c4322cfc0b4ee7a79a5fd2bc3cbe4eb598e5513b6d59941b"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_ewma_vol_5bps.csv",
+      "sha256": "82290f288efe8622bbf4f88c93f1b4ef9b4693abcf9b0812e488c4ffb7df0ec5"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_turnover_buffer_5bps.csv",
+      "sha256": "f85650a4b08284f56618a97a6fe840a6d6a6ca8c8176fa081476849065aee510"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "ebd725fcf08892832e417004784c4b5fac16d5f73f13db3138fa9fab52a4da8e"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "355d5af5f72ecb5a4357f0e3f424ab3018e7984849c3c657d2de51ba03f7881e"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "b98d2cf4c9c42ae65af309952f8edc936ed36e4d38c44e52d0cc31a5d77bc47a"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "cc3318a49861c1f3d8ebb9e9a303d409e8e611314b34df6cf3543da711138427"
+    },
+    {
+      "path": "runs/v3_1/XLY/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "7c6c1a3b146a368466797a3ff14ab14dddce8b557121866a074a1cf21f48159d"
+    },
+    {
+      "path": "runs/v2/XLY/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "5c660ab23ed86b328c50d2ef6825159d4e5723079bb1b86b56ba3a3d7cc165b0"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_baseline_5bps.csv",
+      "sha256": "6938994cf16e801120c06bd77721c7f1313f5ce1d95771c55dd622415fa6a00b"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_payoff_only_5bps.csv",
+      "sha256": "ab7f9c0907e93af0b0c70b0bb12c288b29e6fc6e6137c4f004aca7ef0fdae88e"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_context_only_5bps.csv",
+      "sha256": "b72e703e9c70a6e204f7e9314f182f570dbf126fb40132841ee538fdfe563e6c"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_payoff_context_5bps.csv",
+      "sha256": "1720af6ca041d7d64cbdf4421bb207070bb133bc13bc64c299b6149bf404fd94"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_payoff_buffer_5bps.csv",
+      "sha256": "8b31f4e6e00b9554ba8b130ecfef4e5cbe9ecb1ec1954ec2fc568c912e6f8ded"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_weekly_target_5bps.csv",
+      "sha256": "2b29f83744be1091dcbbb7f7582c84788797fbdd811b521aecc5067dacbf0c48"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "b900c736fbf3d046a79b0f657ebd08243e7efd1d869d3cfa9ae1f5a438f39a1b"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_recency_weighted_5bps.csv",
+      "sha256": "34d958457154b318919f149937a8b74f9302a06b31680be97e7acb746f596f01"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_quarterly_refit_5bps.csv",
+      "sha256": "a14af63d242ca79054d8f2b2284ce721437be9d61ea22a789035fa0b86917c5b"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_ewma_vol_5bps.csv",
+      "sha256": "bdb5575c3a5113bfb7259bfc18da47d62ea6c13673c667f5afbbcf042d14390a"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_turnover_buffer_5bps.csv",
+      "sha256": "f54b71052de53752b6bca0013861d8021e42c47892263516b40518367c7ff6f1"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "d768396db35a82eeb213f7a0be0fd2bd7237c4c7d63a19999832753a84b7c77c"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "705e2c5de58e95d48bda49af21a3436d17632609e4a8c9b97549b2ade76a04fb"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "a844668ebc1a0144fbe7655a0d70a56acacd21f4adfacdfa471347edc9665e4b"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "a414c12fda17353d25000a52b4510b659285034d607c243f3927e0bb03de99de"
+    },
+    {
+      "path": "runs/v3_1/XLP/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "7198c70c99ffda3e69be62cc7e84fe35724599145230a0e4dca56b5a296b909d"
+    },
+    {
+      "path": "runs/v2/XLP/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "0bdfe139c6f2974cb66868824ebab3b8be8b00ddb8e288764ec5dc6b71339b02"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_baseline_5bps.csv",
+      "sha256": "3b7598af23ee6d4bf0b176a031ff2db101a897745f19af52240c18ccd32eb60b"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_payoff_only_5bps.csv",
+      "sha256": "8fc7e3d990334b799feae6fcca2e29a3d55e281c636cae5463db8fd8bbf5f293"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_context_only_5bps.csv",
+      "sha256": "ce58d8db9972b4aab11b9040b7073f088f6bf5e6bd60931c903cc270a1881caf"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_payoff_context_5bps.csv",
+      "sha256": "ec9aa479946aab495c93be0843e28d52f7741edf46a20d17e274d0552b82ca5c"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_payoff_buffer_5bps.csv",
+      "sha256": "6bed58820d5902ff2820634607a802ad179be55ef70f2d1969e5a289a3654a2c"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_weekly_target_5bps.csv",
+      "sha256": "cecc7ea175da361872f6c91325e5d54a6d7c92535d740cbb15a59e2698f61cd1"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "88ae4ec65e29b51e2ee389e284c508c6990ed39b604950914be434a85a01b0a9"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_recency_weighted_5bps.csv",
+      "sha256": "f5b36b7403054d1216212c6859e993eb30f7d3cc24afe896224e7a1cecc892fe"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_quarterly_refit_5bps.csv",
+      "sha256": "53edb7e13a41028c23851709a7a65f3c4dc59fe6d6805186b494ebbbfb522a27"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_ewma_vol_5bps.csv",
+      "sha256": "5f2b0b642c12f7ae0d3a4cab85b3513c5a6f1a791411cfd034a144efd224ce7c"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_turnover_buffer_5bps.csv",
+      "sha256": "c6b316240d08cacea9ed23c2adb53cbd511509105530f35436a2da00ab8ee6b2"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "d11dc82991778d1e9c5b70f33f5cb13b833c84bff2fabe9e9282d2213446a457"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "eddfc480d0732e74641989eec5d9a10b83642f870c960fe358697731c6147f65"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "9de7f356c747487f406197b424736270b46fcafcb1f8e00240b0952a34926268"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "7f3ecce45b677327c6285b443d18c85cb11f91418d7a7f2f9ead2fdeca78f19a"
+    },
+    {
+      "path": "runs/v3_1/XLU/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "59fddbab2175f724a74228325b4ee5c9753b9133e869c7c1510f098e2d47001f"
+    },
+    {
+      "path": "runs/v2/XLU/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "17d40f64e0b7e0bbb3b0bf8594794dee061b3d8fedddb5eaee8a379797a29750"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_baseline_5bps.csv",
+      "sha256": "758b350e7b99f45dd31b5f038a59d6f48b619a2729032210ce3bc409c228b5a5"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_payoff_only_5bps.csv",
+      "sha256": "7e09e27dc4fd2c7962217d2e09db22f0ac58622aa5d7c18fcd6c8d4c2bec302b"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_context_only_5bps.csv",
+      "sha256": "0152544579c7edde5a0c78110df7b4ffdfe63ea7d04cbb97a3fba9062ac0a146"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_payoff_context_5bps.csv",
+      "sha256": "871f6e84e7877f5472597e14280f706791e75cbfe6fd0846d13160b8a5a1352e"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_payoff_buffer_5bps.csv",
+      "sha256": "feb4fa31e24c37f0bbd057367c33b7d07fd9056e948d47dbb2eaae284658e44c"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_weekly_target_5bps.csv",
+      "sha256": "e05c9b844ac3e4ea9dfc88d7357683513256b1e0914732b9bfb7e03fdee8c1e1"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "230f12ac4833dc27642cea3459f3acc52a8419b2bd1cb52d7dbc602eb7903970"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_recency_weighted_5bps.csv",
+      "sha256": "0814a1af3a61ace3285748580cff1b2c3a9767033c5b7a2a15ac57cf6f13f6bd"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_quarterly_refit_5bps.csv",
+      "sha256": "65019b187bbfcdf71dcd1935b639d375fe0e9b6aef4b6f35885e99cfcab95b4d"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_ewma_vol_5bps.csv",
+      "sha256": "e36f704290199e9cc9507913fd451b01a91ba3a39f829c82715183381ecfdb62"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_turnover_buffer_5bps.csv",
+      "sha256": "4c35f11cafb3b685620c2c76c3f46831064ac8f4ac6aad74d802bbde3e38f481"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "833224750fc0427a92d8793905a723ae61d28cf334275fccdfd2466bbbb8027d"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "4bf0a5845f80ecf8c70aca21bf34690c7f534b4b12a66ce91feb2954cfcb3866"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "95b57f1e32c30e8aeb4009bf3e3c39c226e5c3c9d50d6f64e0b32e8bfb2e3fdd"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "26249a017432ea8292d5a182a1b1b6bb38aa33445f20c3ed4485339f16459002"
+    },
+    {
+      "path": "runs/v3_1/XLB/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "68c902212eaffc6c8fb232169bc437751757f857104b1a652f06446e15bdd017"
+    },
+    {
+      "path": "runs/v2/XLB/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "edd168192db539d60164eb1cb87ba3d6c10537bb6f76fa58a2ce1fa5afec12c8"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_baseline_5bps.csv",
+      "sha256": "d761d6fed18450c4307f7623ed60057afb36fd328bc93b4ae177b14b6ed2720b"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_payoff_only_5bps.csv",
+      "sha256": "b52f9954598bf7e8753384f28930d2ebd1deb123af33c016c6e198bf6029b4c6"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_context_only_5bps.csv",
+      "sha256": "03de7f35430db04726a043ed48230faf7267f03a56da0d75566a10ad15214611"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_payoff_context_5bps.csv",
+      "sha256": "6e560625d5ed93c8652eb98b1d4ea4986985d51f55c3a8170fcc39d0e2819985"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_payoff_buffer_5bps.csv",
+      "sha256": "179d1aabc89923ed7ddfb48ef388a41ef64cc16ae0e43ed7dd898d220060c4f1"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_weekly_target_5bps.csv",
+      "sha256": "af79a194948af8b8dd24c20f989cc149fbea6bc90495320cc1823d9f5795e204"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "426a8c3b8be8d6725c00a559c264949e34784cc5ef5055a45152128a4bdea075"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_recency_weighted_5bps.csv",
+      "sha256": "720b5087fa5efe05b9b345bf7235fa2c3675d2ac7d4c5438c0c4b6835095f0fd"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_quarterly_refit_5bps.csv",
+      "sha256": "02496ef7846f8b9175cae476300e4457f7c5ba1ef11e30adabdaa6b9e7566cfc"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_ewma_vol_5bps.csv",
+      "sha256": "4ad2911f7b86119695f0406e470d0c70481d595581a2bedc0fde920e2878d760"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_turnover_buffer_5bps.csv",
+      "sha256": "1959ec7863ae7d897221d98e83a2263ec9b22f96454e00d3e250b61237b0590c"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "a79f01ad2b2d7a6b7a75ed1602e1ebdf9f376ef72611c464ed7702e4f71dbf09"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "c8cc1941be911762c062dc750e6b4bb513b2e43c511cb58083c3e21b676a75ff"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "a4df6628c0971049d44bfd17ffb6b3cef81187990d48c2c4cee9e6f6a9f8aa08"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "4b43f7ac36daf970b771ff2f4b457ef3e7b24f8b47b7b0101fc4112bc9f855e4"
+    },
+    {
+      "path": "runs/v3_1/IEF/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "e931f010901e7d323ab9738e8503189c761e538b0451c4e74a6f2331208cd067"
+    },
+    {
+      "path": "runs/v2/IEF/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "47cf8eeeb8c05a410497915ce8f1ae94a667f7f93d61a4433509b7130b871176"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_baseline_5bps.csv",
+      "sha256": "32f15fbc8540bd3d36ce8fc5569d9803a1b836825cfd4375b0fc6ceaf9d88ab3"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_payoff_only_5bps.csv",
+      "sha256": "a501f22c212febc68908610f69d262f4a455b6c63400ba391d2b3e788d19266f"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_context_only_5bps.csv",
+      "sha256": "10218856ffa4fe4336436cfc5822c646a853437eb2f4581717fdbfb478784b15"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_payoff_context_5bps.csv",
+      "sha256": "c994336bd32aadde72df05b44a162f906b6cd94ed7d9fcd5c09af768be94395b"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_payoff_buffer_5bps.csv",
+      "sha256": "758baa603f8a6d232d8916aa7cf672c21b414d10dd9e4c6959e0108ee960461c"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_weekly_target_5bps.csv",
+      "sha256": "5b2e38c70325296603195f083e4bf316ad68fbea9c3e85b1b1273152fc4ca798"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "c2a7c157940b61e499948b18d827782e1e4fefcb48a56815289312124aba82c2"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_recency_weighted_5bps.csv",
+      "sha256": "555c142d07b63bcfce685cd2ff479ae8822775fe870d0b8033827b4a6cf9fcd9"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_quarterly_refit_5bps.csv",
+      "sha256": "10e98e7a42669d64bd53593591889e889a46c1c279e55d28089946889b2c9d59"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_ewma_vol_5bps.csv",
+      "sha256": "84c40054941fad4e4410e98ae0b75349c0447eabc2dcfd11538ca82abe8b5fb0"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_turnover_buffer_5bps.csv",
+      "sha256": "24525c01f7d245a0c3182e858418fcad2729ee20b4f13a3a57ff6049b994af5d"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "505ac171fee6037a03c821fc356fd8838d5e7392377f9e6174814493c5ea2f7e"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "7381b6aa208455c074b3e5c19e3826b87bcf337b8a937dbc38e7c319359ebeff"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "fcaa917432615ae85d07d7848e22417c2a82ae7472064adda650cef141bf738d"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "b571e1294cb990b3e3044047f804a4fe711507d501b34058242c787edcae0662"
+    },
+    {
+      "path": "runs/v3_1/TLT/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "f84708692a1692f182b3254d2e5a195bddd181825a9d8528e4bcc88ce22551eb"
+    },
+    {
+      "path": "runs/v2/TLT/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "b1e3dadd703fe50e449b06281e40cea38f8a1259e0899d62860ab760c5643ada"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_baseline_5bps.csv",
+      "sha256": "5cfba56acb2a55f57ffb535cd5f048520afa6063e12df939f67f48d0bbeb3c60"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_payoff_only_5bps.csv",
+      "sha256": "5d00ea00991368fb0d1b5ef724d82081c6c65b01e9f29eefb828472f8ab2b97b"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_context_only_5bps.csv",
+      "sha256": "6fd4ed6a2cba73e8769ee2edd31170635a9bd81740b6ec95a54fd76361304b8e"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_payoff_context_5bps.csv",
+      "sha256": "8fcfc01c548eeba575e3a6cbdd76e432cf02ab36c014a6a68c83f59f62a4aa66"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_payoff_buffer_5bps.csv",
+      "sha256": "8265003d98ec8451d438d3b88eac8713a5ca2b27270a42c1907c7e9c258d72e2"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_weekly_target_5bps.csv",
+      "sha256": "2a00ad471fa41834f00ebd336cf12e264584ece3fe572a830e7bd6766a0c6967"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "8f491a636a7a7d6eb8fe64767f3ca17c07f35720f378c666b14e797acee057a3"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_recency_weighted_5bps.csv",
+      "sha256": "5187644f70c11851bfa9c656f0a18541d6226167a07cf5dc01cd0ae88a2864ce"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_quarterly_refit_5bps.csv",
+      "sha256": "52571b7a1b37f15a09979cbea0c3fc6d3c1a2e4931f2fc0d297530f07850f393"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_ewma_vol_5bps.csv",
+      "sha256": "e06834dd93013482ba5d3c9bb80f245430a3aa31428079c17382ab41b89a8c02"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_turnover_buffer_5bps.csv",
+      "sha256": "2849de7be24e50f0b04a9f4fbceb40e91db05f6843972e635938dd8a9840aa5f"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "8f7df499d0cb899533dedd4c5b9cdd2be9bbc03a8b0acd4ed96a9863f0c679c7"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "fbed5f2c6de781391bc1a6e2b90269606c760224d8606593ea37881214c5e675"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "8c3046a64bd4d2f3f0396464b8fe1e0ea27887f0e39e4f5e35d2ac903dbe688d"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "e9174ef4c6ee869bf7fd2d911268c63492b0f5177b374879f3bf56acc5144334"
+    },
+    {
+      "path": "runs/v3_1/TIP/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "c60dad01042e8eb36a8c401cdf3168beaa3ecfef48eaa89d2d3b29037fc6296d"
+    },
+    {
+      "path": "runs/v2/TIP/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "8808d7d1bb5ed8e451c916d17aaa093d08317561677adbee59574ed16872271c"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_baseline_5bps.csv",
+      "sha256": "7ad25c2147e3034331998e50e303c25679202a7dff5cc41a285c6f943ce2f0eb"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_payoff_only_5bps.csv",
+      "sha256": "8b01d3290c17ccbb28d57f5c531c6abfe6bb2a628b832b748487b19b91d1960d"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_context_only_5bps.csv",
+      "sha256": "003435ce53e41db473fd40ed5946242cfa1c12a155d6e02e18152b08cd26c970"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_payoff_context_5bps.csv",
+      "sha256": "0de5263095153ffa3dbbb318f5998ca6a343e22ec89d733d5b5d887b4b4b5bf2"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_payoff_buffer_5bps.csv",
+      "sha256": "581f13bb50b1fa7c971b6598324ea9cb97c7379a1b7430e01ed02557dec02554"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_weekly_target_5bps.csv",
+      "sha256": "226434bb2dea1d546af6394cac16023eba6dc5bc5787d3021570f1954b014cbb"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "54236addac647f654b348d913bdf0437e2bb0c1d63bb1b15a05232f95068efea"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_recency_weighted_5bps.csv",
+      "sha256": "20edc978001791a18bc99bbb0d2bccb7a96ac7d5c3f7cac613b301dd3fe3ce5a"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_quarterly_refit_5bps.csv",
+      "sha256": "f1f3b11bf3a48469f90ee94bff1ae3b3b03e5ef0fb3e616bda0cb5304a238fe2"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_ewma_vol_5bps.csv",
+      "sha256": "93985a20c5b954fb826f662c2b1e1581dee27e5ba404f446131c2acfeac80bf7"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_turnover_buffer_5bps.csv",
+      "sha256": "1dccf6dd07b92bed4182957e1bf916c7b5a2ba61061f289881c27b663972711c"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "2a2ebbf08fcec8bfb016440aaf15baaa267337fd32998f4bee5a3098cfff30b2"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "e670c38a2d59fff341a5d7a4a3479ed97164f384e8d0632ab7e0a83bb6ef5a8f"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "2f0c90016a63ea6a6b31608e019e2b2c2dd0522ac1675c31a6ae6b6e7680cf8b"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "d2635daa1e108163ffea5d95a69d413cc6738b16aea92a25064eb99ba610c95a"
+    },
+    {
+      "path": "runs/v3_1/GLD/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "304571165429419dc2e05daffd0144de817ccab3eb2aa815a4aab68e73264cdc"
+    },
+    {
+      "path": "runs/v2/GLD/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "762451cf00c9474348b998a7c1fa8d3b91d80d8cce2f781fcb6a8a4af352e10f"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_baseline_5bps.csv",
+      "sha256": "6a6d1e7c56d5f5daa2f3752fb558f1bc0ef989f322c43660a954295d4fd42cf4"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_payoff_only_5bps.csv",
+      "sha256": "d9327babc91251b99aa3e30642db7ac3e281641589b4e337dd778e566e923e6c"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_context_only_5bps.csv",
+      "sha256": "f7845ebd5c6fff4488876adcbe352ca8667052fe97105e133fab84b02854d5e5"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_payoff_context_5bps.csv",
+      "sha256": "bcd6049edd28d1d9284a15c00cd6a1cfe901a148d7a0719ada08ae229c7d02e1"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_payoff_buffer_5bps.csv",
+      "sha256": "d8303996e6fabba86c7a66fa9cb1e74d683035bf7114e3b8fd6efe3c85ae8417"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_weekly_target_5bps.csv",
+      "sha256": "425f76b76de2daa882a63aa3bd82ad42eee84aaf149cc20562ed00f22ae88bd6"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "8b757842f67eff2fcd576ad868bc44a1ea6b6c069ce7495c2392146115103915"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_recency_weighted_5bps.csv",
+      "sha256": "69ce5e0336efa8d67be2b3c08a5f8e8e81ec3edb69e2c445bd08a405aff68462"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_quarterly_refit_5bps.csv",
+      "sha256": "b6c7bf035e6ee678d1c4674c23b06c20f2bf529af4011eaa39281b73233fdb28"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_ewma_vol_5bps.csv",
+      "sha256": "d2ebf1c02025fce5a3a5e728d8c4af5a0e42f9d1e7d4f374bc99a0ff8ddea86f"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_turnover_buffer_5bps.csv",
+      "sha256": "c0a00a93f655bc3c6239f82a50ab8e790a23375d59eed8ec1796b155687b5d3f"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "83426d0944ff1bffeee7cf93ed90feae02e3141d6e8b751125cedaf25f286159"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "6a848cc191ab65d557377607d7d68190cca46ad90fcd38ee8a0f28258d9ac355"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "f473d5215f88a935c1bb37041375d4d649510a63c115a1de373739b16baf69ba"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "37eaa15fd3fa37067ec684624a520fd11fa17b193baf949ad70ec364ab38ed54"
+    },
+    {
+      "path": "runs/v3_1/DBC/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "5cb7a1fcfc94e2b39bbb814ca4007c83bdca5c11afd06d7236e4d9f0c830b0ff"
+    },
+    {
+      "path": "runs/v2/DBC/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "258eb702cd5ec049ac4b63ca5d453be7966a978331caf142c585c85955adf3d4"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_baseline_5bps.csv",
+      "sha256": "9aaaca163b4ad526d08bfc8c98a1c5f8189524ae184f618023e6c6a44b73fabe"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_payoff_only_5bps.csv",
+      "sha256": "32d637eb6c73e419e40c196fd048859d2171f58cd82c286bb475faefe59ca91e"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_context_only_5bps.csv",
+      "sha256": "6da8e516a5c9667cdf3397d02169237074f3240911f9750e7c4cf4885e38c79f"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_payoff_context_5bps.csv",
+      "sha256": "46ed3c925e764c1f09c0cf0c7197c39c7a3c0ed7a9be990647885774d2ef05f4"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_payoff_buffer_5bps.csv",
+      "sha256": "4c330a585546c179d96bfac8d7613355e7b387669f7d4cc9d19a9ba6750b846b"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_weekly_target_5bps.csv",
+      "sha256": "2b5d2281bd239141653af35efeb1eb111627f5089005068ecf75b5b56681f0c6"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_risk_scaled_target_5bps.csv",
+      "sha256": "781a2e2ec59ce88562bcd0f14c5f240e735fcb1d6ee70186f4f3932492fca2db"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_recency_weighted_5bps.csv",
+      "sha256": "9d05cff4c1418dfad556b3929e4ac94232e90c410d37c939edab0ebc7b4c2324"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_quarterly_refit_5bps.csv",
+      "sha256": "7951fd5500df1ee2c5acebc4c6d1a5630a0ebfb104db8735c9a7e3eed227947c"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_ewma_vol_5bps.csv",
+      "sha256": "737fc3be13034b7d67d6991c40dd69aa330af0610df036cbcc211e6c4f6c1634"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_turnover_buffer_5bps.csv",
+      "sha256": "d6b375fec74902b2010162df5c9356940e76b1af6f46f96ee0296494440e54d7"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_trend_10m_fixed_5bps.csv",
+      "sha256": "742076b1bd6c9442e3bda563dab5aacedc79c54f20853188a4fcf60c2b0c11f5"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_trend_10m_vol_5bps.csv",
+      "sha256": "7aac215221794fdecefaf3ded4dbc3d8715d3fbe8ce5f710055fa68ba4a25c59"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_tsmom12m_fixed_5bps.csv",
+      "sha256": "259ca55176680e037ca409473f5187db4912c30cef91dd2307aeb6525e2152c2"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_tsmom12m_vol_5bps.csv",
+      "sha256": "1df37958eb09c20c5e5e8a34b3e1fb4ba0cad8df01529be6f6501c8a78f31c1b"
+    },
+    {
+      "path": "runs/v3_1/VNQ/ledger_fixed_recipe_cart_5bps.csv",
+      "sha256": "95e325d854285b020f955b1232988927f1e81b4fb98d5e98688cfd0199e2c061"
+    },
+    {
+      "path": "runs/v2/VNQ/ledger_benchmark_vol_always_5bps.csv",
+      "sha256": "8f923c85cba9b4e3178b00589a5e7651c1b317cc3110a8ee587fafa0507bf78b"
+    }
+  ]
+}

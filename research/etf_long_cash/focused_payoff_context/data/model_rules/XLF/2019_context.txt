@@ -1,0 +1,16 @@
+|--- tech_vol_63 <= 0.17
+|   |--- ctx_sector_breadth50 <= 0.50
+|   |   |--- class: 1
+|   |--- ctx_sector_breadth50 >  0.50
+|   |   |--- tech_gap_5 <= 0.00
+|   |   |   |--- class: 1
+|   |   |--- tech_gap_5 >  0.00
+|   |   |   |--- class: 0
+|--- tech_vol_63 >  0.17
+|   |--- tech_vol_63 <= 0.20
+|   |   |--- class: 0
+|   |--- tech_vol_63 >  0.20
+|   |   |--- tech_vol_20 <= 0.42
+|   |   |   |--- class: 1
+|   |   |--- tech_vol_20 >  0.42
+|   |   |   |--- class: 0

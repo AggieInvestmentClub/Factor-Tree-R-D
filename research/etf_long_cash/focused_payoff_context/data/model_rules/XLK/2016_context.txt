@@ -1,0 +1,10 @@
+|--- tech_trend_200 <= -0.14
+|   |--- value: [-0.01]
+|--- tech_trend_200 >  -0.14
+|   |--- ctx_sector_breadth50 <= 0.28
+|   |   |--- value: [0.01]
+|   |--- ctx_sector_breadth50 >  0.28
+|   |   |--- tech_vol_jump <= -0.08
+|   |   |   |--- value: [0.00]
+|   |   |--- tech_vol_jump >  -0.08
+|   |   |   |--- value: [-0.01]

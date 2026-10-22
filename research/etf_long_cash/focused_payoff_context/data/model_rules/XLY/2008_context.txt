@@ -1,0 +1,13 @@
+|--- rel_market_beta_63 <= 1.22
+|   |--- rel_IEF_mom_63 <= 0.01
+|   |   |--- tech_mom_252 <= -0.04
+|   |   |   |--- class: 1
+|   |   |--- tech_mom_252 >  -0.04
+|   |   |   |--- class: 0
+|   |--- rel_IEF_mom_63 >  0.01
+|   |   |--- tech_vol_63 <= 0.17
+|   |   |   |--- class: 1
+|   |   |--- tech_vol_63 >  0.17
+|   |   |   |--- class: 0
+|--- rel_market_beta_63 >  1.22
+|   |--- class: 1

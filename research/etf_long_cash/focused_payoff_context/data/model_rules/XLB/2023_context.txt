@@ -1,0 +1,10 @@
+|--- tech_mom_63 <= -0.12
+|   |--- value: [0.01]
+|--- tech_mom_63 >  -0.12
+|   |--- rel_market_beta_63 <= 0.88
+|   |   |--- value: [-0.01]
+|   |--- rel_market_beta_63 >  0.88
+|   |   |--- rel_GLD_mom_20 <= 0.04
+|   |   |   |--- value: [0.00]
+|   |   |--- rel_GLD_mom_20 >  0.04
+|   |   |   |--- value: [-0.01]

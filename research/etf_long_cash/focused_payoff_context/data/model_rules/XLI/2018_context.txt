@@ -1,0 +1,10 @@
+|--- tech_vol_jump <= 0.33
+|   |--- tech_mom_20 <= -0.04
+|   |   |--- value: [-0.01]
+|   |--- tech_mom_20 >  -0.04
+|   |   |--- tech_trend_50 <= -0.01
+|   |   |   |--- value: [0.01]
+|   |   |--- tech_trend_50 >  -0.01
+|   |   |   |--- value: [0.00]
+|--- tech_vol_jump >  0.33
+|   |--- value: [0.02]

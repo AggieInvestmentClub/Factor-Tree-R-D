@@ -1,0 +1,16 @@
+|--- tech_range_20 <= 0.00
+|   |--- tech_range_20 <= 0.00
+|   |   |--- class: 1
+|   |--- tech_range_20 >  0.00
+|   |   |--- tech_mom_126 <= 0.01
+|   |   |   |--- class: 0
+|   |   |--- tech_mom_126 >  0.01
+|   |   |   |--- class: 0
+|--- tech_range_20 >  0.00
+|   |--- tech_mom_126 <= 0.10
+|   |   |--- ctx_equity_bond_corr63 <= -0.56
+|   |   |   |--- class: 1
+|   |   |--- ctx_equity_bond_corr63 >  -0.56
+|   |   |   |--- class: 1
+|   |--- tech_mom_126 >  0.10
+|   |   |--- class: 0

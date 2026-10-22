@@ -1,0 +1,10 @@
+|--- tech_fast_slow <= 0.02
+|   |--- ctx_bond_equity_relative20 <= -0.04
+|   |   |--- class: 1
+|   |--- ctx_bond_equity_relative20 >  -0.04
+|   |   |--- ctx_equity_bond_corr63 <= -0.12
+|   |   |   |--- class: 1
+|   |   |--- ctx_equity_bond_corr63 >  -0.12
+|   |   |   |--- class: 1
+|--- tech_fast_slow >  0.02
+|   |--- class: 0

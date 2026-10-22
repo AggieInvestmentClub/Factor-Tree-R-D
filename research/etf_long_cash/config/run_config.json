@@ -1,0 +1,101 @@
+{
+  "run_version": "etf-long-cash-v2",
+  "declared_before_fit_local": "2026-10-19T23:22:18.3073129-05:00",
+  "universe": [
+    "XLK",
+    "XLF",
+    "XLE",
+    "XLV",
+    "XLI",
+    "XLY",
+    "XLP",
+    "XLU",
+    "XLB",
+    "IEF",
+    "TLT",
+    "TIP",
+    "GLD",
+    "DBC",
+    "VNQ"
+  ],
+  "scope": "15 independent long/cash accounts; no portfolio or options",
+  "historical_outer_first_year": 2008,
+  "historical_outer_last_year": 2023,
+  "reserved_start": "2024-01-01",
+  "reserve_policy": "Downloaded and quality audited only; no feature selection, fitting, forecasts or scoring on reserved dates. Historical reserve is not guaranteed unseen by prior team research. Prospective validation requires a later frozen deployment recipe.",
+  "horizons": [
+    5,
+    10,
+    20
+  ],
+  "targets": [
+    "classification",
+    "regression"
+  ],
+  "recipes": [
+    "technical",
+    "relationships",
+    "macro",
+    "all"
+  ],
+  "primary_eligible_recipes": [
+    "technical",
+    "relationships"
+  ],
+  "macro_gate": "Quarantined until release/vintage availability is verified. Lagged current FRED daily observations are archived diagnostic features only.",
+  "minimum_matured_weekly_rows": 104,
+  "inner_years": 2,
+  "minimum_inner_years": 2,
+  "inner_objective": "mean annual net return / annual return standard deviation (daily Sharpe at zero cash rate), pooled prior inner years; tie break recipe ID then fixed sizing",
+  "inner_shortlist": 1,
+  "cart": {
+    "max_depth": 3,
+    "min_samples_leaf": 0.08,
+    "random_state": 42
+  },
+  "random_forest": {
+    "n_estimators": 100,
+    "max_depth": 3,
+    "min_samples_leaf": 0.08,
+    "max_features": 0.75,
+    "random_state": 42,
+    "n_jobs": 1
+  },
+  "xgboost": {
+    "n_estimators": 80,
+    "max_depth": 2,
+    "learning_rate": 0.05,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 10,
+    "random_state": 42,
+    "n_jobs": 1
+  },
+  "learner_policy": "CART primary throughout; RF and XGBoost separately reported fixed-family challengers on the CART-selected recipe, with no promotion from outer results",
+  "classification_long_threshold": 0.5,
+  "regression_long_threshold": 0.0,
+  "fixed_weight": 1.0,
+  "volatility_target": 0.1,
+  "volatility_lookback": 63,
+  "volatility_floor": 0.05,
+  "max_weight": 1.0,
+  "sizing_selection": "fixed or capped volatility targeting selected on earlier inner results",
+  "cost_bps_one_way": [
+    0,
+    5,
+    10
+  ],
+  "selection_cost_bps": 5,
+  "label_roundtrip_hurdle": 0.001,
+  "cash_yield_annual": 0.0,
+  "distribution_accounting": "Consistently Yahoo dividend/split-adjusted OHLC total-return approximation; no separate dividend credits; fractional synthetic units; vendor actions need independent confirmation before official validation",
+  "weekly_clock": "Last completed session of W-FRI week after close, next actual session open. Incomplete final week excluded.",
+  "label_clock": "Entry next session open; outcome at open h sessions after entry; label available at outcome open. Strictly prior mature labels only at calendar year refit cutoff.",
+  "refit": "annual expanding, uniform weights; recipe/sizing reselection once annually using only earlier inner windows",
+  "selection_purge": "Training label end strictly before inner validation first decision and outer year start; 20-session common maturity gate across all recipes",
+  "news": "Pinned FinBERT smoke test and news ingestion contract; historical trading features gated on qualified timestamped relevant versioned corpus",
+  "uncertainty": "Moving block bootstrap of daily strategy-minus-buyhold returns, block length 20, 500 replicates; descriptive historical uncertainty after selection, not proof of significance",
+  "source_repository_commit": "923422fa315d1640cdb313aa261b4d7c5ad0924f",
+  "output_run_directory": "v2",
+  "engineering_correction": "v1 incomplete engineering run archived before final delivery; v2 retains December weekly decisions that execute at January open across year boundaries. No performance-driven parameter changes."
+}

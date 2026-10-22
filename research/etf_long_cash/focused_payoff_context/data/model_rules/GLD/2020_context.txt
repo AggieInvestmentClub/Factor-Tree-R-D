@@ -1,0 +1,13 @@
+|--- rel_market_correlation_63 <= -0.35
+|   |--- value: [-0.02]
+|--- rel_market_correlation_63 >  -0.35
+|   |--- rel_IEF_mom_63 <= 0.04
+|   |   |--- rel_DBC_mom_20 <= -0.06
+|   |   |   |--- value: [0.03]
+|   |   |--- rel_DBC_mom_20 >  -0.06
+|   |   |   |--- value: [0.00]
+|   |--- rel_IEF_mom_63 >  0.04
+|   |   |--- rel_market_beta_63 <= 0.07
+|   |   |   |--- value: [0.02]
+|   |   |--- rel_market_beta_63 >  0.07
+|   |   |   |--- value: [0.04]

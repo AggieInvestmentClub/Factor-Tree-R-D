@@ -1,0 +1,13 @@
+|--- rel_IEF_available_63 <= 0.50
+|   |--- ctx_sector_momentum_dispersion20 <= 0.04
+|   |   |--- class: 0
+|   |--- ctx_sector_momentum_dispersion20 >  0.04
+|   |   |--- class: 1
+|--- rel_IEF_available_63 >  0.50
+|   |--- tech_trend_200 <= 0.11
+|   |   |--- tech_vol_63 <= 0.15
+|   |   |   |--- class: 1
+|   |   |--- tech_vol_63 >  0.15
+|   |   |   |--- class: 1
+|   |--- tech_trend_200 >  0.11
+|   |   |--- class: 0

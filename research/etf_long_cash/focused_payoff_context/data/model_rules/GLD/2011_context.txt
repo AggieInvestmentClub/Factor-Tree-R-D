@@ -1,0 +1,13 @@
+|--- ctx_gold_vs_commodity_mom20 <= 0.11
+|   |--- tech_mom_252 <= 0.34
+|   |   |--- tech_drawdown_252 <= -0.13
+|   |   |   |--- value: [0.04]
+|   |   |--- tech_drawdown_252 >  -0.13
+|   |   |   |--- value: [0.01]
+|   |--- tech_mom_252 >  0.34
+|   |   |--- tech_drawdown_252 <= -0.04
+|   |   |   |--- value: [-0.02]
+|   |   |--- tech_drawdown_252 >  -0.04
+|   |   |   |--- value: [0.02]
+|--- ctx_gold_vs_commodity_mom20 >  0.11
+|   |--- value: [-0.02]

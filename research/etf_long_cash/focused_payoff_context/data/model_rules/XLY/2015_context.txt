@@ -1,0 +1,13 @@
+|--- tech_mom_63 <= -0.11
+|   |--- value: [0.05]
+|--- tech_mom_63 >  -0.11
+|   |--- rel_market_correlation_63 <= 0.88
+|   |   |--- tech_vol_63 <= 0.17
+|   |   |   |--- value: [0.00]
+|   |   |--- tech_vol_63 >  0.17
+|   |   |   |--- value: [-0.03]
+|   |--- rel_market_correlation_63 >  0.88
+|   |   |--- rel_GLD_mom_63 <= 0.05
+|   |   |   |--- value: [0.02]
+|   |   |--- rel_GLD_mom_63 >  0.05
+|   |   |   |--- value: [-0.00]

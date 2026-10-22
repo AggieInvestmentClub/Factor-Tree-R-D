@@ -1,0 +1,13 @@
+|--- rel_strength_63 <= 0.12
+|   |--- tech_mom_252 <= 0.06
+|   |   |--- tech_drawdown_252 <= -0.24
+|   |   |   |--- class: 1
+|   |   |--- tech_drawdown_252 >  -0.24
+|   |   |   |--- class: 0
+|   |--- tech_mom_252 >  0.06
+|   |   |--- rel_GLD_mom_63 <= 0.11
+|   |   |   |--- class: 1
+|   |   |--- rel_GLD_mom_63 >  0.11
+|   |   |   |--- class: 0
+|--- rel_strength_63 >  0.12
+|   |--- class: 0

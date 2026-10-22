@@ -1,0 +1,16 @@
+|--- rel_IEF_mom_63 <= 0.00
+|   |--- rel_market_beta_63 <= 1.01
+|   |   |--- class: 1
+|   |--- rel_market_beta_63 >  1.01
+|   |   |--- tech_range_20 <= 0.03
+|   |   |   |--- class: 0
+|   |   |--- tech_range_20 >  0.03
+|   |   |   |--- class: 1
+|--- rel_IEF_mom_63 >  0.00
+|   |--- tech_mom_5 <= 0.02
+|   |   |--- rel_strength_63 <= 0.01
+|   |   |   |--- class: 1
+|   |   |--- rel_strength_63 >  0.01
+|   |   |   |--- class: 1
+|   |--- tech_mom_5 >  0.02
+|   |   |--- class: 0

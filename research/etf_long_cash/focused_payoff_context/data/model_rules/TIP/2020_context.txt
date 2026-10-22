@@ -1,0 +1,13 @@
+|--- rel_GLD_mom_63 <= -0.05
+|   |--- tech_mom_126 <= 0.00
+|   |   |--- value: [-0.01]
+|   |--- tech_mom_126 >  0.00
+|   |   |--- value: [-0.00]
+|--- rel_GLD_mom_63 >  -0.05
+|   |--- tech_fast_slow <= -0.01
+|   |   |--- value: [0.01]
+|   |--- tech_fast_slow >  -0.01
+|   |   |--- rel_IEF_mom_20 <= 0.00
+|   |   |   |--- value: [0.00]
+|   |   |--- rel_IEF_mom_20 >  0.00
+|   |   |   |--- value: [0.00]

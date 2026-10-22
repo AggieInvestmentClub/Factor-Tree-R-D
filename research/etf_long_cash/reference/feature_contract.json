@@ -1,0 +1,503 @@
+{
+  "schema_version": 1,
+  "feature_version": "v1",
+  "generated_at_utc": "2026-10-20T04:23:59.602943+00:00",
+  "derivation": "Read actual build_features/macro_features source and enumerate actual numerical build_features output for all 15 instruments after truncating every price series and macro frame strictly before 2024-01-01. No trained models were rerun.",
+  "source_sha256": {
+    "src/research.py": "ea2992a39f77027a464e5fcc890efd88520c5f7fd3b845518514d650b11ae2e7",
+    "src/data_ingest.py": "2f76d4b91ff69f596fa01e7b7735920d366f7dc1fd9ca8006317f2203a3dd112",
+    "config/run_config.json": "d90e61ab7fa399aa84f3e0ecd70879d220af087c1e7a99d28f6ec3e50c70908f"
+  },
+  "registry_path": "data/feature_registry.csv",
+  "registry_sha256": "0ef2481ce9602fd7fc76abb7289be2bd57683a30b623f755d0f9939bf80d410b",
+  "counts": {
+    "all_numeric_features": 54,
+    "primary_eligible": 40,
+    "technical": 20,
+    "relationships": 20,
+    "quarantined_macro": 14
+  },
+  "actual_column_order": [
+    "tech_mom_5",
+    "tech_mom_10",
+    "tech_mom_20",
+    "tech_mom_63",
+    "tech_mom_126",
+    "tech_mom_252",
+    "tech_vol_20",
+    "tech_vol_63",
+    "tech_downside_20",
+    "tech_trend_50",
+    "tech_trend_200",
+    "tech_drawdown_252",
+    "tech_range_20",
+    "tech_gap_5",
+    "tech_reversal_5",
+    "tech_volume_ratio",
+    "tech_shock",
+    "tech_vol_jump",
+    "tech_acceleration",
+    "tech_fast_slow",
+    "rel_SPY_available_20",
+    "rel_SPY_mom_20",
+    "rel_SPY_available_63",
+    "rel_SPY_mom_63",
+    "rel_market_beta_63",
+    "rel_market_correlation_63",
+    "rel_market_residual_20",
+    "rel_strength_63",
+    "rel_IEF_available_20",
+    "rel_IEF_mom_20",
+    "rel_IEF_available_63",
+    "rel_IEF_mom_63",
+    "rel_GLD_available_20",
+    "rel_GLD_mom_20",
+    "rel_GLD_available_63",
+    "rel_GLD_mom_63",
+    "rel_DBC_available_20",
+    "rel_DBC_mom_20",
+    "rel_DBC_available_63",
+    "rel_DBC_mom_63",
+    "macro_dgs10",
+    "macro_dgs10_change20",
+    "macro_dgs2",
+    "macro_dgs2_change20",
+    "macro_dtb3",
+    "macro_dtb3_change20",
+    "macro_t10yie",
+    "macro_t10yie_change20",
+    "macro_vixcls",
+    "macro_vixcls_change20",
+    "macro_bamlh0a0hym2",
+    "macro_bamlh0a0hym2_change20",
+    "macro_term_spread",
+    "macro_vix_log"
+  ],
+  "formula_notation": {
+    "C/O/H/L": "Instrument adj_close/adj_open/adj_high/adj_low",
+    "r_t": "C_t/C_(t-1)-1 using pct_change(fill_method=None)",
+    "session": "One row of that instrument's observed trading-session index; macro change20 uses aligned SPY session rows",
+    "std/cov/var": "pandas rolling sample statistics, default ddof=1",
+    "sqrt(252)": "Fixed 252-session annualization"
+  },
+  "unit_rules": [
+    "All price returns and volatility features use decimal units: 0.05 means 5%.",
+    "FRED interest/breakeven/spread levels remain percent units: 5 means 5%, not 0.05. Their differences are percentage points, not relative changes.",
+    "VIX remains index points; log-VIX logs that numeric level. No FRED feature is divided by 100 in the current source."
+  ],
+  "timing": {
+    "decision": "Last completed session of W-FRI week after close, next actual session open. Incomplete final week excluded.",
+    "execution": "Next actual instrument session open; no same-close fill",
+    "technical_relationship_availability": "After instrument and required peer completed close on date t; used only after the last completed W-FRI session close, execution next actual session open. Daily files do not prove original vendor receipt timestamps.",
+    "macro_assumption": "Source observation date + pandas BDay(2), weekdays only (not an exchange/US holiday calendar); backward merge_asof onto SPY sessions. This assumed date is not verified original publication/receipt or vintage availability; quarantined.",
+    "reserved_start": "2024-01-01",
+    "reserved_features_computed_for_this_enumeration": false
+  },
+  "missingness": {
+    "price_fill": "none",
+    "rolling": "No price forward/backfill. Rolling windows require pandas default full-window nonmissing inputs. NaN and nonfinite features remain missing; each fitted recipe drops rows missing any required feature.",
+    "peer_momentum": "Peer prices reindexed to instrument sessions without price fill. Uncomputable n-session peer momentum (prelisting, initial warmup or missing source) becomes explicit zero with paired rel_PEER_available_n=0. Zero is a placeholder, not a price/return observation.",
+    "macro": "Drop missing raw macro observations; backward asof carry last assumed-available observation with no staleness cap. Preserve missing before first available observation; change20 also missing for first 20 aligned sessions. No prices are filled.",
+    "nonfinite": "build_features replaces positive/negative infinity by NaN",
+    "model_rows": "Recipe-specific complete-case drop; no learned imputer or scaler fitted"
+  },
+  "eligibility": {
+    "primary": "20 technical features for technical recipe; all 40 technical+relationship features for relationships recipe",
+    "macro": "14 archived diagnostic candidates quarantined; macro/all recipes ineligible under current macro PIT gate",
+    "monthly": "CPIAUCSL, UNRATE, INDPRO archived only; no numerical feature columns emitted",
+    "news": "FinBERT outputs are separate archived demonstrations; no FinBERT/news features enter these 54 model input columns",
+    "official_validation": "Primary eligibility is for retrospective v1 research, not certification of original-vintage market data. Corporate actions and independent price verification remain necessary."
+  },
+  "implementation_notes": [
+    "tech_shock divides current return by strictly lagged 63-return standard deviation.",
+    "rel_market_residual_20 uses strictly lagged 63-return market beta.",
+    "GLD/DBC beforelisting peer momenta use zero placeholders paired with availability flags. The same actual implementation covers initial warmup and any other uncomputable peer-momentum endpoint; underlying prices are never filled.",
+    "tech_fast_slow emits recursive EMA ratio from the first close; there is no separate 63-session EMA warmup gate.",
+    "Macro BDay(2) offset is weekday-based and has no intraday publication clock or maximum staleness limit.",
+    "Volume is retained as the provider returns it, with no additional verified split adjustment; splits and other actions can distort relative-volume ratios.",
+    "UUP price history was archived as a candidate proxy but build_features currently uses only SPY, IEF, GLD and DBC peers."
+  ],
+  "representative_development_enumeration": {
+    "ticker": "XLK",
+    "first_input_date": "1998-12-22",
+    "last_input_date": "2023-12-29",
+    "rows": 6296,
+    "features": {
+      "tech_mom_5": {
+        "nonmissing": 6291,
+        "missing": 5,
+        "first_nonmissing": "1998-12-30"
+      },
+      "tech_mom_10": {
+        "nonmissing": 6286,
+        "missing": 10,
+        "first_nonmissing": "1999-01-07"
+      },
+      "tech_mom_20": {
+        "nonmissing": 6276,
+        "missing": 20,
+        "first_nonmissing": "1999-01-22"
+      },
+      "tech_mom_63": {
+        "nonmissing": 6233,
+        "missing": 63,
+        "first_nonmissing": "1999-03-25"
+      },
+      "tech_mom_126": {
+        "nonmissing": 6170,
+        "missing": 126,
+        "first_nonmissing": "1999-06-24"
+      },
+      "tech_mom_252": {
+        "nonmissing": 6044,
+        "missing": 252,
+        "first_nonmissing": "1999-12-22"
+      },
+      "tech_vol_20": {
+        "nonmissing": 6276,
+        "missing": 20,
+        "first_nonmissing": "1999-01-22"
+      },
+      "tech_vol_63": {
+        "nonmissing": 6233,
+        "missing": 63,
+        "first_nonmissing": "1999-03-25"
+      },
+      "tech_downside_20": {
+        "nonmissing": 6276,
+        "missing": 20,
+        "first_nonmissing": "1999-01-22"
+      },
+      "tech_trend_50": {
+        "nonmissing": 6247,
+        "missing": 49,
+        "first_nonmissing": "1999-03-05"
+      },
+      "tech_trend_200": {
+        "nonmissing": 6097,
+        "missing": 199,
+        "first_nonmissing": "1999-10-07"
+      },
+      "tech_drawdown_252": {
+        "nonmissing": 6045,
+        "missing": 251,
+        "first_nonmissing": "1999-12-21"
+      },
+      "tech_range_20": {
+        "nonmissing": 6277,
+        "missing": 19,
+        "first_nonmissing": "1999-01-21"
+      },
+      "tech_gap_5": {
+        "nonmissing": 6291,
+        "missing": 5,
+        "first_nonmissing": "1998-12-30"
+      },
+      "tech_reversal_5": {
+        "nonmissing": 6291,
+        "missing": 5,
+        "first_nonmissing": "1998-12-30"
+      },
+      "tech_volume_ratio": {
+        "nonmissing": 6234,
+        "missing": 62,
+        "first_nonmissing": "1999-03-24"
+      },
+      "tech_shock": {
+        "nonmissing": 6232,
+        "missing": 64,
+        "first_nonmissing": "1999-03-26"
+      },
+      "tech_vol_jump": {
+        "nonmissing": 6233,
+        "missing": 63,
+        "first_nonmissing": "1999-03-25"
+      },
+      "tech_acceleration": {
+        "nonmissing": 6256,
+        "missing": 40,
+        "first_nonmissing": "1999-02-22"
+      },
+      "tech_fast_slow": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_SPY_available_20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_SPY_mom_20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_SPY_available_63": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_SPY_mom_63": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_market_beta_63": {
+        "nonmissing": 6233,
+        "missing": 63,
+        "first_nonmissing": "1999-03-25"
+      },
+      "rel_market_correlation_63": {
+        "nonmissing": 6233,
+        "missing": 63,
+        "first_nonmissing": "1999-03-25"
+      },
+      "rel_market_residual_20": {
+        "nonmissing": 6213,
+        "missing": 83,
+        "first_nonmissing": "1999-04-23"
+      },
+      "rel_strength_63": {
+        "nonmissing": 6233,
+        "missing": 63,
+        "first_nonmissing": "1999-03-25"
+      },
+      "rel_IEF_available_20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_IEF_mom_20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_IEF_available_63": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_IEF_mom_63": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_GLD_available_20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_GLD_mom_20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_GLD_available_63": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_GLD_mom_63": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_DBC_available_20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_DBC_mom_20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_DBC_available_63": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "rel_DBC_mom_63": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "macro_dgs10": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "macro_dgs10_change20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "macro_dgs2": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "macro_dgs2_change20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "macro_dtb3": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "macro_dtb3_change20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "macro_t10yie": {
+        "nonmissing": 5283,
+        "missing": 1013,
+        "first_nonmissing": "2003-01-06"
+      },
+      "macro_t10yie_change20": {
+        "nonmissing": 5263,
+        "missing": 1033,
+        "first_nonmissing": "2003-02-04"
+      },
+      "macro_vixcls": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "macro_vixcls_change20": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "macro_bamlh0a0hym2": {
+        "nonmissing": 47,
+        "missing": 6249,
+        "first_nonmissing": "2023-10-24"
+      },
+      "macro_bamlh0a0hym2_change20": {
+        "nonmissing": 27,
+        "missing": 6269,
+        "first_nonmissing": "2023-11-21"
+      },
+      "macro_term_spread": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      },
+      "macro_vix_log": {
+        "nonmissing": 6296,
+        "missing": 0,
+        "first_nonmissing": "1998-12-22"
+      }
+    }
+  },
+  "instrument_enumeration": {
+    "XLK": {
+      "rows": 6296,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 6044
+    },
+    "XLF": {
+      "rows": 6296,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 6044
+    },
+    "XLE": {
+      "rows": 6296,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 6044
+    },
+    "XLV": {
+      "rows": 6296,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 6044
+    },
+    "XLI": {
+      "rows": 6296,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 6044
+    },
+    "XLY": {
+      "rows": 6296,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 6044
+    },
+    "XLP": {
+      "rows": 6296,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 6044
+    },
+    "XLU": {
+      "rows": 6296,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 6044
+    },
+    "XLB": {
+      "rows": 6296,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 6044
+    },
+    "IEF": {
+      "rows": 5393,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 5141
+    },
+    "TLT": {
+      "rows": 5393,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 5141
+    },
+    "TIP": {
+      "rows": 5051,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 4799
+    },
+    "GLD": {
+      "rows": 4811,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 4559
+    },
+    "DBC": {
+      "rows": 4506,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 4254
+    },
+    "VNQ": {
+      "rows": 4847,
+      "numeric_features": 54,
+      "last_input_date": "2023-12-29",
+      "primary_complete_rows": 4595
+    }
+  },
+  "macro_unit_sources": {
+    "DGS10": "https://fred.stlouisfed.org/series/DGS10",
+    "DGS2": "https://fred.stlouisfed.org/series/DGS2",
+    "DTB3": "https://fred.stlouisfed.org/series/DTB3",
+    "T10YIE": "https://fred.stlouisfed.org/series/T10YIE",
+    "VIXCLS": "https://fred.stlouisfed.org/series/VIXCLS",
+    "BAMLH0A0HYM2": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+  },
+  "notebook_usage": {
+    "registry": "Load data/feature_registry.csv for formulas, units, minimum history, availability rules and eligibility filters",
+    "contract": "Use counts, actual_column_order and representative_development_enumeration for input library documentation; macro/news exclusion remains visible",
+    "existing_outputs": "No models, forecasts, ledgers, model math or source code were modified by this documentation task"
+  }
+}

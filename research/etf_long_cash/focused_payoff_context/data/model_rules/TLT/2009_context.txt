@@ -1,0 +1,10 @@
+|--- tech_vol_20 <= 0.17
+|   |--- tech_fast_slow <= 0.02
+|   |   |--- tech_volume_ratio <= -0.27
+|   |   |   |--- value: [0.01]
+|   |   |--- tech_volume_ratio >  -0.27
+|   |   |   |--- value: [0.00]
+|   |--- tech_fast_slow >  0.02
+|   |   |--- value: [-0.01]
+|--- tech_vol_20 >  0.17
+|   |--- value: [0.02]

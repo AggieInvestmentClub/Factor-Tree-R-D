@@ -1,0 +1,16 @@
+|--- tech_volume_ratio <= 0.18
+|   |--- ctx_equity_bond_corr63 <= 0.02
+|   |   |--- tech_vol_jump <= -0.08
+|   |   |   |--- class: 0
+|   |   |--- tech_vol_jump >  -0.08
+|   |   |   |--- class: 1
+|   |--- ctx_equity_bond_corr63 >  0.02
+|   |   |--- class: 1
+|--- tech_volume_ratio >  0.18
+|   |--- tech_mom_126 <= 0.05
+|   |   |--- tech_drawdown_252 <= -0.07
+|   |   |   |--- class: 0
+|   |   |--- tech_drawdown_252 >  -0.07
+|   |   |   |--- class: 1
+|   |--- tech_mom_126 >  0.05
+|   |   |--- class: 0

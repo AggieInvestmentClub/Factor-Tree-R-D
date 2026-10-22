@@ -1,0 +1,10 @@
+|--- tech_gap_5 <= 0.00
+|   |--- tech_trend_50 <= -0.01
+|   |   |--- value: [0.02]
+|   |--- tech_trend_50 >  -0.01
+|   |   |--- ctx_nominal_duration_mom20 <= 0.01
+|   |   |   |--- value: [0.01]
+|   |   |--- ctx_nominal_duration_mom20 >  0.01
+|   |   |   |--- value: [-0.00]
+|--- tech_gap_5 >  0.00
+|   |--- value: [-0.01]

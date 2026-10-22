@@ -1,0 +1,22 @@
+# New local training/download artifacts; the reviewed focused report is tracked.
+/data/
+/models/
+/runs/
+/reports/
+/research_notebook*.ipynb
+/payoff_context*.zip
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+.venv_*/
+.cache/
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+lseg-data.config.json
+refinitiv-data.config.json

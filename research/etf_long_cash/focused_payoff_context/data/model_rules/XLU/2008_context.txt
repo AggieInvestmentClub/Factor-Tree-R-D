@@ -1,0 +1,13 @@
+|--- rel_IEF_mom_63 <= 0.04
+|   |--- rel_IEF_available_63 <= 0.50
+|   |   |--- tech_range_20 <= 0.02
+|   |   |   |--- class: 0
+|   |   |--- tech_range_20 >  0.02
+|   |   |   |--- class: 1
+|   |--- rel_IEF_available_63 >  0.50
+|   |   |--- tech_mom_63 <= -0.02
+|   |   |   |--- class: 1
+|   |   |--- tech_mom_63 >  -0.02
+|   |   |   |--- class: 1
+|--- rel_IEF_mom_63 >  0.04
+|   |--- class: 1

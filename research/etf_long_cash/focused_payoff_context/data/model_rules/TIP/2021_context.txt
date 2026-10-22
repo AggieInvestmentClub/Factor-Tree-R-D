@@ -1,0 +1,10 @@
+|--- tech_mom_20 <= 0.02
+|   |--- rel_GLD_mom_63 <= -0.07
+|   |   |--- value: [-0.00]
+|   |--- rel_GLD_mom_63 >  -0.07
+|   |   |--- rel_strength_63 <= 0.06
+|   |   |   |--- value: [0.00]
+|   |   |--- rel_strength_63 >  0.06
+|   |   |   |--- value: [0.00]
+|--- tech_mom_20 >  0.02
+|   |--- value: [-0.00]

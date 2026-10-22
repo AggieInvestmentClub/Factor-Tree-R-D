@@ -1,0 +1,2 @@
+# Preserve exact audited bytes; CRLF remains a valid original terminator.
+* -text whitespace=cr-at-eol

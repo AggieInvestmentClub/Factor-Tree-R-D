@@ -1,0 +1,16 @@
+|--- ctx_own_cyclical_spread_corr63 <= 0.54
+|   |--- tech_vol_63 <= 0.17
+|   |   |--- class: 1
+|   |--- tech_vol_63 >  0.17
+|   |   |--- tech_vol_20 <= 0.30
+|   |   |   |--- class: 0
+|   |   |--- tech_vol_20 >  0.30
+|   |   |   |--- class: 1
+|--- ctx_own_cyclical_spread_corr63 >  0.54
+|   |--- tech_fast_slow <= 0.04
+|   |   |--- tech_vol_jump <= -0.23
+|   |   |   |--- class: 0
+|   |   |--- tech_vol_jump >  -0.23
+|   |   |   |--- class: 1
+|   |--- tech_fast_slow >  0.04
+|   |   |--- class: 0
