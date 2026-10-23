@@ -1,5 +1,4 @@
 """Readable plotting/reporting helpers for the focused saved-result notebook."""
-import hashlib
 import html
 import json
 from pathlib import Path
@@ -7,7 +6,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import PercentFormatter, FuncFormatter
-from trade_statistics import summary_statistics, completed_episodes, annual_model_statistics
 
 LABELS = {"payoff_context": "Payoff + context", "etf_hold": "ETF buy & hold", "spy_hold": "S&P 500 (SPY) buy & hold"}
 NAMES = {"XLK":"Technology","XLF":"Financials","XLE":"Energy","XLV":"Health care",
@@ -15,6 +13,26 @@ NAMES = {"XLK":"Technology","XLF":"Financials","XLE":"Energy","XLV":"Health care
          "XLU":"Utilities","XLB":"Materials","IEF":"7–10 year Treasuries",
          "TLT":"20+ year Treasuries","TIP":"Inflation-protected Treasuries",
          "GLD":"Gold","DBC":"Broad commodities","VNQ":"U.S. real estate"}
+
+
+def read_table(root, filename, **kwargs):
+    """Read an exact saved table, preferring CSV.gz to an uncompressed CSV.
+
+    ``root`` is the containing directory; ``filename`` may include .csv or
+    .csv.gz. Round-trip parsing preserves binary floats and fitted bin edges.
+    """
+    path = Path(root) / filename
+    if path.name.endswith(".csv.gz"):
+        candidates = [path, path.with_suffix("")]
+    elif path.suffix == ".csv":
+        candidates = [path.with_name(path.name + ".gz"), path]
+    else:
+        candidates = [path.with_name(path.name + ".csv.gz"), path.with_suffix(".csv")]
+    selected = next((candidate for candidate in candidates if candidate.is_file()), None)
+    if selected is None:
+        raise FileNotFoundError(f"Missing saved report table: {path}")
+    kwargs.setdefault("float_precision", "round_trip")
+    return pd.read_csv(selected, **kwargs)
 
 
 def performance(d):
@@ -37,24 +55,42 @@ def tab(d, percent=()):
 class FocusedReport:
     def __init__(self, root):
         self.root = Path(root)
-        self.manifest = json.loads((self.root/"manifest.json").read_text())
-        self.ledgers = pd.read_csv(self.root/"data/ledgers.csv", parse_dates=["Date"])
-        self.forecasts = pd.read_csv(self.root/"data/forecasts.csv", parse_dates=["decision_date","entry_date","fit_cutoff","train_latest_label","calibration_cutoff","calibration_latest_label","label_end"])
-        self.usage = pd.read_csv(self.root/"data/feature_usage.csv")
-        self.factors = pd.read_csv(self.root/"data/factor_dictionary.csv").fillna("")
-        self.costs = pd.read_csv(self.root/"data/cost_sensitivity.csv")
-        calendar_path=self.root/"data/session_calendar.csv"
-        self.session_calendar=pd.DatetimeIndex(pd.read_csv(calendar_path,parse_dates=["Date"]).Date) if calendar_path.exists() else None
+        self.manifest = json.loads((self.root/"manifest.json").read_text(encoding="utf-8"))
+        self.ledgers = read_table(self.root/"data", "ledgers.csv", parse_dates=["Date"])
+        self.forecasts = read_table(self.root/"data", "forecasts.csv", parse_dates=["decision_date","entry_date"])
+        self.usage = read_table(self.root/"data", "feature_usage.csv")
+        self.factors = read_table(self.root/"data", "factor_dictionary.csv").fillna("")
+        self.costs = read_table(self.root/"data", "cost_sensitivity.csv")
+        self.summaries = read_table(self.root/"data", "strategy_summary.csv")
+        self.episodes = read_table(self.root/"data", "trade_episodes.csv", parse_dates=["entry_date","exit_date"])
+        self.model_statistics = read_table(self.root/"data", "annual_model_statistics.csv")
+        self.rules = json.loads((self.root/"data/model_rules.json").read_text(encoding="utf-8"))
         assert set(self.ledgers.strategy) == set(LABELS)
-        assert set(self.forecasts.variant) == {"payoff_context"}
+        if "variant" in self.forecasts:
+            assert set(self.forecasts.variant) == {"payoff_context"}
         assert self.ledgers.Date.max() < pd.Timestamp("2024-01-01")
         assert self.forecasts.decision_date.max() < pd.Timestamp("2024-01-01")
-        (self.root/"figures").mkdir(exist_ok=True)
 
     def ledger(self, ticker, strategy="payoff_context"):
-        d=self.ledgers.loc[self.ledgers.ticker.eq(ticker)&self.ledgers.strategy.eq(strategy)].set_index("Date").sort_index()
-        if self.session_calendar is not None:d.attrs["session_calendar"]=self.session_calendar
-        return d
+        return self.ledgers.loc[self.ledgers.ticker.eq(ticker)&self.ledgers.strategy.eq(strategy)].set_index("Date").sort_index()
+
+    def summary(self, ticker):
+        """Return the already audited whole-account statistics, without refitting."""
+        rows = self.summaries.loc[self.summaries.ticker.eq(ticker)]
+        if len(rows) != 1:
+            raise ValueError(f"Expected one saved strategy summary for {ticker}")
+        result = {key: None if pd.isna(value) else value for key, value in rows.iloc[0].to_dict().items()
+                  if key != "ticker"}
+        counts = result.get("decision_horizon_counts")
+        if isinstance(counts, str):
+            result["decision_horizon_counts"] = json.loads(counts)
+        return result
+
+    def completed_episodes(self, ticker):
+        return self.episodes.loc[self.episodes.ticker.eq(ticker)].drop(columns="ticker").copy()
+
+    def annual_statistics(self, ticker):
+        return self.model_statistics.loc[self.model_statistics.ticker.eq(ticker)].drop(columns="ticker").copy()
 
     def workflow(self):
         return """<p><strong>Research workflow:</strong> completed weekly close → next-session open →
@@ -93,7 +129,6 @@ to the original forecast signal. Weight limits are 0–100%, with a 5% volatilit
             ax.spines[["top","right"]].set_visible(False)
             ax.grid(alpha=.15)
         fig.tight_layout()
-        fig.savefig(self.root/"figures"/f"{ticker}.png",dpi=140,bbox_inches="tight")
         plt.show()
         plt.close(fig)
 
@@ -101,7 +136,7 @@ to the original forecast signal. Weight limits are 0–100%, with a 5% volatilit
         d = self.ledger(ticker)
         f = self.forecasts.loc[self.forecasts.ticker.eq(ticker)]
         usage = self.usage.loc[self.usage.ticker.eq(ticker)]
-        stats = summary_statistics(d,f)
+        stats = self.summary(ticker)
         rows = [{"Account": LABELS[s], **performance(self.ledger(ticker,s))} for s in LABELS]
         perf = tab(pd.DataFrame(rows), ["CAGR","Max drawdown","Volatility","Total return","Daily exposure"])
         # Preserve every statistic and its exact denominator in an expandable table.
@@ -110,7 +145,7 @@ to the original forecast signal. Weight limits are 0–100%, with a 5% volatilit
             if isinstance(value,(dict,list)): value=json.dumps(value,default=str)
             if value is None: value="—"
             statistic_rows.append({"Measure":key.replace("_"," "), "Value":value})
-        annual = annual_model_statistics(f,d,usage)
+        annual = self.annual_statistics(ticker)
         brief_annual = annual[["model_year","target_types","horizons_sessions","base_factor_recipes",
                                "sizing_rules","decision_weeks","training_rows_min",
                                "forecast_feature_count_min","active_tree_feature_count"]].rename(
@@ -124,10 +159,10 @@ to the original forecast signal. Weight limits are 0–100%, with a 5% volatilit
         definitions = factors[["feature_name","family","formula","inputs","unit","available_at_rule","missingness_policy","interpretation"]].copy()
         definitions = definitions.rename(columns={"feature_name":"Feature","family":"Family","formula":"Definition","inputs":"Inputs","unit":"Unit","available_at_rule":"Availability","missingness_policy":"Missing values","interpretation":"Limits"})
         cost = self.costs.loc[self.costs.ticker.eq(ticker),["cost_bps","sharpe","cagr","max_drawdown","average_exposure","turnover_per_year"]].copy()
-        episodes = completed_episodes(d)
+        episodes = self.completed_episodes(ticker)
         rules=[]
-        for path in sorted((self.root/"data/model_rules"/ticker).glob("*.txt")):
-            rules.append(f"<details><summary>{html.escape(path.stem.replace('_context',''))} CART rules</summary><pre>{html.escape(path.read_text(encoding='utf-8'))}</pre></details>")
+        for year,text in sorted(self.rules.get(ticker, {}).items()):
+            rules.append(f"<details><summary>{html.escape(str(year).replace('_context',''))} CART rules</summary><pre>{html.escape(text)}</pre></details>")
         recent=f.sort_values("decision_date").tail(12)[["decision_date","entry_date","target","horizon","prediction","expected_payoff","payoff_bin_n","oof_rows","feature_count","signal","target_weight"]]
         def pct(key):
             value=stats.get(key)
@@ -162,5 +197,13 @@ to the original forecast signal. Weight limits are 0–100%, with a 5% volatilit
         return out
 
     def verification(self):
-        audit=json.loads((self.root/"reference_sources/v3_audit.json").read_text())
-        return f"<p>Parent saved-result audit: <strong>{audit['status']}</strong>, {audit['checks_passed']:,}/{audit['checks_total']:,} checks. Reserved period starts2024-01-01 and remains unscored. Source/config hashes and the curated-input provenance are in manifest.json. Local helper source and factor formulas accompany the notebook.</p>"
+        saved=json.loads((self.root/"verification.json").read_text(encoding="utf-8"))
+        audit=saved.get("source_audit", {})
+        lean=saved.get("lean_validation", {})
+        source_status=html.escape(str(audit.get("status", "recorded in source provenance")))
+        counts=(f", {int(audit['checks_passed']):,}/{int(audit['checks_total']):,} checks"
+                if "checks_passed" in audit and "checks_total" in audit else "")
+        return (f"<p>Preserved full-source audit: <strong>{source_status}</strong>{counts}. "
+                f"Lean report validation: <strong>{html.escape(str(lean.get('status', saved.get('status', 'not recorded'))))}</strong>. "
+                "The full cashflow and OOF audits used the original local inputs; this compact report retains saved display tables and daily view series. "
+                "Reserved observations start 2024-01-01 and remain unscored. Published-input hashes and source provenance are in manifest.json.</p>")

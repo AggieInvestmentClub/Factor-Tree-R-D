@@ -1,113 +1,19 @@
 {
-  "status": "PASS",
-  "generated_utc": "2026-10-20T22:28:13.739146+00:00",
   "source_run": "v3.1",
-  "variant": "payoff_context",
-  "executed_code_cells": 139,
-  "cell_errors": 0,
-  "embedded_notebook_images": 61,
-  "embedded_html_images": 61,
-  "independent_etf_accounts": 15,
-  "curves_per_etf": 3,
-  "paired_buy_hold_accounts_verified": 30,
-  "source_file_hashes_checked": 91,
-  "frozen_v2_hashes_checked": 1604,
-  "original_v3_deliverables_unchanged": true,
   "reserved_start": "2024-01-01",
   "reserved_scored": false,
-  "episode_statistics": [
-    {
-      "ticker": "XLK",
-      "completed_episodes": 35,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "XLF",
-      "completed_episodes": 22,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "XLE",
-      "completed_episodes": 62,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "XLV",
-      "completed_episodes": 27,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "XLI",
-      "completed_episodes": 36,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "XLY",
-      "completed_episodes": 11,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "XLP",
-      "completed_episodes": 45,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "XLU",
-      "completed_episodes": 30,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "XLB",
-      "completed_episodes": 60,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "IEF",
-      "completed_episodes": 48,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "TLT",
-      "completed_episodes": 56,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "TIP",
-      "completed_episodes": 67,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "GLD",
-      "completed_episodes": 15,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "DBC",
-      "completed_episodes": 22,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    },
-    {
-      "ticker": "VNQ",
-      "completed_episodes": 51,
-      "episode_pnl_reconciles": true,
-      "matched_three_curve_dates": true
-    }
-  ],
-  "reporting_edition": "statistics-heavy",
-  "independent_diagnostic_checks": 10408,
-  "visual_qa": "Original3-curve equities retained; representative monthly/annual/rolling/tail panels and bond forecast/payoff/holding panels inspected."
+  "source_audit": {
+    "status": "PASS",
+    "checks_passed": 10408,
+    "checks_total": 10408,
+    "scope": "Preserved full local cashflow/OOF audit; not rerun on reduced display data"
+  },
+  "lean_validation": {
+    "status": "PASS",
+    "checks_passed": 845,
+    "executed_cells": 139,
+    "embedded_figures": 61,
+    "reserved_scored": false,
+    "scope": "Retained-data hashes, curves, cached-statistic consistency and notebook structure"
+  }
 }

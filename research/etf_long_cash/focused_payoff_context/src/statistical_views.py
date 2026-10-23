@@ -1,13 +1,11 @@
 """Statistics-heavy, saved-result notebook views for the combined procedure."""
 from pathlib import Path
-import html,json,hashlib
+import html,json
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import PercentFormatter
-from notebook_views import FocusedReport, LABELS, performance, tab
-from temporal_statistics import monthly_returns, annual_statistics, drawdown_episodes, risk_statistics
-from trade_statistics import completed_episodes, summary_statistics
+from notebook_views import FocusedReport, LABELS, performance, tab, read_table
 from forecast_statistics import forecast_summary, probability_reliability, payoff_reliability, weekly_summary
 
 COLORS={"payoff_context":"#087f82","etf_hold":"#93649a","spy_hold":"#758399"}
@@ -32,19 +30,18 @@ def metrics_matrix(records):
 class StatisticalReport:
     def __init__(self,root):
         self.root=Path(root);self.R=FocusedReport(root)
-        self.outcomes=pd.read_csv(self.root/"data/forecast_outcomes.csv",parse_dates=["decision_date","entry_date","label_end"])
-        self.intervals=pd.read_csv(self.root/"data/weekly_policy_intervals.csv",parse_dates=["decision_date","entry_date","interval_end"])
-        self.paired=pd.read_csv(self.root/"data/paired_benchmark_uncertainty.csv")
-        self.original_uncertainty=pd.read_csv(self.root/"data/v3_uncertainty.csv")
-        self.common=pd.read_csv(self.root/"data/v3_common_period.csv")
-        self.passive=pd.read_csv(self.root/"data/passive_vol_control.csv",parse_dates=["Date"])
-        self.availability=pd.read_csv(self.root/"data/context_availability.csv")
-        self.calibrators=json.loads((self.root/"data/calibrators.json").read_text())
+        self.outcomes=read_table(self.root/"data","forecast_outcomes.csv",parse_dates=["decision_date","entry_date","label_end"])
+        self.intervals=read_table(self.root/"data","weekly_policy_intervals.csv",parse_dates=["decision_date","entry_date","interval_end"])
+        self.paired=read_table(self.root/"data","paired_benchmark_uncertainty.csv")
+        self.original_uncertainty=read_table(self.root/"data","v3_uncertainty.csv")
+        self.common=read_table(self.root/"data","v3_common_period.csv")
+        self.passive=read_table(self.root/"data","passive_vol_summary.csv")
+        self.availability=read_table(self.root/"data","context_availability.csv")
+        self.calibrators=json.loads((self.root/"data/calibrators.json").read_text(encoding="utf-8"))
         self.tickers=self.R.manifest["tickers"]
         self.cache={}
         for name in ["monthly_returns","annual_performance","risk_statistics","drawdown_episodes"]:
-            path=self.root/"data"/f"{name}.csv"
-            if path.exists():self.cache[name]=pd.read_csv(path)
+            self.cache[name]=read_table(self.root/"data",f"{name}.csv")
         assert set(self.outcomes.ticker)==set(self.tickers)
 
     def cached(self,name,t,strategy="payoff_context"):
@@ -53,7 +50,6 @@ class StatisticalReport:
 
     def save(self,fig,name):
         fig.tight_layout()
-        fig.savefig(self.root/"figures"/f"{name}.png",dpi=110,bbox_inches="tight")
         plt.show()
         plt.close(fig)
 
@@ -61,7 +57,7 @@ class StatisticalReport:
         perf=[];trades=[];bench=[];recipes=[]
         for t in self.tickers:
             d=self.R.ledger(t);f=self.R.forecasts.loc[self.R.forecasts.ticker.eq(t)]
-            s=summary_statistics(d,f)
+            s=self.R.summary(t)
             perf.append({"ETF":t,**performance(d)})
             trades.append({"ETF":t,"Episodes":s["completed_episodes"],"Wins":s["net_wins"],"Losses":s["net_losses"],
                            "Win rate":s["win_rate"],"Profit factor":s["net_profit_factor"],
@@ -69,9 +65,10 @@ class StatisticalReport:
                            "Forecast horizon mean":s["decision_horizon_mean_sessions"],
                            "LONG target size mean":s["mean_target_weight_when_long"],"LONG decision rate":s["long_signal_rate"]})
             p=performance(d);q=performance(self.R.ledger(t,"etf_hold"));z=performance(self.R.ledger(t,"spy_hold"))
-            v=self.passive.loc[self.passive.ticker.eq(t)].set_index("Date")
+            v=self.passive.loc[self.passive.ticker.eq(t)]
+            assert len(v)==1, f"Expected one saved passive volatility summary for {t}"
             bench.append({"ETF":t,"Model Sharpe":p["Net Sharpe"],"ETF hold Sharpe":q["Net Sharpe"],
-                          "SPY hold Sharpe":z["Net Sharpe"],"Passive 10% vol Sharpe":performance(v)["Net Sharpe"],
+                          "SPY hold Sharpe":z["Net Sharpe"],"Passive 10% vol Sharpe":v.iloc[0].sharpe,
                           "Delta vs ETF":p["Net Sharpe"]-q["Net Sharpe"],"Delta vs SPY":p["Net Sharpe"]-z["Net Sharpe"]})
             recipes.append({"ETF":t,"Classification decision fraction":f.target.eq("classification").mean(),
                             "Regression decision fraction":f.target.eq("regression").mean(),
@@ -94,7 +91,7 @@ class StatisticalReport:
         wins=[]
         for t in self.tickers:
             f=self.R.forecasts.loc[self.R.forecasts.ticker.eq(t)]
-            wins.append(summary_statistics(self.R.ledger(t),f)["win_rate"])
+            wins.append(self.R.summary(t)["win_rate"])
         axes[1].barh(y,wins,color=COLORS["payoff_context"])
         axes[1].set_yticks(y,self.tickers);axes[1].invert_yaxis();axes[1].set_xlim(0,1)
         axes[1].xaxis.set_major_formatter(PercentFormatter(1));axes[1].set_title("Completed-episode win rate")
@@ -109,7 +106,7 @@ class StatisticalReport:
         self.save(fig,"dashboard_statistics")
 
     def coverage_tables(self):
-        coverage=pd.read_csv(self.root/"data/coverage_pre2024.csv")
+        coverage=read_table(self.root/"data","coverage_pre2024.csv")
         return table(coverage)+fold("Context-factor availability on actual decision dates",tab(self.availability,["mean_available_fraction"]))+"""
 <p>Only technical, market-relationship and ETF-price-context inputs entered the model. Missing context uses a zero value and an explicit availability flag. Macro archives and FinBERT news are excluded from fitted historical performance. Data coverage is cropped before2024; trailing labels that would need reserved observations remain missing.</p>"""
 
@@ -154,7 +151,7 @@ class StatisticalReport:
         for s in LABELS:
             d=self.cached("annual_performance",t,s);d.insert(0,"Account",LABELS[s]);annual.append(d)
         own=self.R.ledger(t);episodes=self.cached("drawdown_episodes",t)
-        trades=completed_episodes(own)
+        trades=self.R.completed_episodes(t)
         pnl=trades.net_pnl
         gross_profit=pnl.clip(lower=0).sum()
         concentration=pd.DataFrame([{"completed_episodes":len(trades),"mean_episode_net_pnl":pnl.mean(),
@@ -238,7 +235,7 @@ class StatisticalReport:
             axes[1,0].plot([lo,hi],[lo,hi],"--",color="#aaa");axes[1,0].legend(fontsize=7)
         axes[1,0].set(xlabel="Mean predicted payoff",ylabel="Mean observed payoff",title="Outer payoff reliability · display bins")
         axes[1,0].xaxis.set_major_formatter(PercentFormatter(1));axes[1,0].yaxis.set_major_formatter(PercentFormatter(1))
-        trade=completed_episodes(self.R.ledger(t))
+        trade=self.R.completed_episodes(t)
         axes[1,1].hist(trade.holding_sessions,bins=min(15,max(3,len(trade)//3)),color=COLORS["payoff_context"])
         axes[1,1].set(xlabel="Invested sessions per completed episode",ylabel="Episodes",title="Actual holding-period distribution")
         for ax in axes.flat:ax.spines[["top","right"]].set_visible(False);ax.grid(alpha=.12)
@@ -269,37 +266,9 @@ class StatisticalReport:
         return "<h4>Paired Sharpe uncertainty versus ETF and SPY holdings</h4><p>Raw95% intervals from9,999 joint20-session block draws. These post-hoc descriptive intervals hold fitted strategies fixed, do not repeat model selection and carry no new p-values or promotion rule.</p>"+table(d)+"<h4>Preserved parent-study comparison with the original baseline</h4><p>This table retains the original225-comparison Holm adjustment. It applies to that parent comparison family, not to the30new ETF/SPY reporting intervals.</p>"+table(original)
 
     def literature_tables(self):
-        p=json.loads((self.root/"reference_sources/literature_review.json").read_text())
+        p=json.loads((self.root/"data/literature_review.json").read_text(encoding="utf-8"))
         rows=[]
         for item in p["papers"]:
             rows.append({"Paper":f"<a href='{html.escape(item['primary_url'],quote=True)}'>{html.escape(item['title'])}</a> ({item['year']})",
                          "Evidence":html.escape(item["finding"]),"Limits for this model":html.escape(item["limits_for_this_project"])})
         return pd.DataFrame(rows).to_html(index=False,border=0,escape=False)
-
-    def export_tables(self):
-        collections={key:[] for key in ["monthly_returns","annual_performance","risk_statistics","drawdown_episodes","forecast_summary","probability_reliability","payoff_reliability","weekly_interval_summary"]}
-        signature=self.cache_signature()
-        cache_plan=self.root/"data/statistical_cache_signature.json"
-        if cache_plan.exists() and json.loads(cache_plan.read_text())==signature and all((self.root/"data"/f"{name}.csv").exists() for name in collections):
-            return
-        for t in self.tickers:
-            for s in LABELS:
-                d=self.R.ledger(t,s)
-                for key,fn in [("monthly_returns",monthly_returns),("annual_performance",annual_statistics),("drawdown_episodes",drawdown_episodes)]:
-                    result=fn(d);result.insert(0,"strategy",s);result.insert(0,"ticker",t);collections[key].append(result)
-                collections["risk_statistics"].append(pd.DataFrame([{"ticker":t,"strategy":s,**risk_statistics(d)}]))
-            o=self.outcomes.loc[self.outcomes.ticker.eq(t)]
-            for key,fn in [("forecast_summary",forecast_summary),("probability_reliability",probability_reliability),("payoff_reliability",payoff_reliability)]:
-                result=fn(o);result.insert(0,"ticker",t);collections[key].append(result)
-            result=weekly_summary(self.intervals.loc[self.intervals.ticker.eq(t)])
-            result.insert(0,"ticker",t);collections["weekly_interval_summary"].append(result)
-        for name,parts in collections.items():
-            pd.concat(parts,ignore_index=True).to_csv(self.root/"data"/f"{name}.csv",index=False)
-        cache_plan.write_text(json.dumps(signature,indent=2),encoding="utf-8")
-        for name in ["monthly_returns","annual_performance","risk_statistics","drawdown_episodes"]:
-            self.cache[name]=pd.read_csv(self.root/"data"/f"{name}.csv")
-
-    def cache_signature(self):
-        names=["data/ledgers.csv","data/forecast_outcomes.csv","data/weekly_policy_intervals.csv",
-               "data/session_calendar.csv","src/temporal_statistics.py","src/forecast_statistics.py"]
-        return {name:hashlib.sha256((self.root/name).read_bytes()).hexdigest() for name in names}

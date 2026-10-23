@@ -1,8 +1,0 @@
-{
-  "data/ledgers.csv": "eb2d10e084dae7a883449e121ecb2d520ef2cec7721015fbb73721e48cfbc868",
-  "data/forecast_outcomes.csv": "09e52cbc008dd92db6d114334c910f8aa63b0a82d01369be2d99a22ddaf1aaaf",
-  "data/weekly_policy_intervals.csv": "58b8b804c1c7ff4220fbdb3a8762f496549cd0b4d8e00b9d9ad6bb95356f5c33",
-  "data/session_calendar.csv": "190d39034597b1a97177c11dadbdbf751ba42d1e00040223408baad5592fbbe5",
-  "src/temporal_statistics.py": "2ee6036db67a377060e032172c34d0530a10b4178172dc8368dcef53f6e7489a",
-  "src/forecast_statistics.py": "08d5f828a9396576aa8e4486c4ceda11c70e2b6a24ff3b4bb4e0c5c9b37e09a5"
-}

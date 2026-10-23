@@ -27,3 +27,10 @@ __pycache__/
 .venv_*/
 .vscode/settings.json
 
+# Local environments, logs and notebook checkpoints
+venv/
+env/
+.venv-*/
+*.log
+logs/
+.ipynb_checkpoints/

@@ -1,22 +1,25 @@
-# New local training/download artifacts; the reviewed focused report is tracked.
+# Regenerated local research inputs and fitted output
 /data/
 /models/
 /runs/
 /reports/
 /research_notebook*.ipynb
-/payoff_context*.zip
+*.zip
 __pycache__/
 *.py[cod]
-.ipynb_checkpoints/
 .pytest_cache/
+.ipynb_checkpoints/
+.cache/
 .venv/
 .venv_*/
-.cache/
+.venv-*/
+venv/
+env/
+logs/
+*.log
 .env
 .env.*
 !.env.example
 secrets/
 *.pem
 *.key
-lseg-data.config.json
-refinitiv-data.config.json
