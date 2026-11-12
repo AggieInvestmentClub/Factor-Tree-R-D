@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "complete": true,
+  "protocol_sha256": "d8006409c3f9368e462e3488326e2c980fe073c47f5abdc9140c6efbca7c851e",
+  "checks": {
+    "source_hashes_unchanged": true,
+    "prior_accounts_unchanged": true,
+    "exact_forward_return_parity": true,
+    "hac_independent_formula": true,
+    "holm_known_case": true,
+    "stationary_bootstrap_reproducible": true,
+    "stationary_continuation_rate": 0.9503386454183267,
+    "performance_reconciled": true,
+    "monte_carlo_saved_samples_reconciled": true,
+    "ic_all_queries_independently_reconciled": true,
+    "local_links_checked": 39,
+    "charts": 12,
+    "png_integrity": true,
+    "visual_inspection": "All chart panels reviewed via contact sheet; equity, IC and fan inspected at full size.",
+    "browser_layout": "No browser rendering claimed; HTML links and static figures checked.",
+    "economic_valuation_certified": false
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.7",
+    "torch": "2.9.0",
+    "Pillow": "13.0.0"
+  },
+  "limitations": [
+    "Conditional historical quote/claim marks retained",
+    "Pre2024 held-quote outages and canceled batches preserved",
+    "Forward era not pristine holdout",
+    "No correction for entire historical model search",
+    "Monte Carlo plug-in drift, no parameter uncertainty integration"
+  ]
+}
