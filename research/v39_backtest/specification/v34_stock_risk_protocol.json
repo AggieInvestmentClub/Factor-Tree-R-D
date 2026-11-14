@@ -1,0 +1,127 @@
+{
+  "created_utc": "2026-11-12T01:11:45.256508+00:00",
+  "status": "Frozen before v34 outcomes; adaptive investigation after2022 technology-long/energy-short attribution",
+  "arms": {
+    "fixed_vol_scale": {
+      "mode": "fixed",
+      "kind": "vol_scale"
+    },
+    "retrained_vol_scale": {
+      "mode": "retrained",
+      "kind": "vol_scale"
+    },
+    "fixed_sector_neutral": {
+      "mode": "fixed",
+      "kind": "sector_neutral"
+    },
+    "retrained_sector_neutral": {
+      "mode": "retrained",
+      "kind": "sector_neutral"
+    },
+    "fixed_corr3_neutral": {
+      "mode": "fixed",
+      "kind": "corr3_neutral"
+    },
+    "retrained_corr3_neutral": {
+      "mode": "retrained",
+      "kind": "corr3_neutral"
+    }
+  },
+  "pairs": [
+    [
+      "fixed_vol_scale",
+      "baseline"
+    ],
+    [
+      "fixed_sector_neutral",
+      "baseline"
+    ],
+    [
+      "fixed_corr3_neutral",
+      "baseline"
+    ],
+    [
+      "retrained_vol_scale",
+      "fixed_vol_scale"
+    ],
+    [
+      "retrained_sector_neutral",
+      "fixed_sector_neutral"
+    ],
+    [
+      "retrained_corr3_neutral",
+      "fixed_corr3_neutral"
+    ],
+    [
+      "retrained_vol_scale",
+      "baseline"
+    ],
+    [
+      "retrained_sector_neutral",
+      "baseline"
+    ],
+    [
+      "retrained_corr3_neutral",
+      "baseline"
+    ]
+  ],
+  "variants": {
+    "vol_scale": "Multiply each raw score by clip(median total63-session volatility / own volatility,.5,2), before original dollar/beta projection.",
+    "sector_neutral": "Project raw scores jointly to zero dollar,SPY beta,and net exposure in every source-sector group, with Unknown treated separately. Source labels are last snapshots known at the query.",
+    "corr3_neutral": "Remove SPY component from63session stock returns, standardize residuals to form their correlation structure, extract top3 principal components, and project scores jointly to zero dollar,SPY beta and those3 raw-return factor exposures. Refit factors each21-session query using past data only."
+  },
+  "design": "For each constraint: apply it to unchanged v31 log_growth coefficients, then refit the identical RFF model with that allocation in the objective. This separates deployment constraints from relearning.",
+  "unchanged": "Same58price inputs+32fixed nonlinear features,21-session horizon/cadence,original efficacy gate,12% forecast-risk budget,gross3 adjusted active/500,name.15,buffer.2,nextclose,2bps/side,repaired daily engine,zero market bias.",
+  "fitting": "100Adam epochs,.01learningrate,gradientclip1;select.1/.01ridge with repaired daily-engine log growth in prior2years;annual10year mature refit;strict inner/outer endpoint purge;fixed.1fallback2007/2008;2012claim-window shortening retained.",
+  "constraint_scope": "Additional sector and PCA constraints are exact at scheduled desired targets. Existing daily beta/gross/eligibility guards are retained and do not impose new daily sector/PCA guards. Measure actual sector drift; do not describe the extra constraints as hard daily exposure limits.",
+  "inference": {
+    "primary": "full2007-2023",
+    "secondary": "2012-2023",
+    "family": 9,
+    "blocks": [
+      20,
+      60
+    ],
+    "replications": 2000,
+    "endpoint": "Annual log growth difference",
+    "stress": "2022 and2021-2023 descriptive, already known;no crisis-specific fitting"
+  },
+  "promotion": false,
+  "limitations": [
+    "Reused history and targeted response to observed2022 failure, not independent confirmation",
+    "Same conditional universe,source sectors and valuations",
+    "Correlation estimates from63sessions are noisy;factor neutrality may remove genuine returns",
+    "Zero financing/borrow/cash yield retained;fixed-path cost sensitivities only",
+    "Gradient retains21session approximation, while selection uses actual daily accounts"
+  ],
+  "sources": {
+    "current/v31_growth_long_bias/protocol.json": "59faa894bef587faeb082e928384e5eb0ad32001406ddc8cd3686b1e13e0d0fc",
+    "current/v31_growth_long_bias/src/learner.py": "2e7917f071548656581618a031f8f59e14e31359c6487fe2b2ec4bb018ce4145",
+    "current/v31_growth_long_bias/src/runner.py": "6642534f26af85a0af574f6426f4103c0f1141747c29950d8efa42e89ab1cdb0",
+    "current/v29_nonlinear_portfolio/src/policy.py": "e2bce979941b9802e9942242ba36b65a3c8dbca232f78b3dcd68fbba9bd2c3d8",
+    "current/v29_nonlinear_portfolio/data_manifest.json": "50a274a9b24ac84705e57cbcedb048c6c0f1b6aaf1083b846782fe56fed8cfe9",
+    "prior/v17_long_history/data/assembled/approval.json": "66aea76e9a416020f5099652ac7a136e8c9b6c32fee32ea702f07aefba0bcc0f",
+    "prior/v17_long_history/data/sector_candidate_snapshots.csv.gz": "55ab25256d3ad93556745ec12bfc5d27b3c3d715f40da65799c1b9a8979de77f",
+    "current/v31_growth_long_bias/models/log_growth_2007.pt": "8e37f23d41f9f6d460f3146a1ee829da024d3c091fac6f22e7466b1599f6f59c",
+    "current/v31_growth_long_bias/models/log_growth_2008.pt": "01e5faf10f14dd87c51c75c52dac0d27a45223f9d11a49928e45ff2308a47c58",
+    "current/v31_growth_long_bias/models/log_growth_2009.pt": "22aad832248b8586da2361b825180049d713bc32388511f7d75e628d03e93d29",
+    "current/v31_growth_long_bias/models/log_growth_2010.pt": "8713edeb0a424670e6c655c1b0514d30ed26f70db0b76c223568da9d83138a2d",
+    "current/v31_growth_long_bias/models/log_growth_2011.pt": "b5ba708b76ec0c2fadad021e779cd9d46af9b9c225b1be3eab0b233c9689dc0e",
+    "current/v31_growth_long_bias/models/log_growth_2012.pt": "e03dfe9408ec945f3347f82096168190d0bb7f102bb995febe0edaddb4da53d7",
+    "current/v31_growth_long_bias/models/log_growth_2013.pt": "d833a7642b550ef3d966f3759a902931924e588608fe4be809480011fece0aa6",
+    "current/v31_growth_long_bias/models/log_growth_2014.pt": "9c7d72d04ce9bed9d50faf950bfd2c847fc5727a42fead9368d152e20f118e9b",
+    "current/v31_growth_long_bias/models/log_growth_2015.pt": "51d9326aeeb9c7cd3e844540173e3cab63d72268cd9ca8329cb3be88b0f34b19",
+    "current/v31_growth_long_bias/models/log_growth_2016.pt": "a7a6c1dcb69502fda9bd5a1becb29c07668521080c4f70dd8751044a116a668e",
+    "current/v31_growth_long_bias/models/log_growth_2017.pt": "acbaa3ce5df211a263d7cde6b5185ba691b2de70fb6ce456ea0d55e6c067ec6f",
+    "current/v31_growth_long_bias/models/log_growth_2018.pt": "3438f715360d9c3dd3449886c8462027535f641b74de704a2db58f4e0c18bff5",
+    "current/v31_growth_long_bias/models/log_growth_2019.pt": "bba63b05284de1093b2381036dfa8119597386f57d8a7417d7beef2d18852764",
+    "current/v31_growth_long_bias/models/log_growth_2020.pt": "48cfcbf087fbb6af9a30611ce34462434bac02a2f4293652b6ad322f15010887",
+    "current/v31_growth_long_bias/models/log_growth_2021.pt": "0f41f9518d2ac5c0e3ebe4f8372a090859174cb11522c66a14f1bab1ba933399",
+    "current/v31_growth_long_bias/models/log_growth_2022.pt": "3cab47baee0883949863739cbcbb7a45a74a43576b5d3effe047c9f2fd5bbeff",
+    "current/v31_growth_long_bias/models/log_growth_2023.pt": "2eb8f2ebbee7a84594a3299b781d89d3d78f1cc232e322f97f4a0a7946e824b7"
+  },
+  "code": {
+    "risk_learning.py": "1cc7ba35274338e2d0f77ff8302036042cc26ab450e9de8b5ea15ecf2e96acd3",
+    "test_risk_learning.py": "cfe8d4f09b858b127a0ade97898c22299fb58e234be38e68f956767bdbebd0de"
+  }
+}

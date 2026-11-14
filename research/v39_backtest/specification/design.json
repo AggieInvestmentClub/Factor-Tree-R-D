@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-11-12T06:06:00.941906+00:00",
+  "user_authorized": "Test the benchmark and volatility-scaled stop from2024 to present; expands prior pre2024 research boundary only in this isolated study",
+  "start": "2024-01-02",
+  "end": "2026-11-11",
+  "exclusive_boundary": "2026-11-12",
+  "accounts": [
+    "benchmark",
+    "vol2sigma"
+  ],
+  "benchmark": "Exact v38 none / v36 fixed_corr_long50: v31 log-growth RFF learner, unchanged58features32randomfeatures; three correlation-factor constraints on alpha; market-bias cap.50,12% shared forecast risk",
+  "training": "Preserve annual10year rolling refits,100Adam epochs,regularization.1/.01 chosen on prior2years with original repaired daily-engine log growth; strict mature inner/outer labels. Refit2024 on pre2024 only,2025 on mature pre2025,2026 on mature pre2026. No selection of architectures,stops,risk limits or policy based on forward results.",
+  "gate": "Preserve original H5 Huber-ridge efficacy gate from strictly matured whole-date OOS forecasts; original21observed-session forecast cadence continues from2007 anchor",
+  "account_start": "Both accounts start in cash at first2024 execution session. Preserve pre2024 forecast/feature history and original cadence. Stop entry basis begins with actual new-account fills. No optimization of initial holdings or entry timing.",
+  "stop": "Frozen v38 vol2sigma:2*entry-time63session daily sigma*sqrt21,clipped3%-20%;adjusted close trigger,nextclose actual execution;exclude until next original21session forecast;existing risk-preserving reprojection;no profit target",
+  "constraints": "Same2bps/side,gross3 scaled active/500,name.15,buffer.2,dailybeta/net.05 guards,grossguard3.3,no cash borrowing,zero borrow/funding/cashyield. Last session marked with inherited terminal liquidation convention; report it.",
+  "source": "Extend historical membership and sectors via dated anchors plus joiner/leaver events; separately dated prices,raw cash-conversion quotes,distribution/terminal audit; preserve original pre2024 sources. No survivor-only substitution,no missing-return zero imputation,no future-label selection of prediction universe.",
+  "holdout": "Later-period walk-forward validation of this frozen design,not pristine holdout:2024+ was examined in older110stock project. Current v31-v38 fitting/results used only pre2024. No performance viewed in v39 before this design declaration.",
+  "inference": "One paired stop-versus-benchmark comparison;annual loggrowth primary;2000paired circular block bootstraps20/60sessions;CAGR,Sharpe,drawdown,turnover,exposure,2024/2025/2026partial descriptive. No automatic promotion.",
+  "source_hashes": {
+    "current/v31_growth_long_bias/protocol.json": "59faa894bef587faeb082e928384e5eb0ad32001406ddc8cd3686b1e13e0d0fc",
+    "current/v31_growth_long_bias/src/learner.py": "2e7917f071548656581618a031f8f59e14e31359c6487fe2b2ec4bb018ce4145",
+    "current/v31_growth_long_bias/src/allocation.py": "e956abf01c0c72de2df656149f996e6fe738dc27b367156ff7765459ae2bcd8e",
+    "current/v29_nonlinear_portfolio/src/policy.py": "e2bce979941b9802e9942242ba36b65a3c8dbca232f78b3dcd68fbba9bd2c3d8",
+    "current/v34_stock_risk/protocol.json": "3827b8b865c5ba5c9cdeb0ecefcf7d2aeadcb170ebc20cefdbe01303cd37e8d8",
+    "current/v34_stock_risk/src/risk_learning.py": "1cc7ba35274338e2d0f77ff8302036042cc26ab450e9de8b5ea15ecf2e96acd3",
+    "current/v36_correlation_long_bias/protocol.json": "67d8528817a433cfaadc52ac1312daabffb42077317faad47c98ec1209bb22b5",
+    "current/v36_correlation_long_bias/account_inputs/fixed_corr_long50_desired.pkl": "4cc5c6961a515be8441b2abf10266b2c7b4ec3c9653b08ea2004307a1ca0a332",
+    "current/v38_position_exits/protocol.json": "67e0aa93a875d777249072dc168d5c2d744647bdfa1eeb6e400f9c722ee74c14",
+    "current/v38_position_exits/src/exits.py": "c8477525cf62a8c0d5d5be0ae4939b0206c65811fd5f2b2a64cd2c8c37ce68df",
+    "current/v38_position_exits/src/exit_account.py": "a3da5d02c616ca02e6527e25bdba937c12ae3f94375ab206a860a823f260af88",
+    "prior/v17_long_history/data/assembled/approval.json": "66aea76e9a416020f5099652ac7a136e8c9b6c32fee32ea702f07aefba0bcc0f"
+  }
+}

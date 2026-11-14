@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "comparison": "All account ledger columns and numeric model states",
+  "absolute_tolerance": 1e-10,
+  "accounts": {
+    "benchmark": {
+      "sessions": 719,
+      "start": "2024-01-02",
+      "end": "2026-11-11",
+      "max_absolute_error": 0.0,
+      "nav_max_absolute_error": 0.0,
+      "return_max_absolute_error": 0.0,
+      "arithmetic_passed": true,
+      "validated_performance": false
+    },
+    "vol2sigma": {
+      "sessions": 719,
+      "start": "2024-01-02",
+      "end": "2026-11-11",
+      "max_absolute_error": 0.0,
+      "nav_max_absolute_error": 0.0,
+      "return_max_absolute_error": 0.0,
+      "arithmetic_passed": true,
+      "validated_performance": false
+    }
+  },
+  "checkpoints": {
+    "2024": {
+      "state_entries": 4,
+      "max_absolute_error": 0.0,
+      "selected_penalty": 0.1
+    },
+    "2025": {
+      "state_entries": 4,
+      "max_absolute_error": 0.0,
+      "selected_penalty": 0.1
+    },
+    "2026": {
+      "state_entries": 4,
+      "max_absolute_error": 0.0,
+      "selected_penalty": 0.1
+    }
+  },
+  "conditional_valuations_remain": true,
+  "pristine_holdout": false
+}

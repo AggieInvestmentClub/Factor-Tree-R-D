@@ -1,0 +1,80 @@
+{
+  "source_qualification_passed": true,
+  "qualification": "Historical reconstruction; qualified observed quotes and independently reconciled corporate terms. Conditional rights/claim valuations retained; account-level exposure and arithmetic audits still required.",
+  "created_utc": "2026-11-12T07:15:50.594484+00:00",
+  "design_sha256": "203d5d63df27df26c0ca3d36b25ec9d4df58c8f21b4dc0ee3c57824e5ab469cc",
+  "prices_sha256": "41062aa9c25cfe3fdd281b6e2d04e3f6aec99e80e553b100d02f5ce71a488567",
+  "events_sha256": "335e32fc1a6403757e850aac849fc6d27685223e8d7c7a3f574af27ef3df1d97",
+  "claims_sha256": "d40ee384a1f18494f98ec521924cb23508efd587f637d946dca8798e173ce69e",
+  "noncash_census_sha256": "3867ca7a6ea8ec5c48eca3a71bf2c84858823458c62cda7ec5ea5e6b3df7e468",
+  "membership_qualification_sha256": "c016b4a1aa7b8df46d6a0c29b13bf4d35c96a9f809e04250286a9d200a1cbdbf",
+  "census_qualification_sha256": "20943624178230e35ee73af5b2c6f8c691f73066b51506f9c58fa788d412fa5d",
+  "prior_price_prefixes_checked": 1085,
+  "prior_price_prefixes_exact": true,
+  "forward_sessions": 719,
+  "calendar_end": "2026-11-11",
+  "calendar_counts": {
+    "2000": 252,
+    "2001": 248,
+    "2002": 252,
+    "2003": 252,
+    "2004": 252,
+    "2005": 252,
+    "2006": 251,
+    "2007": 251,
+    "2008": 253,
+    "2009": 252,
+    "2010": 252,
+    "2011": 252,
+    "2012": 250,
+    "2013": 252,
+    "2014": 252,
+    "2015": 252,
+    "2016": 252,
+    "2017": 251,
+    "2018": 251,
+    "2019": 252,
+    "2020": 253,
+    "2021": 252,
+    "2022": 251,
+    "2023": 250,
+    "2024": 252,
+    "2025": 250,
+    "2026": 217
+  },
+  "independent_direct_quote_disagreements": 0,
+  "interior_quote_gaps": 0,
+  "forward_terminal_events": 18,
+  "forward_noncash_events": 18,
+  "split_events_verified": 38,
+  "forward_delayed_claims": [
+    {
+      "ticker": "LEN.N",
+      "ex_date": "2025-01-21",
+      "settlement_date": "2025-02-07",
+      "child": "MRP.N",
+      "child_ratio": 0.5,
+      "source": "https://infomemo.theocc.com/infomemos?number=56021",
+      "terms_source": "https://investors.lennar.com/press-releases/2025/02-07-2025",
+      "valuation_policy": "zero_until_observed_settlement; conditional_only",
+      "settlement_clock": "First regular-session raw open; cash entered at that open. No future closing-price backfill.",
+      "qualification": "No contemporaneous traded child marks from ex-date. Interim NAV and decisions conditional on inherited zero-mark claim convention. When-issued trading only began February 5; regular delivery and trading began February 7.",
+      "raw_parent_previous": 141.54,
+      "raw_parent_ex_close": 133.14,
+      "raw_settlement_per_parent": 11.395,
+      "receivers": [
+        {
+          "ric": "MRP.N",
+          "ratio": 0.5,
+          "raw_settlement_open": 22.79
+        }
+      ]
+    }
+  ],
+  "conditional_terminal_tickers": [
+    "WBA.OQ^H25",
+    "HOLX.OQ^D26"
+  ],
+  "conditional_performance_requires_explicit_disclosure": true,
+  "vintage_database": false
+}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "payload_files_scanned": 134,
+  "python_files_syntax_checked": 93,
+  "original_source_files_unchanged": 91,
+  "source_hashes_verified": true,
+  "original_checkpoint_bytes_unchanged": true,
+  "credential_pattern_findings": 0,
+  "absolute_machine_path_findings": 0,
+  "vendor_history_files_in_package": 0,
+  "unexpected_ignored_package_files": 0,
+  "git_diff_check_passed": true,
+  "git_whitespace_policy": "Preserve source bytes/CRLF. Two immutable legacy risk_engine files retain their original trailing empty line; other whitespace checks remain enabled.",
+  "monte_carlo_guide_included": false,
+  "qualifications": "Pattern scan and reproduction checks, not an independent forensic security or vendor-data audit."
+}

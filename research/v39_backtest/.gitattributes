@@ -1,0 +1,5 @@
+# Preserve the exact bytes recorded by the reproducibility manifests on every OS.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# These two immutable legacy files include a source-hashed final empty line.
+engine/prior/v16_payoff_alignment/src/risk_engine.py whitespace=blank-at-eol,space-before-tab,cr-at-eol,-blank-at-eof
+engine/prior/v17_long_history/src/risk_engine.py whitespace=blank-at-eol,space-before-tab,cr-at-eol,-blank-at-eof

@@ -1,0 +1,8 @@
+# Recorded Python 3.12 research environment. CPU execution is sufficient.
+numpy==2.3.5
+pandas==3.0.1
+scipy==1.16.3
+scikit-learn==1.7.2
+torch==2.9.0
+matplotlib==3.10.7
+psutil==7.2.2

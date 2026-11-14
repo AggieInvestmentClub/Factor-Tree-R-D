@@ -1,0 +1,643 @@
+{
+  "files": [
+    {
+      "path": "prior/v16_payoff_alignment/src/account_engine.py",
+      "original_sha256": "237f3e661b534e631e81a24a6083bfbc3e3cfc423fad94d2f156a228151e1e44",
+      "distributed_sha256": "237f3e661b534e631e81a24a6083bfbc3e3cfc423fad94d2f156a228151e1e44",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v16_payoff_alignment/src/risk_engine.py",
+      "original_sha256": "30a8d51ac94ed821bb6bc36f54edbf8f7dcd42be87f0e8269d078cec6f9e83c3",
+      "distributed_sha256": "30a8d51ac94ed821bb6bc36f54edbf8f7dcd42be87f0e8269d078cec6f9e83c3",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v16_payoff_alignment/src/signal_engine.py",
+      "original_sha256": "f4564541d39db2bffa75760e0347be0cc7b8221b359792b4c9d35c7987b8d1f2",
+      "distributed_sha256": "f4564541d39db2bffa75760e0347be0cc7b8221b359792b4c9d35c7987b8d1f2",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v16_payoff_alignment/src/stock_features.py",
+      "original_sha256": "c25875e3c69522f11c57813f0658e2be24bfa521caac8a65d92f084a4045bf18",
+      "distributed_sha256": "c25875e3c69522f11c57813f0658e2be24bfa521caac8a65d92f084a4045bf18",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/account_engine.py",
+      "original_sha256": "8c6e4b3e14b6069932f960773b3b6562c1285e16d49a39502362b6ef8594f735",
+      "distributed_sha256": "8c6e4b3e14b6069932f960773b3b6562c1285e16d49a39502362b6ef8594f735",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/analyze_state_v20.py",
+      "original_sha256": "5e3362b2dfae389f393c315eaaa213b0490c3979887eb51cfa0eaad7a131106a",
+      "distributed_sha256": "5e3362b2dfae389f393c315eaaa213b0490c3979887eb51cfa0eaad7a131106a",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/audit_capture_years.py",
+      "original_sha256": "93d4be46eef5b82b40c20396457aeef06fc41e52001a9865af945c8cbd3b5a27",
+      "distributed_sha256": "93d4be46eef5b82b40c20396457aeef06fc41e52001a9865af945c8cbd3b5a27",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/audit_noncash_exposure.py",
+      "original_sha256": "97ff675e0a04a5965f2601306a42f6980aa3f7ff96c9998ff511a2d43c2a44d8",
+      "distributed_sha256": "97ff675e0a04a5965f2601306a42f6980aa3f7ff96c9998ff511a2d43c2a44d8",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/dated_quote_cache.py",
+      "original_sha256": "8057c1b79df1c3ab66f6106999a96927a23da10d6108c03d5725f4c7d49aad8a",
+      "distributed_sha256": "8057c1b79df1c3ab66f6106999a96927a23da10d6108c03d5725f4c7d49aad8a",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/distribution_claims.py",
+      "original_sha256": "29ed5e8410f708bc2760d0142752e96bb5399c4ae3fc60e9bd92d8b03441a06c",
+      "distributed_sha256": "29ed5e8410f708bc2760d0142752e96bb5399c4ae3fc60e9bd92d8b03441a06c",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/fast_gate.py",
+      "original_sha256": "b8a82cf2325054e7b573f2de68125fd97d763513a4c88840b00f4171999cf27e",
+      "distributed_sha256": "b8a82cf2325054e7b573f2de68125fd97d763513a4c88840b00f4171999cf27e",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/fit_long_history.py",
+      "original_sha256": "3c775f330936f86cf7afc6b9787904b08a91b971d41a4f2cb553be22722dc209",
+      "distributed_sha256": "3c775f330936f86cf7afc6b9787904b08a91b971d41a4f2cb553be22722dc209",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/forecast_stage_attribution.py",
+      "original_sha256": "ac351c5a50edb67e4c07f33a8c5d99e4edff5fa3fe3944f27dd9a764306bd757",
+      "distributed_sha256": "ac351c5a50edb67e4c07f33a8c5d99e4edff5fa3fe3944f27dd9a764306bd757",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/historical_features.py",
+      "original_sha256": "e06ef0cbb80997363db347a4648b947f8c53099a263f1889c72a039750917402",
+      "distributed_sha256": "e06ef0cbb80997363db347a4648b947f8c53099a263f1889c72a039750917402",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/historical_sources.py",
+      "original_sha256": "f0e4b8f7d72838e2094b83df6c318ee18813448a002891b21b1c6fba43e40514",
+      "distributed_sha256": "f0e4b8f7d72838e2094b83df6c318ee18813448a002891b21b1c6fba43e40514",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/lazy_covariances.py",
+      "original_sha256": "b129290683a34b1bb915be5fef19c3f812f2869fbe16398c16f2d8ada16df714",
+      "distributed_sha256": "b129290683a34b1bb915be5fef19c3f812f2869fbe16398c16f2d8ada16df714",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/model_core_long.py",
+      "original_sha256": "784a3b7412d0c0547b86777bb767bbe27094b0b6925e995e4faa6ba971527377",
+      "distributed_sha256": "784a3b7412d0c0547b86777bb767bbe27094b0b6925e995e4faa6ba971527377",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/reconcile_crisis_quotes.py",
+      "original_sha256": "120633a19fe3edba7c793b3ee2a12e4778449128c13ab6b3d304700a5b37d74f",
+      "distributed_sha256": "120633a19fe3edba7c793b3ee2a12e4778449128c13ab6b3d304700a5b37d74f",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/reconcile_delayed_distributions.py",
+      "original_sha256": "cb7b8be79ec26f051bd6e02302243a5610c069df04816eb563e0c0d341d9a138",
+      "distributed_sha256": "cb7b8be79ec26f051bd6e02302243a5610c069df04816eb563e0c0d341d9a138",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/reconcile_due_bill.py",
+      "original_sha256": "5f77ce300e7ec1e28ccb8a0a9da880910d907b973d1c70cd892663660309ea4b",
+      "distributed_sha256": "5f77ce300e7ec1e28ccb8a0a9da880910d907b973d1c70cd892663660309ea4b",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/reconcile_halt_gauges.py",
+      "original_sha256": "1e772b6877ad4e58d61a8982c4edf7c611ed098caae40a3c4bbc2f2ea48bcb8f",
+      "distributed_sha256": "1e772b6877ad4e58d61a8982c4edf7c611ed098caae40a3c4bbc2f2ea48bcb8f",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/reconcile_terminal_quotes.py",
+      "original_sha256": "9ddadb03fb522dead2da08836f08ffab5f7a2254b6d7fb787f0001f5534ecc46",
+      "distributed_sha256": "9ddadb03fb522dead2da08836f08ffab5f7a2254b6d7fb787f0001f5534ecc46",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/risk_engine.py",
+      "original_sha256": "58a858c54023b2466abb8bd1e6b9eb877f9b4eb6e1044b70f63977a1111ffd92",
+      "distributed_sha256": "58a858c54023b2466abb8bd1e6b9eb877f9b4eb6e1044b70f63977a1111ffd92",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v17_long_history/src/signal_engine.py",
+      "original_sha256": "907bb1eefc82144fb338cada7bfe03d4b16b1aab3bee1e4009309357577196c1",
+      "distributed_sha256": "907bb1eefc82144fb338cada7bfe03d4b16b1aab3bee1e4009309357577196c1",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "prior/v5_1/src/portfolio_account.py",
+      "original_sha256": "a199538cda6f950cd2caae8c319aad19f0b5588562f2b9174f79bfb2ef92c26e",
+      "distributed_sha256": "a199538cda6f950cd2caae8c319aad19f0b5588562f2b9174f79bfb2ef92c26e",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v21_forecast_research/src/account_runner.py",
+      "original_sha256": "0aa56752f60bea87b2087ffa78213ceb2347df92ca882c093b418cc75b28316f",
+      "distributed_sha256": "11ce8580e686587beeda6bf87f8b31f9a72ed46575f9249b4625b2b7e1ca904b",
+      "path_literal_relocations": 1,
+      "behavior_changes": "None; only absolute path literals relocated"
+    },
+    {
+      "path": "current/v23_horizon_targets/src/build_labels.py",
+      "original_sha256": "0d0fa68269a1380874d3a7c6a7ab2bb5f9803c402a729b3d999d064e05354cdc",
+      "distributed_sha256": "96e75677680da8da3f08c1768742a30ec6a3ef02d08633864fc3f6eb4d2c6401",
+      "path_literal_relocations": 1,
+      "behavior_changes": "None; only absolute path literals relocated"
+    },
+    {
+      "path": "current/v23_horizon_targets/src/evaluate_horizons.py",
+      "original_sha256": "1a71042dcea9031eeba15702e3ed3fbce3c0bab38c6d98e420ad013d491182d5",
+      "distributed_sha256": "1a71042dcea9031eeba15702e3ed3fbce3c0bab38c6d98e420ad013d491182d5",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v23_horizon_targets/src/fit_horizons.py",
+      "original_sha256": "545bd155cd3d98ff07edea9d453cffa327e742fc41e7e87f984724014abf3d9a",
+      "distributed_sha256": "d6d52e07e0e953296535794ea49574fd8171532eb331da07f281429369049aac",
+      "path_literal_relocations": 1,
+      "behavior_changes": "None; only absolute path literals relocated"
+    },
+    {
+      "path": "current/v23_horizon_targets/src/horizon_accounts.py",
+      "original_sha256": "ee894fbe91332050b25899c35557646fd11fe0bbd2d3a6cfae88d4ed393c2cb1",
+      "distributed_sha256": "ee894fbe91332050b25899c35557646fd11fe0bbd2d3a6cfae88d4ed393c2cb1",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v28_direct_portfolio/src/accounts.py",
+      "original_sha256": "6b2a46dc9c16211bceb47757d97a53bae611e31306f2ed7c321a0769f87ed065",
+      "distributed_sha256": "6b2a46dc9c16211bceb47757d97a53bae611e31306f2ed7c321a0769f87ed065",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v28_direct_portfolio/src/build_data.py",
+      "original_sha256": "c77aae9a019ed745fabe4f08063e398b566af49b076481fbe2da8f632a0bf807",
+      "distributed_sha256": "c77aae9a019ed745fabe4f08063e398b566af49b076481fbe2da8f632a0bf807",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v28_direct_portfolio/src/core.py",
+      "original_sha256": "d4db5f26c46c863885a678d7a1128adad4cb534408d38e490fb03044e025dda5",
+      "distributed_sha256": "39133663da28fb812a5c54777e266f8c221dc1060def36cdacea241968269ce7",
+      "path_literal_relocations": 1,
+      "behavior_changes": "None; only absolute path literals relocated"
+    },
+    {
+      "path": "current/v28_direct_portfolio/src/evaluate.py",
+      "original_sha256": "1ae3b040e815490b840aa62b25521b08882a59db5c1438ece33432130e0742c4",
+      "distributed_sha256": "1ae3b040e815490b840aa62b25521b08882a59db5c1438ece33432130e0742c4",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v28_direct_portfolio/src/fit_policy.py",
+      "original_sha256": "179c05655dc002017fa70ec94ebf5c59983fcdf339a2a8c4c55ab52d544cb90f",
+      "distributed_sha256": "179c05655dc002017fa70ec94ebf5c59983fcdf339a2a8c4c55ab52d544cb90f",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v28_direct_portfolio/src/report.py",
+      "original_sha256": "1befd01abb7a1cc28a2d66df742bd2b642676f08dfd063c32d72f26064aae600",
+      "distributed_sha256": "1befd01abb7a1cc28a2d66df742bd2b642676f08dfd063c32d72f26064aae600",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v28_direct_portfolio/src/test_policy.py",
+      "original_sha256": "03c8bb45f893c460b9c69c746cd9e40a28f465696dc18031a6de7bfa958372d4",
+      "distributed_sha256": "03c8bb45f893c460b9c69c746cd9e40a28f465696dc18031a6de7bfa958372d4",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v29_nonlinear_portfolio/src/accounts.py",
+      "original_sha256": "630e7b21b553b4b5fd76443e1e64362b022d4006168cf36342e77bfac4e034c9",
+      "distributed_sha256": "630e7b21b553b4b5fd76443e1e64362b022d4006168cf36342e77bfac4e034c9",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v29_nonlinear_portfolio/src/common.py",
+      "original_sha256": "dd4a3c9c99f17ec186bae7564bf519d7c8863e0a07c43788c4be6517d96dcded",
+      "distributed_sha256": "95e69b3db8a9d5920043685120ecd835e2ffe7b0b56015de2ac32ad612784e08",
+      "path_literal_relocations": 1,
+      "behavior_changes": "None; only absolute path literals relocated"
+    },
+    {
+      "path": "current/v29_nonlinear_portfolio/src/evaluate.py",
+      "original_sha256": "378a766d9d3388c64dd1a4e53406bc71fe17995fbcdd53e8a909badb7c5cfa8a",
+      "distributed_sha256": "378a766d9d3388c64dd1a4e53406bc71fe17995fbcdd53e8a909badb7c5cfa8a",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v29_nonlinear_portfolio/src/policy.py",
+      "original_sha256": "e2bce979941b9802e9942242ba36b65a3c8dbca232f78b3dcd68fbba9bd2c3d8",
+      "distributed_sha256": "e2bce979941b9802e9942242ba36b65a3c8dbca232f78b3dcd68fbba9bd2c3d8",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v29_nonlinear_portfolio/src/report.py",
+      "original_sha256": "d4285ffa42fbbea5d1f0c8e6c646bb5d7fef9e7cf41af563fe03ef66132b6450",
+      "distributed_sha256": "d4285ffa42fbbea5d1f0c8e6c646bb5d7fef9e7cf41af563fe03ef66132b6450",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v29_nonlinear_portfolio/src/test_policy.py",
+      "original_sha256": "ff9b62313d0391e8d720554b8e1e7e6a8c71f1a1f93f7d1b0c16084b7277c5bb",
+      "distributed_sha256": "ff9b62313d0391e8d720554b8e1e7e6a8c71f1a1f93f7d1b0c16084b7277c5bb",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v31_growth_long_bias/src/allocation.py",
+      "original_sha256": "e956abf01c0c72de2df656149f996e6fe738dc27b367156ff7765459ae2bcd8e",
+      "distributed_sha256": "e956abf01c0c72de2df656149f996e6fe738dc27b367156ff7765459ae2bcd8e",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v31_growth_long_bias/src/evaluate.py",
+      "original_sha256": "2a2d99665ca3a4f090f20e4ac03eecc4d5fd032827c0c640e2675ac4a837ade6",
+      "distributed_sha256": "2a2d99665ca3a4f090f20e4ac03eecc4d5fd032827c0c640e2675ac4a837ade6",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v31_growth_long_bias/src/learner.py",
+      "original_sha256": "2e7917f071548656581618a031f8f59e14e31359c6487fe2b2ec4bb018ce4145",
+      "distributed_sha256": "2e7917f071548656581618a031f8f59e14e31359c6487fe2b2ec4bb018ce4145",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v31_growth_long_bias/src/qa.py",
+      "original_sha256": "d1fdfebd743a2703312d59fe373a16f088243859870b3a2ec3727dc88656252b",
+      "distributed_sha256": "d1fdfebd743a2703312d59fe373a16f088243859870b3a2ec3727dc88656252b",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v31_growth_long_bias/src/report.py",
+      "original_sha256": "29d16114c782e152a63aab9075516be668b7f4b1270ea92c4780c3e8d0c753e8",
+      "distributed_sha256": "29d16114c782e152a63aab9075516be668b7f4b1270ea92c4780c3e8d0c753e8",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v31_growth_long_bias/src/research_account.py",
+      "original_sha256": "259b1d74b1617f303d1fb570ec30d7d84fc2435f2f66dc5e86925966d0cec5e3",
+      "distributed_sha256": "8afd746bfad6f43597db5a420e09de18e3fc4d382ac066d506319cfcfb67af9e",
+      "path_literal_relocations": 1,
+      "behavior_changes": "None; only absolute path literals relocated"
+    },
+    {
+      "path": "current/v31_growth_long_bias/src/runner.py",
+      "original_sha256": "6642534f26af85a0af574f6426f4103c0f1141747c29950d8efa42e89ab1cdb0",
+      "distributed_sha256": "6642534f26af85a0af574f6426f4103c0f1141747c29950d8efa42e89ab1cdb0",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v31_growth_long_bias/src/settings.py",
+      "original_sha256": "f56523cd79c94e0335f113604bb87505d6fed95aed7da9bc97c47e55c2c39446",
+      "distributed_sha256": "a3117b6ae4e343d496c805e1dea2cb3af78a4845afb2718f7425c2d56d8b605c",
+      "path_literal_relocations": 1,
+      "behavior_changes": "None; only absolute path literals relocated"
+    },
+    {
+      "path": "current/v33_adaptive_beta/src/assess.py",
+      "original_sha256": "085805f4e38ff3645408617c6ac1e08c9710a9cad69168f9bdca24f3b84be18a",
+      "distributed_sha256": "085805f4e38ff3645408617c6ac1e08c9710a9cad69168f9bdca24f3b84be18a",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v33_adaptive_beta/src/controller.py",
+      "original_sha256": "42e8384822c28d09696a35f42c5f1cc427717a38e0cf0c04881f84c82080503f",
+      "distributed_sha256": "42e8384822c28d09696a35f42c5f1cc427717a38e0cf0c04881f84c82080503f",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v33_adaptive_beta/src/report.py",
+      "original_sha256": "f941c9c8059a7bb1972947511d65bacda07d428cff18f5da03563335b038c4b7",
+      "distributed_sha256": "f941c9c8059a7bb1972947511d65bacda07d428cff18f5da03563335b038c4b7",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v33_adaptive_beta/src/signed_account.py",
+      "original_sha256": "d45abcf2123e8b280b85ce4b830130bb96481bc04295ea8a372bfb38e877ae02",
+      "distributed_sha256": "43092a092ecab5700734543c8f9e9c81a65cb512adcb1ba721deb5ceedb1337a",
+      "path_literal_relocations": 1,
+      "behavior_changes": "None; only absolute path literals relocated"
+    },
+    {
+      "path": "current/v33_adaptive_beta/src/test_controller.py",
+      "original_sha256": "0abb6e7b5206f968e4ff25d1855284f7d6d2eaf5ca2d23f642b7ffffcce5aef1",
+      "distributed_sha256": "0abb6e7b5206f968e4ff25d1855284f7d6d2eaf5ca2d23f642b7ffffcce5aef1",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v34_stock_risk/src/assess.py",
+      "original_sha256": "d26664b1dbf66fe856455a58a2e0f57052e7ad6bf9459bf2760d331b6a5c1b03",
+      "distributed_sha256": "d26664b1dbf66fe856455a58a2e0f57052e7ad6bf9459bf2760d331b6a5c1b03",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v34_stock_risk/src/report.py",
+      "original_sha256": "f85874836705b84c4a3ff2b71f53ad338467c663c4fda686355584aee349971d",
+      "distributed_sha256": "f85874836705b84c4a3ff2b71f53ad338467c663c4fda686355584aee349971d",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v34_stock_risk/src/risk_learning.py",
+      "original_sha256": "1cc7ba35274338e2d0f77ff8302036042cc26ab450e9de8b5ea15ecf2e96acd3",
+      "distributed_sha256": "1cc7ba35274338e2d0f77ff8302036042cc26ab450e9de8b5ea15ecf2e96acd3",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v34_stock_risk/src/test_risk_learning.py",
+      "original_sha256": "cfe8d4f09b858b127a0ade97898c22299fb58e234be38e68f956767bdbebd0de",
+      "distributed_sha256": "cfe8d4f09b858b127a0ade97898c22299fb58e234be38e68f956767bdbebd0de",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v36_correlation_long_bias/src/assess.py",
+      "original_sha256": "95535aa9c5e588b1d1fd2e990cf9aabfa4dd8302d8f3c627a592830a52293860",
+      "distributed_sha256": "95535aa9c5e588b1d1fd2e990cf9aabfa4dd8302d8f3c627a592830a52293860",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v36_correlation_long_bias/src/compare.py",
+      "original_sha256": "d28e18c497a41456eb4daf7bfa9e4cd97b958088ded370f055f6d992b6d49348",
+      "distributed_sha256": "d28e18c497a41456eb4daf7bfa9e4cd97b958088ded370f055f6d992b6d49348",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v38_position_exits/src/assess.py",
+      "original_sha256": "8a9af5bb4c204f815ead9eceab5e1160777ccac90078be7f807afddf2d5b6b73",
+      "distributed_sha256": "8a9af5bb4c204f815ead9eceab5e1160777ccac90078be7f807afddf2d5b6b73",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v38_position_exits/src/exit_account.py",
+      "original_sha256": "a3da5d02c616ca02e6527e25bdba937c12ae3f94375ab206a860a823f260af88",
+      "distributed_sha256": "8997149804de5cf2c7d0ba7a5bcfb89fd11d7f21705b8bcae0c45a04b8599272",
+      "path_literal_relocations": 1,
+      "behavior_changes": "None; only absolute path literals relocated"
+    },
+    {
+      "path": "current/v38_position_exits/src/exits.py",
+      "original_sha256": "c8477525cf62a8c0d5d5be0ae4939b0206c65811fd5f2b2a64cd2c8c37ce68df",
+      "distributed_sha256": "c8477525cf62a8c0d5d5be0ae4939b0206c65811fd5f2b2a64cd2c8c37ce68df",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v38_position_exits/src/report.py",
+      "original_sha256": "fa601a35c0bb30687a70ed9d5c8f5296297d4677ae6258f66d79898757e08d62",
+      "distributed_sha256": "fa601a35c0bb30687a70ed9d5c8f5296297d4677ae6258f66d79898757e08d62",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v38_position_exits/src/test_exits.py",
+      "original_sha256": "038722c6fceba94e9222da38f38de1dd5ce13b1be2f8107c04b35de4c8c0a493",
+      "distributed_sha256": "038722c6fceba94e9222da38f38de1dd5ce13b1be2f8107c04b35de4c8c0a493",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/assemble.py",
+      "original_sha256": "d983da0865cdec90d89229fbc1480539045884aed984261ee734ecf92d735a47",
+      "distributed_sha256": "d983da0865cdec90d89229fbc1480539045884aed984261ee734ecf92d735a47",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/assess.py",
+      "original_sha256": "673be69e7c10c25ad2cc203e5da39f2fdfe6ba92219322cb946a5bb22bb7f7c7",
+      "distributed_sha256": "673be69e7c10c25ad2cc203e5da39f2fdfe6ba92219322cb946a5bb22bb7f7c7",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/build_arrays.py",
+      "original_sha256": "9af38f654c20e06c7a432d8b8d971390341cc0cf5209c4aad9e54db263a4dc37",
+      "distributed_sha256": "9af38f654c20e06c7a432d8b8d971390341cc0cf5209c4aad9e54db263a4dc37",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/capture.py",
+      "original_sha256": "166788f5f635737411bccb265a007d4067e57ffd1efd79d3c1be1354d33cf95a",
+      "distributed_sha256": "166788f5f635737411bccb265a007d4067e57ffd1efd79d3c1be1354d33cf95a",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/census.py",
+      "original_sha256": "29fbd007460a617bcc697643b5a8822c050051132f466832e26ef6f132178d3a",
+      "distributed_sha256": "29fbd007460a617bcc697643b5a8822c050051132f466832e26ef6f132178d3a",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/common.py",
+      "original_sha256": "1ebd1c0674f13a974567e54cdc89967c93537cf88f0fc410120fb0b42c58f215",
+      "distributed_sha256": "d55750cf54dff89a376a4642983a6ce6d00a012570306c38bec3ef9d8acc35ab",
+      "path_literal_relocations": 1,
+      "behavior_changes": "None; only absolute path literals relocated"
+    },
+    {
+      "path": "current/v39_forward_validation/src/event_inventory.py",
+      "original_sha256": "1c31fb4d27cfa56be6f6390bd3ca6a3e54c77de8171e6e7d4b6ceb7f0150b66a",
+      "distributed_sha256": "1c31fb4d27cfa56be6f6390bd3ca6a3e54c77de8171e6e7d4b6ceb7f0150b66a",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/event_quotes_plan.py",
+      "original_sha256": "03c18ab0c3ff1d956a9600ed8a755383f4fba9052799a5ffc67efa82c57ebfa6",
+      "distributed_sha256": "03c18ab0c3ff1d956a9600ed8a755383f4fba9052799a5ffc67efa82c57ebfa6",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/features.py",
+      "original_sha256": "43f174e1589dcea69a605cb4dc28eb73189557185f2d259e0b752c35afebca0d",
+      "distributed_sha256": "43f174e1589dcea69a605cb4dc28eb73189557185f2d259e0b752c35afebca0d",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/fit_2024.py",
+      "original_sha256": "55eb531c70808ea406334b5dfd48771bb11c69988588dab1c7e698b5c861f886",
+      "distributed_sha256": "55eb531c70808ea406334b5dfd48771bb11c69988588dab1c7e698b5c861f886",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/gate.py",
+      "original_sha256": "00d9719a2db7377b326dd49e84bb2b4535459515eb94f2ea090fcd3dcc882e91",
+      "distributed_sha256": "00d9719a2db7377b326dd49e84bb2b4535459515eb94f2ea090fcd3dcc882e91",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/generated_features.py",
+      "original_sha256": "13a20cb1b5cae518e3ad6ab61f2e000a0442a44cec0641c59c3d72534534f826",
+      "distributed_sha256": "3e3678dd0a525b2499ce0165cc5ed11f68d0e7e119f565082449b64156f64d30",
+      "path_literal_relocations": 1,
+      "behavior_changes": "None; only absolute path literals relocated"
+    },
+    {
+      "path": "current/v39_forward_validation/src/labels.py",
+      "original_sha256": "1263aef350ce8957c97bfbcc9e35af2ccef9f1c64cd95c73d0dc82390bc7f801",
+      "distributed_sha256": "1263aef350ce8957c97bfbcc9e35af2ccef9f1c64cd95c73d0dc82390bc7f801",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/membership.py",
+      "original_sha256": "0d5b31eb1fede39f59afd36cbbf56b79ec9f1131e6ff2a1418b8b1da4a86cd3a",
+      "distributed_sha256": "0d5b31eb1fede39f59afd36cbbf56b79ec9f1131e6ff2a1418b8b1da4a86cd3a",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/model_core_v39.py",
+      "original_sha256": "4106f65224bb6d8f0c1e0aef928a19c7483a6c873803b3c21c4ea7278508c16f",
+      "distributed_sha256": "4106f65224bb6d8f0c1e0aef928a19c7483a6c873803b3c21c4ea7278508c16f",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/pipeline.py",
+      "original_sha256": "2344e5b303b9d28708e05598d33debb88c66c9f27d27aa38eaefa877d27ed468",
+      "distributed_sha256": "2344e5b303b9d28708e05598d33debb88c66c9f27d27aa38eaefa877d27ed468",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/plan.py",
+      "original_sha256": "4cce4b369a99d5a22dc5f14292500d481313a90822f34bd581958b6e154be315",
+      "distributed_sha256": "4cce4b369a99d5a22dc5f14292500d481313a90822f34bd581958b6e154be315",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/portfolio.py",
+      "original_sha256": "a1fc7b64c3593b607dc4458967f254fbee94e9c04a86942940920c6908adf671",
+      "distributed_sha256": "a1fc7b64c3593b607dc4458967f254fbee94e9c04a86942940920c6908adf671",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/qualify_events.py",
+      "original_sha256": "e905efc9cd5aff42e9fc873f35571b8f6cc79ce3855b8192c7db1443a2fd7f4e",
+      "distributed_sha256": "e905efc9cd5aff42e9fc873f35571b8f6cc79ce3855b8192c7db1443a2fd7f4e",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/source_probe.py",
+      "original_sha256": "ad71909f6779b9f799263b69fc19fb565ba95beb87a1e1ea36184ab577e73229",
+      "distributed_sha256": "ad71909f6779b9f799263b69fc19fb565ba95beb87a1e1ea36184ab577e73229",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/source_qa.py",
+      "original_sha256": "7b5f8246ce893b0158f6719622b5bd7d3992b8d711d4ff2ced678b2604ca83c7",
+      "distributed_sha256": "7b5f8246ce893b0158f6719622b5bd7d3992b8d711d4ff2ced678b2604ca83c7",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/stock_features_v39.py",
+      "original_sha256": "f4e8da7b85aadaa060e58c097e79532307c2486b933a0dc7019960898e15d60d",
+      "distributed_sha256": "f4e8da7b85aadaa060e58c097e79532307c2486b933a0dc7019960898e15d60d",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/supplement_plan.py",
+      "original_sha256": "52de806776ec8f2c0cf1a18fe3a9f2e9cb593dbbd89900d6fd119ebc8e9e21e8",
+      "distributed_sha256": "52de806776ec8f2c0cf1a18fe3a9f2e9cb593dbbd89900d6fd119ebc8e9e21e8",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    },
+    {
+      "path": "current/v39_forward_validation/src/xlre_repair_plan.py",
+      "original_sha256": "4ea6de1755c1b81a21892a95264dcaa35f75edb6a91035f1847280b6cf725640",
+      "distributed_sha256": "4ea6de1755c1b81a21892a95264dcaa35f75edb6a91035f1847280b6cf725640",
+      "path_literal_relocations": 0,
+      "behavior_changes": "Byte-identical source"
+    }
+  ],
+  "source_count": 91,
+  "originals_modified": false
+}

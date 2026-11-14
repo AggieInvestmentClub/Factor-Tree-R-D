@@ -2,6 +2,14 @@
 
 University research into decision-tree-based trading processes.
 
+## Cross-sectional portfolio research
+
+- [v39 benchmark and volatility-stop backtest, model specification and reproducibility guide](research/v39_backtest/README.md)
+
+This separate stock-portfolio study evaluates 2024 through November 11, 2026.
+Its README documents the historical universe, data qualifications and prior
+use of the forward period. The older ETF study below retains its own scope.
+
 ## Current ETF research
 
 - [v3.1 payoff + ETF-context performance report](research/etf_long_cash/focused_payoff_context/README.md)

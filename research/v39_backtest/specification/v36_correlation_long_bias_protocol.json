@@ -1,0 +1,65 @@
+{
+  "created_utc": "2026-11-12T01:43:50.884407+00:00",
+  "status": "Frozen before v36 outcomes; neutral correlation results already known; direct comparison explicitly requested",
+  "arms": [
+    "fixed_corr_long50",
+    "retrained_corr_long50"
+  ],
+  "pairs": [
+    [
+      "fixed_corr_long50",
+      "monthly_leader"
+    ],
+    [
+      "retrained_corr_long50",
+      "monthly_leader"
+    ],
+    [
+      "retrained_corr_long50",
+      "fixed_corr_long50"
+    ]
+  ],
+  "objective": "Test the two previously constructed correlation-neutral stock-selection portfolios with the leading +.50 long-bias allocation and shared12% risk budget, not infer this result from neutral tests.",
+  "design": "Use unchanged v34 fixed_corr3 and retrained_corr3 neutral desired portfolios. Apply exactly v31 long-bias allocator and gate handling, original21-session schedule,next-close,repaired daily account,2bps/side,gross3 active/500,name.15,buffer.2. Long broad-stock basket has equal target net and estimated SPY beta, capped .50. Alpha contracts to share risk; no independent overlay leverage.",
+  "interpretation": "Correlation constraints apply to the neutral stock-selection component. The long market basket is intentionally allowed its common-factor exposure; total portfolio is not PCA neutral. The retrained coefficients were fitted for neutral correlation-aware allocation in v34, not refitted under this positive bias. This isolates allocation under long bias and does not test joint long-biased training.",
+  "controls": "Regenerate original long50 targets from v31 neutral log_growth and require numerical identity on all204 dates before accounts. Original leader and original H21 remain unchanged.",
+  "inference": {
+    "primary": "2012-2023",
+    "full": "2007-2023",
+    "stress": [
+      2008,
+      2020,
+      2022
+    ],
+    "family": 3,
+    "blocks": [
+      20,
+      60
+    ],
+    "replications": 2000,
+    "endpoint": "Annual log growth paired difference; drawdown descriptive"
+  },
+  "promotion": false,
+  "limitations": [
+    "Reused history and known2022 failure",
+    "No new fitting under long-biased objective",
+    "Zero borrow/funding/cash interest; conditional source valuations remain",
+    "Additional factor neutrality at scheduled alpha targets, not hard daily total-portfolio neutrality"
+  ],
+  "sources": {
+    "current/v31_growth_long_bias/protocol.json": "59faa894bef587faeb082e928384e5eb0ad32001406ddc8cd3686b1e13e0d0fc",
+    "current/v31_growth_long_bias/src/allocation.py": "e956abf01c0c72de2df656149f996e6fe738dc27b367156ff7765459ae2bcd8e",
+    "current/v31_growth_long_bias/src/research_account.py": "259b1d74b1617f303d1fb570ec30d7d84fc2435f2f66dc5e86925966d0cec5e3",
+    "current/v31_growth_long_bias/src/runner.py": "6642534f26af85a0af574f6426f4103c0f1141747c29950d8efa42e89ab1cdb0",
+    "current/v31_growth_long_bias/account_inputs/log_growth_desired.pkl": "d8ef33f7d02c260a9f917e31246c06016263c8951a1f808354796e0d55f1228b",
+    "current/v31_growth_long_bias/account_inputs/growth_long50_v12_desired.pkl": "c08c3b62b86d95d662864dbb9580af78c9969fa1b52260ac026eaa5435e4bce2",
+    "current/v34_stock_risk/protocol.json": "3827b8b865c5ba5c9cdeb0ecefcf7d2aeadcb170ebc20cefdbe01303cd37e8d8",
+    "current/v34_stock_risk/data_manifest.json": "9978a0a06e67a7b349785372c1277622e11ef92de0c4ccadac475d8fe96483a1",
+    "current/v34_stock_risk/data/factor_loadings.npy": "12fc8ac0b642846bf3a4278c3d6396a29083db7bf23f78ae2d1ef8c9dbefc0a7",
+    "current/v34_stock_risk/account_inputs/fixed_corr3_neutral_desired.pkl": "3216841c2ff6a63c5f6b212e77a95e09d0cf3af7a5cb888ab0413c029d53dfda",
+    "current/v34_stock_risk/account_inputs/retrained_corr3_neutral_desired.pkl": "1d203b6dfb686daad6164003c41a52e76a78a339ae32d4fd8921dd6be44c3aa9"
+  },
+  "code": {
+    "compare.py": "d28e18c497a41456eb4daf7bfa9e4cd97b958088ded370f055f6d992b6d49348"
+  }
+}

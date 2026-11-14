@@ -1,0 +1,83 @@
+{
+  "created_utc": "2026-11-12T02:18:07.092293+00:00",
+  "status": "Frozen before stop outcomes; prior2022 drawdowns known; independent of running beta-cap results",
+  "arms": [
+    "none",
+    "fixed5",
+    "trailing8",
+    "bracket5_10",
+    "vol2sigma",
+    "tree"
+  ],
+  "pairs": [
+    [
+      "fixed5",
+      "none"
+    ],
+    [
+      "trailing8",
+      "none"
+    ],
+    [
+      "bracket5_10",
+      "none"
+    ],
+    [
+      "vol2sigma",
+      "none"
+    ],
+    [
+      "tree",
+      "none"
+    ]
+  ],
+  "benchmark": "Immutable v36 fixed_corr_long50, original21-session forecasts and +.50 maximum beta. No new entry alpha or beta cap selection.",
+  "stops": {
+    "none": "Original account replay with no policy; collect causal position states and require exact ledger identity.",
+    "fixed5": "Exit after adjusted close price loses5% versus average entry basis.",
+    "trailing8": "Exit after8% adverse movement from favorable adjusted closing-price extreme since entry; long high-water/short low-water.",
+    "bracket5_10": "Fixed5% loss or10% gain versus entry.",
+    "vol2sigma": "Entry-frozen loss threshold2*63-session daily stock volatility*sqrt21, clipped3%-20%.",
+    "tree": "Annual depth2 continuation-value regression tree trained on prior5years of every-fifth-session baseline position states with matureH21 labels; min_leaf1000,min_training10000;before2012 use fixed5. Exit if predicted holding advantage below minus20bp and age>=5sessions. No grid search."
+  },
+  "execution": "Signals observed at close; orders at next close with actual quotes,fees and corporate mechanics. These are not resting intraday stop orders and thresholds do not guarantee fill prices. Reliable high/low is not available on all qualified OC dates; intraday backtest deferred rather than invent missing paths.",
+  "position_state": "Actual executed shares from daily position sink before decision. Average adjusted entry basis updates on same-side additions, unchanged on reductions; resets on flat/sign reversal. Closing high/low watermark updates on valid marks only. Stop percentages use adjusted total-return wealth prices, not raw broker quotes. Provisional marks do not trigger exits.",
+  "reentry": "Triggered names excluded until next original21-session forecast; persistent blocked holdings force a retry after failed execution. A fresh forecast permits re-entry with a new actual entry basis if previously flat. Triggered exits bypass20% trading buffer.",
+  "portfolio": "After exclusions, project surviving source target jointly to dollar/beta/PCA neutrality for its alpha, then add feasible long basket over remaining names. Net/beta request is remaining raw net clipped0-.50. Gross budget never exceeds pre-projection surviving target gross or remaining-cohort cap. No normalization back to original leverage. Existing12% forecast-risk/name/gross limits remain. Guard rebalancing can change other names to restore constraints; this is an integrated portfolio exit test, not an isolated ticket-profit sum.",
+  "tree_label": "Use audited next-close t+1 to t+22 total-wealth H21 labels including resolved corporate outcomes. Holding advantage versus exiting at t+1 is approximately(side-2bp)*future_return; same exit-cost constant cancels. This is a continuation-value proxy, not full optimal-stopping Bellman recursion. Baseline-state training is off-policy relative to the exit strategy; no claim of globally optimal exit zones. Strict label_end<annualcut, training dates beforecut, past5years; no threshold selection on2022.",
+  "inference": {
+    "primary": "2012-2023",
+    "full": "2007-2023",
+    "stress": [
+      2008,
+      2020,
+      2022
+    ],
+    "family": 5,
+    "blocks": [
+      20,
+      60
+    ],
+    "replications": 2000,
+    "endpoint": "Paired annual log growth; drawdown descriptive"
+  },
+  "funding": "Same2bps per side,zero borrow/funding/cash interest and conditional source valuations",
+  "promotion": false,
+  "sources": {
+    "current/v31_growth_long_bias/src/research_account.py": "259b1d74b1617f303d1fb570ec30d7d84fc2435f2f66dc5e86925966d0cec5e3",
+    "current/v31_growth_long_bias/src/allocation.py": "e956abf01c0c72de2df656149f996e6fe738dc27b367156ff7765459ae2bcd8e",
+    "current/v36_correlation_long_bias/protocol.json": "67d8528817a433cfaadc52ac1312daabffb42077317faad47c98ec1209bb22b5",
+    "current/v36_correlation_long_bias/account_inputs/fixed_corr_long50_desired.pkl": "4cc5c6961a515be8441b2abf10266b2c7b4ec3c9653b08ea2004307a1ca0a332",
+    "current/v36_correlation_long_bias/accounts/fixed_corr_long50_ledger.csv.gz": "87f50f1f1d52226487047da4fd6ef225f61d47983eb7052d443e7647f733a7f5",
+    "current/v33_adaptive_beta/account_inputs/qualified_returns.npy": "f96ec3299573ce3b0dee7380cf74194095ac469b6501a11d11de37da1a26ea44",
+    "current/v33_adaptive_beta/account_inputs/return_clock.json": "3a38b32aaace0e9cb78bf485298f12b03d95aa2637fc6a3c5222f7bce2013e14",
+    "current/v34_stock_risk/data/factor_loadings.npy": "12fc8ac0b642846bf3a4278c3d6396a29083db7bf23f78ae2d1ef8c9dbefc0a7",
+    "current/v34_stock_risk/data_manifest.json": "9978a0a06e67a7b349785372c1277622e11ef92de0c4ccadac475d8fe96483a1",
+    "current/v23_horizon_targets/data/horizon_labels.pkl": "979713ca744d3774916e8da85c9b94a422922e37e12580cbd69c5cf2c9243714"
+  },
+  "code": {
+    "exits.py": "c8477525cf62a8c0d5d5be0ae4939b0206c65811fd5f2b2a64cd2c8c37ce68df",
+    "exit_account.py": "a3da5d02c616ca02e6527e25bdba937c12ae3f94375ab206a860a823f260af88",
+    "test_exits.py": "038722c6fceba94e9222da38f38de1dd5ce13b1be2f8107c04b35de4c8c0a493"
+  }
+}

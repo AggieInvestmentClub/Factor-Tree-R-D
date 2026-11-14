@@ -1,0 +1,219 @@
+{
+  "created_utc": "2026-11-11T23:45:46.738073+00:00",
+  "status": "Frozen before v31 outcomes; adaptive research on reused history",
+  "arms": {
+    "h21_legacy": {
+      "source": "h21",
+      "repair": false,
+      "bias": 0,
+      "vol": 0.12
+    },
+    "h21_repaired": {
+      "source": "h21",
+      "repair": true,
+      "bias": 0,
+      "vol": 0.12
+    },
+    "rff_repaired": {
+      "source": "rff",
+      "repair": true,
+      "bias": 0,
+      "vol": 0.12
+    },
+    "utility5": {
+      "source": "utility5",
+      "repair": true,
+      "bias": 0,
+      "vol": 0.12
+    },
+    "utility1": {
+      "source": "utility1",
+      "repair": true,
+      "bias": 0,
+      "vol": 0.12
+    },
+    "net_return": {
+      "source": "net_return",
+      "repair": true,
+      "bias": 0,
+      "vol": 0.12
+    },
+    "log_growth": {
+      "source": "log_growth",
+      "repair": true,
+      "bias": 0,
+      "vol": 0.12
+    },
+    "growth_v16": {
+      "source": "log_growth",
+      "repair": true,
+      "bias": 0,
+      "vol": 0.16
+    },
+    "growth_v20": {
+      "source": "log_growth",
+      "repair": true,
+      "bias": 0,
+      "vol": 0.2
+    },
+    "growth_long25_v12": {
+      "source": "log_growth",
+      "repair": true,
+      "bias": 0.25,
+      "vol": 0.12
+    },
+    "growth_long25_v16": {
+      "source": "log_growth",
+      "repair": true,
+      "bias": 0.25,
+      "vol": 0.16
+    },
+    "market_long25": {
+      "source": "market",
+      "repair": true,
+      "bias": 0.25,
+      "vol": 0.12
+    },
+    "growth_long50_v12": {
+      "source": "log_growth",
+      "repair": true,
+      "bias": 0.5,
+      "vol": 0.12
+    },
+    "growth_long50_v16": {
+      "source": "log_growth",
+      "repair": true,
+      "bias": 0.5,
+      "vol": 0.16
+    },
+    "market_long50": {
+      "source": "market",
+      "repair": true,
+      "bias": 0.5,
+      "vol": 0.12
+    }
+  },
+  "objectives": [
+    "utility5",
+    "utility1",
+    "net_return",
+    "log_growth"
+  ],
+  "pairs": [
+    [
+      "h21_repaired",
+      "h21_legacy"
+    ],
+    [
+      "rff_repaired",
+      "old_rff"
+    ],
+    [
+      "utility5",
+      "rff_repaired"
+    ],
+    [
+      "utility1",
+      "utility5"
+    ],
+    [
+      "net_return",
+      "utility5"
+    ],
+    [
+      "log_growth",
+      "utility5"
+    ],
+    [
+      "growth_v16",
+      "log_growth"
+    ],
+    [
+      "growth_v20",
+      "log_growth"
+    ],
+    [
+      "growth_long25_v12",
+      "log_growth"
+    ],
+    [
+      "growth_long50_v12",
+      "log_growth"
+    ],
+    [
+      "growth_long25_v16",
+      "growth_v16"
+    ],
+    [
+      "growth_long50_v16",
+      "growth_v16"
+    ],
+    [
+      "growth_long25_v12",
+      "market_long25"
+    ],
+    [
+      "growth_long50_v12",
+      "market_long50"
+    ]
+  ],
+  "repair": "For stale targets with missing betas, exclude currently ineligible/unquoted/terminated/nonfinite-risk names and project remaining weights into the declared constraints. Keep next-close quote checks, abort behavior, fees, corporate cash and claims unchanged. Never invent missing risk or fills.",
+  "controlled_long": "Long-only broad-stock basket with near-equal weights and unit estimated beta; overlay25% or50% capital net long. Bias is reduced if necessary to fit total forecast risk or caps. Alpha is contracted to fit remaining budget. Net and beta targets equal the effective overlay. Bias persists when alpha efficacy gate is off.",
+  "guards": "Neutral beta guard.05 unchanged; biased accounts guard actual beta and actual net against latest desired net, with.05 deviation bands. All guards submit next-close orders, not immediate fills. Reproject stale biased targets to current eligible names while maintaining desired net/beta.",
+  "constraints": "21observed-session cadence;original58causal price features and32fixed random features;gross3 adjusted active/500;name.15;buffer.2;grossguard3.3;nextclose;2bps/side;no new data or post2023 outcomes.",
+  "objectives_description": {
+    "utility5": "annual mean net return minus2.5 annual variance",
+    "utility1": "annual mean net return minus.5 annual variance",
+    "net_return": "annual mean net return under fixed hard exposure/risk limits",
+    "log_growth": "annual mean log(1+net return), monotone in compounded growth"
+  },
+  "fitting": {
+    "epochs": 100,
+    "penalties": [
+      0.1,
+      0.01
+    ],
+    "architecture": "Same v29 random map and initialization, fixed seed20261111",
+    "validation": "Prior10year annual refits; common mature monthly census; last2years validation; strict inner and outer endpoint purge; select regularization with repaired daily engine and objective matching the arm. Fixed.1 fallback2007/2008. Same shortened2012 validation claim boundary.",
+    "gradient": "v29 sequential21session surrogate retained, objective varied only. Daily repaired engine used for model selection and final accounts. Measure remaining surrogate gap; no claim of differentiation through daily guards."
+  },
+  "inference": {
+    "primary": "2012-2023",
+    "early": "2007-2011",
+    "full": "2007-2023",
+    "blocks": [
+      20,
+      60
+    ],
+    "replications": 2000,
+    "holm_family": 14,
+    "primary_endpoint": "annual log growth difference; CAGR monotone transformation",
+    "secondary": "Sharpe,drawdown,realized risk,market beta,fees,exposure"
+  },
+  "funding": "Original accounting assumes zero borrow,financing,cash yield. Add clearly labeled100/300bp short-borrow sensitivities without claiming actual borrow availability or historical prices.",
+  "promotion": false,
+  "sources": {
+    "prior/v17_long_history/src/account_engine.py": "8c6e4b3e14b6069932f960773b3b6562c1285e16d49a39502362b6ef8594f735",
+    "current/v29_nonlinear_portfolio/protocol.json": "2a71891d7f4f75c792cc0c994a0fce0db5871413f5cbe0894f65460d156d45dd",
+    "current/v29_nonlinear_portfolio/data_manifest.json": "50a274a9b24ac84705e57cbcedb048c6c0f1b6aaf1083b846782fe56fed8cfe9",
+    "current/v29_nonlinear_portfolio/src/policy.py": "e2bce979941b9802e9942242ba36b65a3c8dbca232f78b3dcd68fbba9bd2c3d8",
+    "current/v29_nonlinear_portfolio/src/common.py": "dd4a3c9c99f17ec186bae7564bf519d7c8863e0a07c43788c4be6517d96dcded",
+    "current/v23_horizon_targets/account_contract.json": "b2a2f84644d64e60a7e570ee40acd0444c9a44d041c3bb9d58a553e799b86c44",
+    "current/v23_horizon_targets/accounts/h21_projected_scaled_matched_complete.json": "74b4b09547c6f6374acc9c7fc2037fba4de50034f0b082522ac56cfddc487f0e"
+  },
+  "code": {
+    "allocation.py": "e956abf01c0c72de2df656149f996e6fe738dc27b367156ff7765459ae2bcd8e",
+    "learner.py": "2e7917f071548656581618a031f8f59e14e31359c6487fe2b2ec4bb018ce4145",
+    "prepare.py": "b0871c999d3f707637fbcc00d443ccfe40f800f7251ce38cf93299a8f59cdf73",
+    "research_account.py": "259b1d74b1617f303d1fb570ec30d7d84fc2435f2f66dc5e86925966d0cec5e3",
+    "runner.py": "6642534f26af85a0af574f6426f4103c0f1141747c29950d8efa42e89ab1cdb0",
+    "settings.py": "f56523cd79c94e0335f113604bb87505d6fed95aed7da9bc97c47e55c2c39446",
+    "test_research.py": "b78076db6a632363809197e31a8b1c073b1cdfd347a6b94fc314ff381f9ee39c"
+  },
+  "limitations": [
+    "Original conditional source valuations and historical universe retained",
+    "No statistical correction for earlier research families",
+    "A long bias can increase CAGR through market exposure rather than better alpha",
+    "Gradient replay remains approximate; high estimated training growth is not a forecast"
+  ]
+}

@@ -1,0 +1,27 @@
+# Licensed histories and mutable work must remain outside the checkout.
+private/
+v39_private_inputs/
+runtime/
+scratch/
+raw/
+captures/
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.zip
+source_locations.json
+.v39-workspace.json
+.env
+.env.*
+!*.example
+secrets/
+*.key
+*.pem
+lseg-data.config.json
+refinitiv-data.config.json
+__pycache__/
+*.py[cod]
+.venv/
+*.log
+*.partial

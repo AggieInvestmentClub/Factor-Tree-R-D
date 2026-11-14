@@ -1,0 +1,141 @@
+{
+  "passed": true,
+  "scope": "Frozen inputs and forward rebuild integrity; not an independent vendor recapture",
+  "inputs": {
+    "passed": true,
+    "profile": "rebuild",
+    "files": 61,
+    "bytes": 2888089700,
+    "all_sha256_match": true,
+    "manifest_sha256": "fca8a4c6cec1b8f8215958566059fd2c5a12b9cb7315fd85702ee176c43b1898"
+  },
+  "model_queries": 297,
+  "stored_names": 1008,
+  "unique_sorted_dates_and_names": true,
+  "h21_label_clock_passed": true,
+  "annual_training": {
+    "2024": {
+      "training_periods": 106,
+      "max_label_end": "2023-12-11 00:00:00",
+      "refit_boundary": "2024-01-01",
+      "strict_maturity_passed": true
+    },
+    "2025": {
+      "training_periods": 107,
+      "max_label_end": "2024-12-11 00:00:00",
+      "refit_boundary": "2025-01-01",
+      "strict_maturity_passed": true
+    },
+    "2026": {
+      "training_periods": 108,
+      "max_label_end": "2025-12-15 00:00:00",
+      "refit_boundary": "2026-01-01",
+      "strict_maturity_passed": true
+    }
+  },
+  "rebuilt_array_max_absolute_errors": {
+    "x": 0.0,
+    "centered": 0.0,
+    "diag": 0.0,
+    "orth": 0.0,
+    "corr_orth": 0.0,
+    "factor_loadings": 0.0,
+    "mask": 0.0,
+    "beta": 0.0,
+    "gate": 0.0,
+    "returns": 0.0,
+    "complete": 0.0,
+    "qualified_returns": 0.0
+  },
+  "array_shapes": {
+    "x": [
+      297,
+      1008,
+      58
+    ],
+    "centered": [
+      297,
+      63,
+      1008
+    ],
+    "diag": [
+      297,
+      1008
+    ],
+    "orth": [
+      297,
+      2,
+      1008
+    ],
+    "corr_orth": [
+      297,
+      5,
+      1008
+    ],
+    "factor_loadings": [
+      297,
+      3,
+      1008
+    ],
+    "mask": [
+      297,
+      1008
+    ],
+    "beta": [
+      297,
+      1008
+    ],
+    "gate": [
+      297
+    ],
+    "returns": [
+      297,
+      1008
+    ],
+    "complete": [
+      297
+    ],
+    "qualified_returns": [
+      6756,
+      1008
+    ]
+  },
+  "gate_strict_maturity": true,
+  "return_series": {
+    "development": {
+      "sessions": 4277,
+      "start": "2007-01-04",
+      "end": "2023-12-29"
+    },
+    "forward": {
+      "sessions": 719,
+      "start": "2024-01-02",
+      "end": "2026-11-11"
+    },
+    "full": {
+      "sessions": 4996,
+      "start": "2007-01-04",
+      "end": "2026-11-11"
+    }
+  },
+  "accounts": {
+    "benchmark": {
+      "arithmetic_passed": true,
+      "provisional_sessions": 15,
+      "validated_performance": false,
+      "held_quote_gaps": 0,
+      "aborted_batches": 0,
+      "margin_calls": 0
+    },
+    "vol2sigma": {
+      "arithmetic_passed": true,
+      "provisional_sessions": 15,
+      "validated_performance": false,
+      "held_quote_gaps": 0,
+      "aborted_batches": 0,
+      "margin_calls": 0
+    }
+  },
+  "historical_vintage_database": false,
+  "data_fully_unconditional": false
+}

@@ -1,0 +1,145 @@
+{
+  "year": 2024,
+  "objective": "log_growth",
+  "design_sha256": "203d5d63df27df26c0ca3d36b25ec9d4df58c8f21b4dc0ee3c57824e5ab469cc",
+  "weights_sha256": "84dbc6c3a361817aba79053826a8dfa907d32247b9e285115126bd571cc12fb5",
+  "training_periods": 106,
+  "training_query_sha256": "2058db62e9bfb8572c3f19584534642c44b4979df6884479964b056cd42bdf99",
+  "max_training_label_end": "2023-12-11 00:00:00",
+  "refit_boundary": "2024-01-01 00:00:00",
+  "inner_max_training_label_end": "2021-12-08 00:00:00",
+  "validation_start": "2022-01-01 00:00:00",
+  "selection": [
+    {
+      "penalty": 0.1,
+      "validation": {
+        "utility": 0.03130530560616965,
+        "annual_mean": 0.03951361134121041,
+        "annual_log_growth": 0.03130530560616965,
+        "annual_variance": 0.01645616890160649,
+        "start": "2022-01-07 00:00:00",
+        "end": "2023-12-29 00:00:00",
+        "sessions": 497,
+        "claim_boundary_shortened": false,
+        "seconds": 5.296999999904074,
+        "exact_repaired_engine": true
+      },
+      "training": {
+        "utility": 0.2376466180601356,
+        "annual_mean": 0.24942335073670768,
+        "annual_log_growth": 0.2376466180601356,
+        "annual_variance": 0.008909481447588529,
+        "trace": [
+          {
+            "epoch": 0,
+            "loss": 0.05174827606816938
+          },
+          {
+            "epoch": 20,
+            "loss": -0.17345021652058729
+          },
+          {
+            "epoch": 40,
+            "loss": -0.2111867893622883
+          },
+          {
+            "epoch": 60,
+            "loss": -0.22658446418896414
+          },
+          {
+            "epoch": 80,
+            "loss": -0.22758999532029292
+          },
+          {
+            "epoch": 99,
+            "loss": -0.2315552604191128
+          }
+        ]
+      }
+    },
+    {
+      "penalty": 0.01,
+      "validation": {
+        "utility": 0.005686893983575296,
+        "annual_mean": 0.01419962292988214,
+        "annual_log_growth": 0.005686893983575296,
+        "annual_variance": 0.017061429801826913,
+        "start": "2022-01-07 00:00:00",
+        "end": "2023-12-29 00:00:00",
+        "sessions": 497,
+        "claim_boundary_shortened": false,
+        "seconds": 5.062000000034459,
+        "exact_repaired_engine": true
+      },
+      "training": {
+        "utility": 0.2434168317546911,
+        "annual_mean": 0.25756799019768795,
+        "annual_log_growth": 0.2434168317546911,
+        "annual_variance": 0.009679239256804183,
+        "trace": [
+          {
+            "epoch": 0,
+            "loss": 0.049532481842317594
+          },
+          {
+            "epoch": 20,
+            "loss": -0.17866829796812952
+          },
+          {
+            "epoch": 40,
+            "loss": -0.21898659797549622
+          },
+          {
+            "epoch": 60,
+            "loss": -0.2294418523953728
+          },
+          {
+            "epoch": 80,
+            "loss": -0.23408974065902388
+          },
+          {
+            "epoch": 99,
+            "loss": -0.23865688559849418
+          }
+        ]
+      }
+    }
+  ],
+  "selected_penalty": 0.1,
+  "fallback": false,
+  "training": {
+    "utility": 0.2086879060125023,
+    "annual_mean": 0.21877356741550108,
+    "annual_log_growth": 0.2086879060125023,
+    "annual_variance": 0.008612940790406445,
+    "trace": [
+      {
+        "epoch": 0,
+        "loss": 0.039416149909108064
+      },
+      {
+        "epoch": 20,
+        "loss": -0.15134327404712114
+      },
+      {
+        "epoch": 40,
+        "loss": -0.1787045860501481
+      },
+      {
+        "epoch": 60,
+        "loss": -0.19743125216068924
+      },
+      {
+        "epoch": 80,
+        "loss": -0.20672415531720928
+      },
+      {
+        "epoch": 99,
+        "loss": -0.20278188885839882
+      }
+    ]
+  },
+  "seconds": 45.686999999918044,
+  "source_data_manifest_sha256": "50a274a9b24ac84705e57cbcedb048c6c0f1b6aaf1083b846782fe56fed8cfe9",
+  "forward_data_accessed": false
+}

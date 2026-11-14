@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "old_feature_arrays_exact": true,
+  "old_risk_parity": {
+    "centered": 0.0,
+    "diag": 0.0,
+    "mask": 0.0,
+    "beta": 0.0
+  },
+  "scheduled_queries": 297,
+  "forward_queries": 34,
+  "stored_names": 1008,
+  "risk_budget_denominator": 500,
+  "prediction_eligibility_uses_future_labels": false,
+  "files": {
+    "beta.npy": "9f3e327ab600de012b38e36746e0f222719d0b0f4f6ea5450f833404641fea4e",
+    "centered.npy": "8b68f5f7ff9b368599eeb0d9718d8db89f392443cb6e7b71566bfb6b468504c9",
+    "complete.npy": "378e325a2c876a68944fba0a856afac9538b2dd7048ff59e67f2e1e2c60bd21c",
+    "corr_orth.npy": "813f74a94e49bf48c86ff3982a8b976f093f2698348acbfcad5584de54570894",
+    "daily_beta.pkl": "6eb4fd8db20590c70908e5de25634c223a0db499dcaedb1976de2abe081d3708",
+    "daily_eligible.pkl": "531aefe096b01c67c9b119f225e36b022d71daefd63315a2b2b4dd0a2bb56c39",
+    "diag.npy": "e2ad456448923bad1889f715e7cf6bdc86e557471f8b6a80945f1c8df37949ae",
+    "factor_loadings.npy": "65534e097434e178537e6fdb38613ba0dd05320a56390072c94389835e4ced9c",
+    "gate.npy": "f9993b702a6a303a98f50daa5131fec187a25df7fc1ce3ca1fb632269639d9dc",
+    "market_returns.csv": "e798ebf2abc59b3dc5a0f64e463d03587a65264d252d399450b929cd025133a1",
+    "mask.npy": "0641d64146110136441e9036cad8c79b08398f1d6c67633baf22459c5b044f0f",
+    "metadata.json": "b2b964a1a2b5aa0466e227924eef123eb0e26ad70642e3c8ef83123a6d56327c",
+    "orth.npy": "d6b31e5c7fa6261a9d11e6193fc7678e09bca9653903549671d597d6bad7fe45",
+    "qualified_returns.npy": "f22b40e4631256c7e780f176ca6d20715aa44c7bd1036daa7f04888174bdf94b",
+    "query_audit.csv": "0c9ed4c8e2879d52d75db80e465e87ad3d4eebf7d431c38d723b33523af02d42",
+    "returns.npy": "a9848f4fa07222c37904936a5136f759613c4047eee26e1332130bb891d67b6f",
+    "x.npy": "306162cec236d50399ade371fb5bf9efca793939dfbcf4608ff233f40caabea2"
+  }
+}

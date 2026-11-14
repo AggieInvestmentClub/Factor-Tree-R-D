@@ -1,0 +1,176 @@
+{
+  "arm": "vol2sigma",
+  "design_sha256": "203d5d63df27df26c0ca3d36b25ec9d4df58c8f21b4dc0ee3c57824e5ab469cc",
+  "ledger_sha256": "4f68b721c06aeb02187b0d5d8ff0e3787216fa7e888e202bdada18a51b58b975",
+  "desired_sha256": "c9205cbc86630d0ac18561fc8129b07dd95cff1e5cf1b6d457765e0e04659c0a",
+  "audit": {
+    "arithmetic_passed": true,
+    "validated_performance": false,
+    "execution_clock": "next_close",
+    "exposure_clock": "after next-session close execution; end-of-day exposure",
+    "provisional_sessions": 15,
+    "unresolved_terminal_assets": [],
+    "issues": [
+      {
+        "date": "2025-01-21",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-01-22",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-01-23",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-01-24",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-01-27",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-01-28",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-01-29",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-01-30",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-01-31",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-02-03",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-02-04",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-02-05",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-02-06",
+        "ticker": "LEN.N",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": -1.6161785458316315e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2025-08-28",
+        "ticker": "WBA.OQ^H25",
+        "kind": "unresolved_conditional_corporate_value",
+        "raw_share_equivalent": -0.000690769141832665,
+        "reason": "Unpriced non-transferable contingent right; cash-only NAV scenario; signed0-to-cap sensitivity required",
+        "cvr_upper": 3.0
+      },
+      {
+        "date": "2026-04-07",
+        "ticker": "HOLX.OQ^D26",
+        "kind": "unresolved_conditional_corporate_value",
+        "raw_share_equivalent": 1.0488248307175772e-05,
+        "reason": "Unpriced non-transferable contingent right; cash-only NAV scenario; signed0-to-cap sensitivity required",
+        "cvr_upper": 3.0
+      }
+    ],
+    "aborted_order_batches": 0,
+    "corporate_cash_events": 234,
+    "reserved_scored": false,
+    "delayed_distribution_events": [
+      {
+        "ticker": "LEN.N",
+        "date": "2025-01-21",
+        "kind": "entitlement_created",
+        "raw_parent_shares": -1.6161785458316315e-05
+      },
+      {
+        "ticker": "LEN.N",
+        "date": "2025-02-07",
+        "kind": "observed_receiver_liquidation",
+        "raw_parent_shares": -1.6161785458316315e-05,
+        "cashflow": -0.0001841635452975144,
+        "cost": 3.6832709059502886e-08,
+        "source": "https://infomemo.theocc.com/infomemos?number=56021"
+      }
+    ],
+    "cash_termination_canceled_legs": 10,
+    "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+    "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+    "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+    "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+    "limitations": [
+      "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+      "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+    ],
+    "declared_gross_cap": 3.0,
+    "declared_position_cap": 0.15,
+    "dollar_neutral": false,
+    "beta_neutral": false,
+    "gross_guard": 3.3,
+    "known_eligibility_frame_supplied": true,
+    "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+    "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+    "data_cutoff_exclusive": "2026-11-12",
+    "requested_start": "2024-01-02",
+    "requested_end": "2026-11-11",
+    "first_observed_session": "2024-01-02",
+    "last_observed_session": "2026-11-11",
+    "source_numeric_prefix_only": true,
+    "legacy_class_specific_bypass": false,
+    "spy_benchmark": false,
+    "position_output_streamed": true,
+    "streamed_position_rows": 724752,
+    "repair_stale_risk": true,
+    "controlled_long_bias": true,
+    "stale_risk_repairs": 309,
+    "repaired_excluded_names": 681
+  },
+  "trigger_count": 791,
+  "seconds": 16.5
+}

@@ -1,0 +1,5 @@
+{
+  "sha256": "203d5d63df27df26c0ca3d36b25ec9d4df58c8f21b4dc0ee3c57824e5ab469cc",
+  "published_design": "specification/design.json",
+  "relocation": "Path keys normalized for publication; runtime uses original sealed metadata from private input pack."
+}

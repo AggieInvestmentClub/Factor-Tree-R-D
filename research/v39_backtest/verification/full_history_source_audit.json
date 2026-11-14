@@ -1,0 +1,1084 @@
+{
+  "accounts": {
+    "v38_position_exits/benchmark": {
+      "validated_performance": false,
+      "provisional_sessions": 36,
+      "unpriced_holding_sessions": 18,
+      "aborted_order_batches": 15,
+      "issues": [
+        {
+          "date": "2007-09-07",
+          "ticker": "CBSS.OQ^I07",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": 1.513610278125351e-05,
+          "reason": "Sept6 preliminary no-election allocation2.8USADS, completedSept7; final proration release unavailable. Cash71.82 vs2.8ADS sensitivity required.",
+          "cvr_upper": null
+        },
+        {
+          "date": "2011-12-14",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-15",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-16",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-19",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-20",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-21",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-22",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-23",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-27",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-28",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-29",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-30",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.00013643726246797243,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2015-05-12",
+          "ticker": "VRTX.OQ",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2015-05-12",
+          "ticker": "VRTX.OQ",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2015-06-09",
+          "ticker": "REGN.OQ",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2015-06-09",
+          "ticker": "REGN.OQ",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2018-10-01",
+          "ticker": "ANDV.N^J18",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": -0.00027696995981021537,
+          "reason": "Final issuer release reports approximately87pct stock/no-election proration, not exact fraction. Use rounded central scenario; .865-.875 fraction sensitivity required.",
+          "cvr_upper": null
+        },
+        {
+          "date": "2019-06-11",
+          "ticker": "BMS.N^F19",
+          "kind": "unresolved_cash_action_factor"
+        },
+        {
+          "date": "2020-11-06",
+          "ticker": "BIIB.OQ",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2020-11-06",
+          "ticker": "BIIB.OQ",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2022-12-22",
+          "ticker": "ABMD.OQ^L22",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": 2.1165764530443326e-05,
+          "reason": "Unpriced contingent rights; explicit cash-only scenario",
+          "cvr_upper": 35.0
+        },
+        {
+          "date": "2023-03-10",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-10",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-13",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-13",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-13",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-13",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-14",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-14",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-14",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-14",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-15",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-15",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-15",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-15",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-16",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-16",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-16",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-16",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-17",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-17",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-17",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-17",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-20",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-20",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-20",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-20",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-21",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-21",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-21",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-21",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-22",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-22",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-22",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-22",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-23",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-23",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-23",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-23",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-24",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-24",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-24",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-24",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-27",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-27",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-27",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-27",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-28",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": 3.699643820640962e-05,
+          "reason": "No executable marks during documented halt; resumed OTC opening payout verified, interim NAV requires stated mark sensitivity",
+          "cvr_upper": null
+        },
+        {
+          "date": "2023-05-01",
+          "ticker": "FRC.N^E23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-05-01",
+          "ticker": "FRC.N^E23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-05-02",
+          "ticker": "FRC.N^E23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-05-02",
+          "ticker": "FRC.N^E23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-05-03",
+          "ticker": "FRC.N^E23",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": -0.003130970533823475,
+          "reason": "No executable marks during documented halt; resumed OTC opening payout verified, interim NAV requires stated mark sensitivity",
+          "cvr_upper": null
+        },
+        {
+          "date": "2023-06-09",
+          "ticker": "BIIB.OQ",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-06-09",
+          "ticker": "BIIB.OQ",
+          "kind": "unpriced_held_close"
+        }
+      ]
+    },
+    "v39_forward_validation/benchmark": {
+      "validated_performance": false,
+      "provisional_sessions": 15,
+      "unpriced_holding_sessions": 0,
+      "aborted_order_batches": 0,
+      "issues": [
+        {
+          "date": "2025-01-21",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-22",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-23",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-24",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-27",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-28",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-29",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-30",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-31",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-02-03",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-02-04",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-02-05",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-02-06",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6815222241272874e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-08-28",
+          "ticker": "WBA.OQ^H25",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": -0.0007093072005958968,
+          "reason": "Unpriced non-transferable contingent right; cash-only NAV scenario; signed0-to-cap sensitivity required",
+          "cvr_upper": 3.0
+        },
+        {
+          "date": "2026-04-07",
+          "ticker": "HOLX.OQ^D26",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": 1.1956934721584168e-05,
+          "reason": "Unpriced non-transferable contingent right; cash-only NAV scenario; signed0-to-cap sensitivity required",
+          "cvr_upper": 3.0
+        }
+      ]
+    },
+    "v38_position_exits/vol2sigma": {
+      "validated_performance": false,
+      "provisional_sessions": 35,
+      "unpriced_holding_sessions": 17,
+      "aborted_order_batches": 16,
+      "issues": [
+        {
+          "date": "2007-09-07",
+          "ticker": "CBSS.OQ^I07",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": 1.8546583870733725e-05,
+          "reason": "Sept6 preliminary no-election allocation2.8USADS, completedSept7; final proration release unavailable. Cash71.82 vs2.8ADS sensitivity required.",
+          "cvr_upper": null
+        },
+        {
+          "date": "2011-12-14",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-15",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-16",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-19",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-20",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-21",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-22",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-23",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-27",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-28",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-29",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2011-12-30",
+          "ticker": "SHLD.OQ^J18",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": 0.0001373296356917187,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2015-05-12",
+          "ticker": "VRTX.OQ",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2015-05-12",
+          "ticker": "VRTX.OQ",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2015-06-09",
+          "ticker": "REGN.OQ",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2015-06-09",
+          "ticker": "REGN.OQ",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2018-10-01",
+          "ticker": "ANDV.N^J18",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": -0.0002729809226360124,
+          "reason": "Final issuer release reports approximately87pct stock/no-election proration, not exact fraction. Use rounded central scenario; .865-.875 fraction sensitivity required.",
+          "cvr_upper": null
+        },
+        {
+          "date": "2019-06-11",
+          "ticker": "BMS.N^F19",
+          "kind": "unresolved_cash_action_factor"
+        },
+        {
+          "date": "2022-12-22",
+          "ticker": "ABMD.OQ^L22",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": 2.3846646831200016e-05,
+          "reason": "Unpriced contingent rights; explicit cash-only scenario",
+          "cvr_upper": 35.0
+        },
+        {
+          "date": "2023-03-10",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-10",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-13",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-13",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-13",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-13",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-14",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-14",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-14",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-14",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-15",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-15",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-15",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-15",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-16",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-16",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-16",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-16",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-17",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-17",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-17",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-17",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-20",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-20",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-20",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-20",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-21",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-21",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-21",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-21",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-22",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-22",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-22",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-22",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-23",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-23",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-23",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-23",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-24",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-24",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-24",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-24",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-27",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-27",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-03-27",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-27",
+          "ticker": "SIVB.OQ^C23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-03-28",
+          "ticker": "SBNY.OQ^C23",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": 3.825046478985968e-05,
+          "reason": "No executable marks during documented halt; resumed OTC opening payout verified, interim NAV requires stated mark sensitivity",
+          "cvr_upper": null
+        },
+        {
+          "date": "2023-05-01",
+          "ticker": "FRC.N^E23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-05-01",
+          "ticker": "FRC.N^E23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-05-02",
+          "ticker": "FRC.N^E23",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-05-02",
+          "ticker": "FRC.N^E23",
+          "kind": "unpriced_held_close"
+        },
+        {
+          "date": "2023-05-03",
+          "ticker": "FRC.N^E23",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": -0.006206161603011141,
+          "reason": "No executable marks during documented halt; resumed OTC opening payout verified, interim NAV requires stated mark sensitivity",
+          "cvr_upper": null
+        },
+        {
+          "date": "2023-06-09",
+          "ticker": "BIIB.OQ",
+          "kind": "unpriced_held_open"
+        },
+        {
+          "date": "2023-06-09",
+          "ticker": "BIIB.OQ",
+          "kind": "unpriced_held_close"
+        }
+      ]
+    },
+    "v39_forward_validation/vol2sigma": {
+      "validated_performance": false,
+      "provisional_sessions": 15,
+      "unpriced_holding_sessions": 0,
+      "aborted_order_batches": 0,
+      "issues": [
+        {
+          "date": "2025-01-21",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-22",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-23",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-24",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-27",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-28",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-29",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-30",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-01-31",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-02-03",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-02-04",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-02-05",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-02-06",
+          "ticker": "LEN.N",
+          "kind": "unresolved_distribution_claim_mark",
+          "raw_share_equivalent": -1.6161785458316315e-05,
+          "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+        },
+        {
+          "date": "2025-08-28",
+          "ticker": "WBA.OQ^H25",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": -0.000690769141832665,
+          "reason": "Unpriced non-transferable contingent right; cash-only NAV scenario; signed0-to-cap sensitivity required",
+          "cvr_upper": 3.0
+        },
+        {
+          "date": "2026-04-07",
+          "ticker": "HOLX.OQ^D26",
+          "kind": "unresolved_conditional_corporate_value",
+          "raw_share_equivalent": 1.0488248307175772e-05,
+          "reason": "Unpriced non-transferable contingent right; cash-only NAV scenario; signed0-to-cap sensitivity required",
+          "cvr_upper": 3.0
+        }
+      ]
+    }
+  },
+  "start": "2007-01-04",
+  "end": "2026-11-11",
+  "sessions": 4996,
+  "join": "Liquidation/cash restart at2024; chain published returns, not uninterrupted holdings",
+  "spy": "Dividend-reinvested adjusted wealth;2bp at first close and final close; no annual transactions",
+  "source_hashes_verified": true
+}

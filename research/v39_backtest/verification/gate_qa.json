@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "prior_2023_gate_multiplier_exact": true,
+  "overlap_dates": 12,
+  "forward_queries": 34,
+  "strict_label_end_before_query": true,
+  "gate_sha256": "fda41423aed79776cd493b335f99f6840d80202f5d11436b5f3c324288642592"
+}

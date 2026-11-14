@@ -1,0 +1,109 @@
+{
+  "created_utc": "2026-11-11T22:34:17.668370+00:00",
+  "status": "Frozen before v29 fits and outcomes; adaptive research on reused historical data",
+  "benchmark": "h21_projected_scaled_matched",
+  "models": [
+    "replay_linear",
+    "replay_random",
+    "replay_mlp"
+  ],
+  "penalties": [
+    0.1,
+    0.01
+  ],
+  "epochs": 100,
+  "seed": 20261111,
+  "features": "Same36 price/sector/availability inputs; daily causal EWMA .25, plus slow half-life21 bank for22 continuous features only. No company data added to the core comparison.",
+  "architecture": {
+    "linear": "58 shared coefficients",
+    "random": "58 linear plus32 fixed cos random features, seed20261111, frequencies N(0,1/58), phases uniform0..2pi",
+    "mlp": "58-input8-tanh-hidden shared network with linear skip"
+  },
+  "objective": {
+    "training": "Sequential21-session surrogate: current-dollar holdings drift, endogenous NAV, implicit post-fee rebalance, hardL1.2 buffer and scheduled beta/gross guard, common known gate, exact decision-time source covariance/risk and neutrality/caps. Annual mean net return minus2.5*annual ex-ante variance minus ridge.",
+    "risk_target": 0.12,
+    "gamma": 5,
+    "cost_per_side": 0.0002,
+    "buffer": 0.2,
+    "gross_guard": 3.3,
+    "beta_guard": 0.05,
+    "timing": "Rewards are source next-close-to-next-close21-session returns. Surrogate evaluates buffer on execution-boundary drifted holdings, one close later than actual engine.",
+    "persistence": "Fast and slow causal characteristic histories plus holdings/cost state. No stock-specific parameters in core arms.",
+    "gaps": "Common complete-query census; missing reward or nonconsecutive dates reset to cash and charge liquidation of previous segment. No zero-return substitution for known assets.",
+    "terminal": "Surrogate charges liquidation at every segment end; account selection liquidates at validation end as source engine does.",
+    "pre2007_gate": "Gate unavailable before original OOS begins; multiplier1 used in training before2007, not represented as historical OOS gate.",
+    "omissions": [
+      "No daily intraperiod guards or margin calls in gradient surrogate",
+      "Endpoint total returns do not reproduce timing of corporate cash/claims or quote failures",
+      "Buffer timing differs by one close; current risk-ineligible holdings force surrogate rebalance even when the original buffer might retain them",
+      "Hard branches differentiated piecewise; nonconvex Adam fits have no global-optimum certificate"
+    ]
+  },
+  "validation": "Annual prior10year rolling window; complete H21 endpoints strictly before cutoff; last2calendar years withheld and inner endpoints strictly before validation start. For each penalty fit100epochs, select by original daily account engine annual mean net return minus2.5 annual realized variance on validation, including actual gate/buffer/guards/corporate events. Before2009 or insufficient inner queries use .1 fixed. Refit selected penalty on full mature sample.",
+  "unchanged_execution": "Original engine, next close,21 observed-session cadence, shared originalH5 gate,12% risk target,gross3 adjusted active/500,name.15,dollar/SPYbeta neutrality,buffer.2,2bps/side,no borrow/financing.",
+  "pairs": [
+    [
+      "replay_linear",
+      "h21_projected_scaled_matched"
+    ],
+    [
+      "replay_random",
+      "h21_projected_scaled_matched"
+    ],
+    [
+      "replay_mlp",
+      "h21_projected_scaled_matched"
+    ],
+    [
+      "replay_random",
+      "replay_linear"
+    ],
+    [
+      "replay_mlp",
+      "replay_linear"
+    ]
+  ],
+  "inference": {
+    "primary": "2012-2023",
+    "early": "2007-2011",
+    "full": "2007-2023",
+    "blocks": [
+      20,
+      60
+    ],
+    "replications": 2000,
+    "holm_family": 5,
+    "promotion": false
+  },
+  "sources": {
+    "current/v28_direct_portfolio/data_manifest.json": "d38d8a43a36310f08218f43b1a27f4cf95363e4f31cca68afa8c6adf0782b72a",
+    "current/v23_horizon_targets/protocol.json": "ca812e1ae8a90513ac0870fd8a1a099cb863dde9aa613e549bde1fbcf80e2c88",
+    "current/v23_horizon_targets/accounts/h21_projected_scaled_matched_complete.json": "74b4b09547c6f6374acc9c7fc2037fba4de50034f0b082522ac56cfddc487f0e",
+    "current/v23_horizon_targets/account_inputs/original_huber_gate_cadence21.csv": "0e8bcc66897e1bdd64a9722dedf4a37b7ef2aad2f530ef632f62c2d925887a72",
+    "prior/v17_long_history/data/candidate_features/panel.pkl": "3d89f16b17495286e3ee5c444d1dc841929dd4026b5b4b0d8a58cc85426eee91",
+    "current/v23_horizon_targets/data/horizon_labels.pkl": "979713ca744d3774916e8da85c9b94a422922e37e12580cbd69c5cf2c9243714"
+  },
+  "code": {
+    "accounts.py": "630e7b21b553b4b5fd76443e1e64362b022d4006168cf36342e77bfac4e034c9",
+    "build.py": "b33dd73ada404e810d939afdd9aebc859d74883d1c3caf918e065181deb1e288",
+    "common.py": "dd4a3c9c99f17ec186bae7564bf519d7c8863e0a07c43788c4be6517d96dcded",
+    "fit.py": "be55a59ed31d76245f95faaecc6732e83337f3fc664e51f8715fbab608202c02",
+    "policy.py": "e2bce979941b9802e9942242ba36b65a3c8dbca232f78b3dcd68fbba9bd2c3d8",
+    "test_policy.py": "ff9b62313d0391e8d720554b8e1e7e6a8c71f1a1f93f7d1b0c16084b7277c5bb"
+  },
+  "limits": [
+    "Modern source reconstruction, conditional historical universe and unresolved valuation sessions remain",
+    "Same underlying data/constraints, with changed economic objective and functional form; no fresh untouched test set",
+    "Only small fixed nonlinear architectures; no assertion that all neural or nonlinear methods fail"
+  ],
+  "implementation_correction": {
+    "previous_protocol_sha256": "e79950c5d01a62cbb018532f4dca564285dffb4b4c84b1c2ea76e63d483c4488",
+    "reason": "Filter future ex-date distribution claims for bounded inner accounts; assert no accrued claim crosses validation cutoff",
+    "before_any_validation_or_OOS_outcome": true
+  },
+  "claim_boundary_correction": {
+    "previous_protocol_sha256": "f5b736101d9c46bcfaf36bb1242ee4d0d847abbb1844cf9450c66925a7a2631a",
+    "reason": "2012 refit validation ends2011-12-13 before an accrued claim crossing yearend; same cutoff for all candidates, no post-refit data or fictitious claim liquidation",
+    "other_validation_windows_unchanged": true
+  }
+}

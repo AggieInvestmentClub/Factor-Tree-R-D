@@ -1,0 +1,2 @@
+# Optional, only for legacy acquisition scripts; not required for offline replay.
+lseg-data==2.1.1

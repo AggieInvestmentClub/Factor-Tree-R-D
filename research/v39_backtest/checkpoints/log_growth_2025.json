@@ -1,0 +1,224 @@
+{
+  "year": 2025,
+  "objective": "log_growth",
+  "design_sha256": "203d5d63df27df26c0ca3d36b25ec9d4df58c8f21b4dc0ee3c57824e5ab469cc",
+  "weights_sha256": "2fe3ece4d49a4e6012a936ddf077f3e9a4ce330cb995a1257f1aae92165d0e59",
+  "training_periods": 107,
+  "training_query_sha256": "ee4e9262ac1d85fbaeefb35d2431dcf2b2be760559e6efbecc10f49823d7367b",
+  "max_training_label_end": "2024-12-11 00:00:00",
+  "refit_boundary": "2025-01-01 00:00:00",
+  "inner_max_training_label_end": "2022-12-08 00:00:00",
+  "validation_start": "2023-01-01 00:00:00",
+  "selection": [
+    {
+      "penalty": 0.1,
+      "validation": {
+        "utility": -0.000253203885938603,
+        "annual_mean": 0.006063890784828305,
+        "annual_log_growth": -0.000253203885938603,
+        "annual_variance": 0.01262380125500994,
+        "start": "2023-01-10 00:00:00",
+        "end": "2024-12-31 00:00:00",
+        "sessions": 497,
+        "claim_boundary_shortened": false,
+        "exact_repaired_engine": true,
+        "validated_performance": false,
+        "issues": [
+          {
+            "date": "2023-05-01",
+            "ticker": "FRC.N^E23",
+            "kind": "unpriced_held_open"
+          },
+          {
+            "date": "2023-05-01",
+            "ticker": "FRC.N^E23",
+            "kind": "unpriced_held_close"
+          },
+          {
+            "date": "2023-05-02",
+            "ticker": "FRC.N^E23",
+            "kind": "unpriced_held_open"
+          },
+          {
+            "date": "2023-05-02",
+            "ticker": "FRC.N^E23",
+            "kind": "unpriced_held_close"
+          },
+          {
+            "date": "2023-05-03",
+            "ticker": "FRC.N^E23",
+            "kind": "unresolved_conditional_corporate_value",
+            "raw_share_equivalent": -0.0008760529435241804,
+            "reason": "No executable marks during documented halt; resumed OTC opening payout verified, interim NAV requires stated mark sensitivity",
+            "cvr_upper": null
+          },
+          {
+            "date": "2023-06-09",
+            "ticker": "BIIB.OQ",
+            "kind": "unpriced_held_open"
+          },
+          {
+            "date": "2023-06-09",
+            "ticker": "BIIB.OQ",
+            "kind": "unpriced_held_close"
+          }
+        ]
+      },
+      "training": {
+        "utility": 0.21132389667625934,
+        "annual_mean": 0.21865344289173716,
+        "annual_log_growth": 0.21132389667625934,
+        "annual_variance": 0.008126908556852467,
+        "trace": [
+          {
+            "epoch": 0,
+            "loss": 0.046075605257686614
+          },
+          {
+            "epoch": 20,
+            "loss": -0.14922885673029146
+          },
+          {
+            "epoch": 40,
+            "loss": -0.18451974173792202
+          },
+          {
+            "epoch": 60,
+            "loss": -0.19833859120697056
+          },
+          {
+            "epoch": 80,
+            "loss": -0.1910492901286917
+          },
+          {
+            "epoch": 99,
+            "loss": -0.19792265205954843
+          }
+        ]
+      }
+    },
+    {
+      "penalty": 0.01,
+      "validation": {
+        "utility": -0.032556394755319296,
+        "annual_mean": -0.027694195882728163,
+        "annual_log_growth": -0.032556394755319296,
+        "annual_variance": 0.00970939368773059,
+        "start": "2023-01-10 00:00:00",
+        "end": "2024-12-31 00:00:00",
+        "sessions": 497,
+        "claim_boundary_shortened": false,
+        "exact_repaired_engine": true,
+        "validated_performance": false,
+        "issues": [
+          {
+            "date": "2023-05-01",
+            "ticker": "FRC.N^E23",
+            "kind": "unpriced_held_open"
+          },
+          {
+            "date": "2023-05-01",
+            "ticker": "FRC.N^E23",
+            "kind": "unpriced_held_close"
+          },
+          {
+            "date": "2023-05-02",
+            "ticker": "FRC.N^E23",
+            "kind": "unpriced_held_open"
+          },
+          {
+            "date": "2023-05-02",
+            "ticker": "FRC.N^E23",
+            "kind": "unpriced_held_close"
+          },
+          {
+            "date": "2023-05-03",
+            "ticker": "FRC.N^E23",
+            "kind": "unresolved_conditional_corporate_value",
+            "raw_share_equivalent": -0.0009147639746515622,
+            "reason": "No executable marks during documented halt; resumed OTC opening payout verified, interim NAV requires stated mark sensitivity",
+            "cvr_upper": null
+          },
+          {
+            "date": "2023-06-09",
+            "ticker": "BIIB.OQ",
+            "kind": "unpriced_held_open"
+          },
+          {
+            "date": "2023-06-09",
+            "ticker": "BIIB.OQ",
+            "kind": "unpriced_held_close"
+          }
+        ]
+      },
+      "training": {
+        "utility": 0.22056850058927982,
+        "annual_mean": 0.22754119546206944,
+        "annual_log_growth": 0.22056850058927982,
+        "annual_variance": 0.006943225961638667,
+        "trace": [
+          {
+            "epoch": 0,
+            "loss": 0.04385981103183482
+          },
+          {
+            "epoch": 20,
+            "loss": -0.15826104833680413
+          },
+          {
+            "epoch": 40,
+            "loss": -0.1895942204805644
+          },
+          {
+            "epoch": 60,
+            "loss": -0.20209647535112465
+          },
+          {
+            "epoch": 80,
+            "loss": -0.21319066153269348
+          },
+          {
+            "epoch": 99,
+            "loss": -0.22082723875580607
+          }
+        ]
+      }
+    }
+  ],
+  "selected_penalty": 0.1,
+  "fallback": false,
+  "training": {
+    "utility": 0.1948732289767805,
+    "annual_mean": 0.20220047178591288,
+    "annual_log_growth": 0.1948732289767805,
+    "annual_variance": 0.008113379080986418,
+    "trace": [
+      {
+        "epoch": 0,
+        "loss": 0.03230515629608409
+      },
+      {
+        "epoch": 20,
+        "loss": -0.1320629059950556
+      },
+      {
+        "epoch": 40,
+        "loss": -0.1638162147132995
+      },
+      {
+        "epoch": 60,
+        "loss": -0.16217733390758132
+      },
+      {
+        "epoch": 80,
+        "loss": -0.186559771145639
+      },
+      {
+        "epoch": 99,
+        "loss": -0.18224607152619546
+      }
+    ]
+  },
+  "seconds": 43.60899999993853,
+  "array_qa_sha256": "e8c84435c22f84b1328924afc26b7f89c5bb3dada055048819f05a1a299802c4"
+}

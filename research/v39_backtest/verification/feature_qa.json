@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "original_predictors_exact": true,
+  "overlap_rows": 20623,
+  "rows": 3140018,
+  "forward_rows": 361687,
+  "mature_old_label_identity": true,
+  "label_tail_extension": [
+    {
+      "column": "execution_date",
+      "previous_observed": 20120,
+      "new_tail_values": 503
+    },
+    {
+      "column": "label_end_h5",
+      "previous_observed": 17605,
+      "new_tail_values": 3018
+    },
+    {
+      "column": "future_return_h5",
+      "previous_observed": 17570,
+      "new_tail_values": 3012
+    },
+    {
+      "column": "future_parent_return_h5",
+      "previous_observed": 17605,
+      "new_tail_values": 3018
+    },
+    {
+      "column": "target_risk_resid_h5",
+      "previous_observed": 17535,
+      "new_tail_values": 3006
+    },
+    {
+      "column": "future_spy_h5",
+      "previous_observed": 17605,
+      "new_tail_values": 3018
+    },
+    {
+      "column": "response_spy",
+      "previous_observed": 17535,
+      "new_tail_values": 3006
+    },
+    {
+      "column": "v8_target_absolute_h5",
+      "previous_observed": 17535,
+      "new_tail_values": 3006
+    },
+    {
+      "column": "v8_target_spy_h5",
+      "previous_observed": 17535,
+      "new_tail_values": 3006
+    }
+  ],
+  "source_sha256": "e06ef0cbb80997363db347a4648b947f8c53099a263f1889c72a039750917402",
+  "adapter_sha256": "13a20cb1b5cae518e3ad6ab61f2e000a0442a44cec0641c59c3d72534534f826",
+  "primitive_source_sha256": "c25875e3c69522f11c57813f0658e2be24bfa521caac8a65d92f084a4045bf18",
+  "primitive_adapter_sha256": "f4e8da7b85aadaa060e58c097e79532307c2486b933a0dc7019960898e15d60d",
+  "primitive_change": "Only exclusive date boundary; original file and globals untouched",
+  "panel_sha256": "972e7dbfac1bafd69db73711fd8268a3b8171a093a5d4b03590273255a5fba0c"
+}
