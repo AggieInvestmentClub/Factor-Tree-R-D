@@ -1,0 +1,31 @@
+{
+  "real_replica": {
+    "portfolio_sharpe": 0.47867052098228224,
+    "portfolio_always_long": 0.6015129595766167,
+    "delta_vs_always_long": -0.12284243859433441,
+    "cash_share": 0.3516658902014191
+  },
+  "label_permutation": {
+    "runs": 90,
+    "real_portfolio_sharpe": 0.47867052098228224,
+    "null_median": 0.4948150644573236,
+    "null_5th": 0.3773262495123468,
+    "null_95th": 0.6173706103488961,
+    "real_percentile": 0.4111111111111111,
+    "p_value_one_sided": 0.5934065934065934,
+    "etfs_beating_95pct": 2
+  },
+  "synthetic_markets": {
+    "runs": 2,
+    "real_delta_vs_always_long": -0.12284243859433441,
+    "synthetic_delta_median": -0.07329441540074316,
+    "synthetic_delta_5th": -0.13907954923397223,
+    "synthetic_delta_95th": -0.007509281567514104,
+    "real_delta_percentile": 0.5,
+    "p_value_one_sided": 0.6666666666666666,
+    "synthetic_model_sharpe_median": 0.6645279391130033,
+    "synthetic_always_long_sharpe_median": 0.7378223545137466,
+    "share_synthetic_runs_model_sharpe_above_real": 1.0,
+    "synthetic_cash_share_median": 0.3754445006299488
+  }
+}

@@ -24,8 +24,12 @@ Bryce asked me to figure out **why the model fails on the short side**.
 - **v40** (`BACKTEST RESULTS.pdf`, Nov 12): a new cross-sectional model that ranks stocks with
   annual PyTorch "log-growth" models, predicts 21 sessions ahead, and has a volatility-stop
   variant. Forward 2024–26: CAGR 8.6%, Sharpe 0.79 vs SPY 19.4% / 1.21. SPY beta about 0.5,
-  alpha about 0, IC about 0. **Its source code is not in the repo** (it's on Bryce's machine);
-  I need to ask him to push `src/` and the v31/v38/v39 folders.
+  alpha about 0, IC about 0.
+- **v39 package** (`research/v39_backtest/`, pushed by Bryce Nov 13): the frozen engine source,
+  2024/25/26 checkpoints, MODEL.md, DATA.md and reference returns. Forward 2024-01-02 to
+  2026-11-11: benchmark CAGR 8.59%, Sharpe 0.792, max DD −10.9%; vol stop 7.17% / 0.708 /
+  −10.3%. Rerunning the stock-level backtest needs Bryce's private input pack (licensed data,
+  not in git). Its README says the forward period is not a pristine holdout.
 - Abhinav's concept (`docs/Abhinav's Implementation Concept`) is long / put / exclude with
   deep-ITM 1–2 week puts. Not backtested. His `Code-Drafts/` script targets individual stocks
   and uses yfinance.
@@ -42,6 +46,44 @@ Files: `docs/short_side_diagnosis.md` and `scripts/short_side_diagnosis.py`. The
 - Cash weeks are **more volatile in both directions**. The model is a **risk filter, not a
   direction predictor**: "cash" means uncertain, not down. Shorting those weeks bets against
   upward drift and takes on rebound risk.
+
+## Volatility check (`scripts/cash_week_volatility_check.py`)
+- Return per risk (mean/std of forward weekly return) is the same for long and cash weeks
+  (0.072 vs 0.074). Cash weeks are more volatile in 11/15 ETFs, but they are not worse weeks.
+- The model's ratio beat always-long in only 3/15 ETFs (median 0.061 vs 0.082). v3.1's lower
+  drawdown comes from lower exposure, not timing. That's an honest caveat for Joflay.
+
+## Significance tests: IN PROGRESS, pick up here
+Folder: `wip/manas_significance_tests/`. **Read its `HANDOFF.md` first.** It has the status,
+results and resume steps.
+- **#1 random timing (done):** v3.1's real decisions vs 10,000 random-timing versions with
+  identical exposure, run lengths and trade count. Portfolio Sharpe 0.567 vs random median
+  0.622. **20th percentile, p = 0.80.** The timing adds nothing; returns come from drift and
+  diversification.
+- **#2 label permutation:** paused at 90/200 runs. Interim: real at the 41st percentile, p ≈ 0.59.
+- **#3 synthetic markets:** paused at 2/200 runs.
+- Tests #2 and #3 retrain a replica of the v3.1 core loop (`common.py`). Price data is
+  gitignored (`research/etf_long_cash/data/`, through 2023-12-29 only), and the Python 3.12
+  environment is `research/etf_long_cash/.venv`.
+- The published v3.1 report never beat SPY: Sharpe below SPY in 15/15 ETFs, and below
+  holding the same ETF in 11/15. No interval showed the model winning.
+
+## Mirrored short model (team idea): why it isn't enough alone
+Training "did it go down?" / "short return" on the **same factors** reproduces v4.0, because
+those targets are the long targets flipped. A short model only becomes different with new,
+direction-bearing factors. Use a cost-beating drop threshold, class weighting and precision
+scoring, and run it as a rare overlay on v3.1. Details are in `docs/short_side_diagnosis.md`.
+
+## Git / accounts
+Global `git config user.name` changed to "m4nasp06" on Nov 17 (older commits still show
+"Technology-TheStringLine"). GitHub credits
+commits by email, which maps them to the **m4nasp06** account. `git push` authenticates as
+m4nasp06. The `gh` CLI's active account is Technology-thestringline (matters for PRs).
+
+## Python
+On the laptop, default `python` (3.14) has pandas but no scipy, and the bare 3.12 install has
+neither. Use `research/etf_long_cash/.venv` (3.12 with the full requirements) for the pipeline
+and the significance tests.
 
 ## Next task: test direction signals inside cash weeks
 Split the model's cash weeks by candidate features and check whether forward returns separate

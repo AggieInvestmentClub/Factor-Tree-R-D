@@ -1,0 +1,15 @@
+{
+  "n_simulations": 10000,
+  "seed": 20261117,
+  "weeks": 11971,
+  "portfolio_sharpe_model": 0.566943743181879,
+  "portfolio_sharpe_always_long": 0.6015129595766167,
+  "portfolio_sharpe_matched_exposure": 0.6253648441611404,
+  "null_median": 0.6217125548657436,
+  "null_5th": 0.5162574704954221,
+  "null_95th": 0.7436926002456463,
+  "model_percentile": 0.2018,
+  "p_value_one_sided": 0.7982201779822018,
+  "etfs_beating_95pct_of_random": 0,
+  "etfs_below_null_median": 9
+}
