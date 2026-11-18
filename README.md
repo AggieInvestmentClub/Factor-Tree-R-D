@@ -5,6 +5,7 @@ University research into decision-tree-based trading processes.
 ## Cross-sectional portfolio research
 
 - [v39 benchmark and volatility-stop backtest, model specification and reproducibility guide](research/v39_backtest/README.md)
+- [Standalone Monte Carlo strategy testing suite](monte_carlo/README.md)
 
 This separate stock-portfolio study evaluates 2024 through November 11, 2026.
 Its README documents the historical universe, data qualifications and prior
