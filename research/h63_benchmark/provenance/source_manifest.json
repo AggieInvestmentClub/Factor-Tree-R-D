@@ -1,0 +1,102 @@
+{
+  "files": [
+    {
+      "origin": "outputs/v48_long_only_improvements/runtime/long_only_account.py",
+      "path": "src/account.py",
+      "original_sha256": "851e71d56180439f692ced659b5cad8d4217dfb7657422967ac4cb84811be92b",
+      "distributed_sha256": "82ea6ef4915fbc3dce0ccff7800501f29ab9afbf50b1f1e8b20d78a388cb992a",
+      "adapted": true
+    },
+    {
+      "origin": "work/v44_mc_workspace/prior/v5_1/src/portfolio_account.py",
+      "path": "src/portfolio_account.py",
+      "original_sha256": "a199538cda6f950cd2caae8c319aad19f0b5588562f2b9174f79bfb2ef92c26e",
+      "distributed_sha256": "a199538cda6f950cd2caae8c319aad19f0b5588562f2b9174f79bfb2ef92c26e",
+      "adapted": false
+    },
+    {
+      "origin": "work/v44_mc_workspace/prior/v17_long_history/src/dated_quote_cache.py",
+      "path": "src/dated_quote_cache.py",
+      "original_sha256": "8057c1b79df1c3ab66f6106999a96927a23da10d6108c03d5725f4c7d49aad8a",
+      "distributed_sha256": "8057c1b79df1c3ab66f6106999a96927a23da10d6108c03d5725f4c7d49aad8a",
+      "adapted": false
+    },
+    {
+      "origin": "work/v44_mc_workspace/prior/v17_long_history/src/distribution_claims.py",
+      "path": "src/distribution_claims.py",
+      "original_sha256": "29ed5e8410f708bc2760d0142752e96bb5399c4ae3fc60e9bd92d8b03441a06c",
+      "distributed_sha256": "29ed5e8410f708bc2760d0142752e96bb5399c4ae3fc60e9bd92d8b03441a06c",
+      "adapted": false
+    },
+    {
+      "origin": "work/v44_mc_workspace/current/v31_growth_long_bias/src/allocation.py",
+      "path": "src/allocation.py",
+      "original_sha256": "e956abf01c0c72de2df656149f996e6fe738dc27b367156ff7765459ae2bcd8e",
+      "distributed_sha256": "e956abf01c0c72de2df656149f996e6fe738dc27b367156ff7765459ae2bcd8e",
+      "adapted": false
+    },
+    {
+      "origin": "work/v39-monte-carlo/monte_carlo/v39_runtime.py",
+      "path": "src/account_cache.py",
+      "original_sha256": "6dbe956d14f40d30b1449890243b80cae51898782374c03288604dd083e75632",
+      "distributed_sha256": "6dbe956d14f40d30b1449890243b80cae51898782374c03288604dd083e75632",
+      "adapted": false
+    },
+    {
+      "origin": "work/v44_mc_workspace/current/v39_forward_validation/src/stock_features_v39.py",
+      "path": "provenance/recipes/stock_features_v39.py",
+      "original_sha256": "f4e8da7b85aadaa060e58c097e79532307c2486b933a0dc7019960898e15d60d",
+      "distributed_sha256": "30a2d96f1146c0bc15f8d251d68f7c8016eca9516be00b63e1d376be85090976",
+      "adapted": false
+    },
+    {
+      "origin": "work/v44_mc_workspace/current/v39_forward_validation/src/build_arrays.py",
+      "path": "provenance/recipes/build_arrays.py",
+      "original_sha256": "9af38f654c20e06c7a432d8b8d971390341cc0cf5209c4aad9e54db263a4dc37",
+      "distributed_sha256": "9af38f654c20e06c7a432d8b8d971390341cc0cf5209c4aad9e54db263a4dc37",
+      "adapted": false
+    },
+    {
+      "origin": "outputs/v50_ranking_regimes_horizons/src/prepare50.py",
+      "path": "provenance/recipes/prepare50.py",
+      "original_sha256": "f97a6cff4a743e6c9abf484fca8ebbb1911dbd1a7c33ad8370844afbf701bd3b",
+      "distributed_sha256": "f97a6cff4a743e6c9abf484fca8ebbb1911dbd1a7c33ad8370844afbf701bd3b",
+      "adapted": false
+    },
+    {
+      "origin": "outputs/v50_ranking_regimes_horizons/src/fit50.py",
+      "path": "provenance/recipes/fit50.py",
+      "original_sha256": "6edb1e8fd968fafcc85902367f0d5c4b1c610c4c38554cf59c13b4751241f77d",
+      "distributed_sha256": "6edb1e8fd968fafcc85902367f0d5c4b1c610c4c38554cf59c13b4751241f77d",
+      "adapted": false
+    },
+    {
+      "origin": "outputs/v50_ranking_regimes_horizons/src/targets50.py",
+      "path": "provenance/recipes/targets50.py",
+      "original_sha256": "469fa3895e18175fafcee195e43c0a0a23ad3233bdc1ca38911adf8fa12f364d",
+      "distributed_sha256": "469fa3895e18175fafcee195e43c0a0a23ad3233bdc1ca38911adf8fa12f364d",
+      "adapted": false
+    },
+    {
+      "origin": "outputs/v46_directional_mandates/src/learner46.py",
+      "path": "provenance/recipes/learner46.py",
+      "original_sha256": "a7b41044d6a4825353637d7e1a7f24843256793b960848b5d32b7d102117a820",
+      "distributed_sha256": "a7b41044d6a4825353637d7e1a7f24843256793b960848b5d32b7d102117a820",
+      "adapted": false
+    },
+    {
+      "origin": "outputs/v47_full_history_mandates/src/fit47.py",
+      "path": "provenance/recipes/fit47.py",
+      "original_sha256": "d713a1e4e475e019a3d377b5fa56cbde0a6de2d75ea1bfb5db1c1c53c5ddf550",
+      "distributed_sha256": "d713a1e4e475e019a3d377b5fa56cbde0a6de2d75ea1bfb5db1c1c53c5ddf550",
+      "adapted": false
+    },
+    {
+      "origin": "outputs/v46_directional_mandates/src/learner46.py",
+      "path": "src/capital_training.py",
+      "original_sha256": "a7b41044d6a4825353637d7e1a7f24843256793b960848b5d32b7d102117a820",
+      "distributed_sha256": "470d2623792875c7e612878b56a6d6493515ab0d4cee90e68fe0f9b6424b42c9",
+      "adapted": true
+    }
+  ]
+}

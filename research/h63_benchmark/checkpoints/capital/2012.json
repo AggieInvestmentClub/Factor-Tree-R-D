@@ -1,0 +1,59 @@
+{
+  "mode": "long_only",
+  "year": 2012,
+  "protocol_sha256": "19539ce741b53987369e770d8682d9dd3b15e908d02b6e8764414bd7aa2d6dc9",
+  "weights_sha256": "845d987b2eaa7beecfb5062c800079c72e915a679ee75bc06f5fac649fdd4b5b",
+  "scores_sha256": "1a67adc1b4381c3b534107faad63808f1a07bcf408a574e488005ad565c9d6c2",
+  "training_periods": 84,
+  "max_training_label_end": "2011-12-02 00:00:00",
+  "inner_training_periods": 60,
+  "inner_max_training_label_end": "2009-12-03 00:00:00",
+  "selected_penalty": 0.1,
+  "validation_fallback": true,
+  "early_history_fallback": false,
+  "unsettled_claim_fallback": true,
+  "validation_failure": null,
+  "validation_start": "2010-01-05",
+  "validation_end": "2011-12-30",
+  "validation_reference_audit": {},
+  "selection": [],
+  "training": {
+    "annual_log_growth": 0.10645645577027169,
+    "annual_mean": 0.11832967673765689,
+    "mean_target_gross": 0.810342841705071,
+    "mean_target_net": 0.810342841705071,
+    "trace": [
+      {
+        "epoch": 0,
+        "loss": -0.006427631884924213,
+        "gradient_norm": 0.7644448300384948
+      },
+      {
+        "epoch": 20,
+        "loss": -0.07530426672026891,
+        "gradient_norm": 0.12228869638692472
+      },
+      {
+        "epoch": 40,
+        "loss": -0.08894300501672178,
+        "gradient_norm": 0.2509348828351376
+      },
+      {
+        "epoch": 60,
+        "loss": -0.09105801461291689,
+        "gradient_norm": 0.10930692680233198
+      },
+      {
+        "epoch": 80,
+        "loss": -0.09105516815117977,
+        "gradient_norm": 0.1603596728790083
+      },
+      {
+        "epoch": 99,
+        "loss": -0.0913238700359478,
+        "gradient_norm": 0.27539970574537176
+      }
+    ]
+  },
+  "seconds": 12.702999999994063
+}

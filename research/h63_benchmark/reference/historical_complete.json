@@ -1,0 +1,208 @@
+{
+  "arm": "benchmark",
+  "part": "historical",
+  "protocol_sha256": "0bbb716c427968d4ae9a319cdcb7739ef2afc3d56e84ab3853678990b18b101b",
+  "target_sha256": "d07de142e5a6dfed27311be5983d7653a5e2cb406874f0e72d29255870101dbe",
+  "runtime_sha256": "676bc3c84f52a28267ae9bb3c4b94549de26a6362f8ea456f53b45aac70a717d",
+  "ledger_sha256": "feae641bacd12e188b2dad67fa4c42a824febb666c47116499408fb28687563c",
+  "weights_sha256": "f599a0bdc1aa745b39b5f09a8400775918ba928d7cc84ea481cdf6f3b73bd85f",
+  "audit": {
+    "arithmetic_passed": true,
+    "validated_performance": false,
+    "execution_clock": "next_close",
+    "exposure_clock": "after next-session close execution; end-of-day exposure",
+    "provisional_sessions": 18,
+    "unresolved_terminal_assets": [],
+    "issues": [
+      {
+        "date": "2007-09-07",
+        "ticker": "CBSS.OQ^I07",
+        "kind": "unresolved_conditional_corporate_value",
+        "raw_share_equivalent": 5.806687083407996e-05,
+        "reason": "Sept6 preliminary no-election allocation2.8USADS, completedSept7; final proration release unavailable. Cash71.82 vs2.8ADS sensitivity required.",
+        "cvr_upper": null
+      },
+      {
+        "date": "2011-12-14",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-15",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-16",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-19",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-20",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-21",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-22",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-23",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-27",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-28",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-29",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-30",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 2.5816131690878513e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2015-05-12",
+        "ticker": "VRTX.OQ",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2015-05-12",
+        "ticker": "VRTX.OQ",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2015-06-09",
+        "ticker": "REGN.OQ",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2015-06-09",
+        "ticker": "REGN.OQ",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2019-06-11",
+        "ticker": "BMS.N^F19",
+        "kind": "unresolved_cash_action_factor"
+      },
+      {
+        "date": "2020-11-06",
+        "ticker": "BIIB.OQ",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2020-11-06",
+        "ticker": "BIIB.OQ",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2022-12-22",
+        "ticker": "ABMD.OQ^L22",
+        "kind": "unresolved_conditional_corporate_value",
+        "raw_share_equivalent": 2.1672681450545547e-05,
+        "reason": "Unpriced contingent rights; explicit cash-only scenario",
+        "cvr_upper": 35.0
+      }
+    ],
+    "aborted_order_batches": 2,
+    "corporate_cash_events": 216,
+    "reserved_scored": false,
+    "delayed_distribution_events": [
+      {
+        "ticker": "SHLD.OQ^J18",
+        "date": "2011-12-14",
+        "kind": "entitlement_created",
+        "raw_parent_shares": 2.5816131690878513e-05
+      },
+      {
+        "ticker": "SHLD.OQ^J18",
+        "date": "2012-01-03",
+        "kind": "observed_receiver_liquidation",
+        "raw_parent_shares": 2.5816131690878513e-05,
+        "cashflow": 2.9358537753149663e-05,
+        "cost": 5.871707550629933e-09,
+        "source": "https://infomemo.theocc.com/infomemos?date=201112&number=29943"
+      }
+    ],
+    "cash_termination_canceled_legs": 5,
+    "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+    "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+    "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+    "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+    "limitations": [
+      "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+      "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+    ],
+    "declared_gross_cap": 1.0,
+    "declared_position_cap": 0.15,
+    "dollar_neutral": false,
+    "beta_neutral": false,
+    "gross_guard": 1.1,
+    "known_eligibility_frame_supplied": true,
+    "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+    "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+    "data_cutoff_exclusive": "2024-01-01",
+    "requested_start": "2007-01-04",
+    "requested_end": "2023-12-29",
+    "first_observed_session": "2007-01-04",
+    "last_observed_session": "2023-12-29",
+    "source_numeric_prefix_only": true,
+    "legacy_class_specific_bypass": false,
+    "spy_benchmark": false,
+    "position_output_streamed": true,
+    "streamed_position_rows": 4311216,
+    "repair_stale_risk": true,
+    "controlled_long_bias": false,
+    "stale_risk_repairs": 0,
+    "repaired_excluded_names": 0
+  },
+  "parity_error": 4.440892098500626e-16,
+  "unreviewed_distribution_ownership": [],
+  "seconds": 13.39100000000326
+}

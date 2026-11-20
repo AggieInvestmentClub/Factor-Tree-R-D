@@ -1,0 +1,215 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "year": 2007,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2007,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2008,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2008,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2009,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2009,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2010,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2010,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2011,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2011,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2012,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2012,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2013,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2013,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2014,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2014,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2015,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2015,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2016,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2016,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2017,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2017,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2018,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2018,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2019,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2019,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2020,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2020,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2021,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2021,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2022,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2022,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2023,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2023,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2024,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2024,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2025,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2025,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2026,
+      "component": "capital",
+      "max_score_error": 0.0
+    },
+    {
+      "year": 2026,
+      "component": "ranker",
+      "max_score_error": 0.0
+    },
+    {
+      "part": "historical",
+      "max_target_error": 0.0,
+      "rows": 204
+    },
+    {
+      "part": "forward",
+      "max_target_error": 0.0,
+      "rows": 35
+    }
+  ]
+}

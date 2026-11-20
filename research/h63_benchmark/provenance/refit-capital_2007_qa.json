@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "year": 2007,
+  "max_parameter_error": 0.0,
+  "selected_penalty": 0.1,
+  "training": {
+    "annual_log_growth": 0.19948880469914432,
+    "annual_mean": 0.2101232780701281,
+    "mean_target_gross": 0.8423652649434032,
+    "mean_target_net": 0.8423652649434032,
+    "trace": [
+      {
+        "epoch": 0,
+        "loss": 0.00402963212929669,
+        "gradient_norm": 0.1594402667098039
+      },
+      {
+        "epoch": 20,
+        "loss": -0.13506392829848196,
+        "gradient_norm": 0.620689755504205
+      },
+      {
+        "epoch": 40,
+        "loss": -0.15511578813651222,
+        "gradient_norm": 0.11320559717116142
+      },
+      {
+        "epoch": 60,
+        "loss": -0.15820277944793085,
+        "gradient_norm": 0.40877187747105587
+      },
+      {
+        "epoch": 80,
+        "loss": -0.1494639358218317,
+        "gradient_norm": 0.9364778565485233
+      },
+      {
+        "epoch": 99,
+        "loss": -0.16338378812572568,
+        "gradient_norm": 0.25008980943929454
+      }
+    ]
+  },
+  "selection_repeated": false
+}

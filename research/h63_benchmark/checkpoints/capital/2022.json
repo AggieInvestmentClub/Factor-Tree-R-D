@@ -1,0 +1,122 @@
+{
+  "mode": "long_only",
+  "year": 2022,
+  "protocol_sha256": "19539ce741b53987369e770d8682d9dd3b15e908d02b6e8764414bd7aa2d6dc9",
+  "weights_sha256": "b235ea042f56e746fdc16d2a3c196287c70542cfcdb62eed85c1b1616ecbcfbe",
+  "scores_sha256": "925b8c58789f62692e623190b3874751358581b0b44197d963ec83401e666337",
+  "training_periods": 111,
+  "max_training_label_end": "2021-12-08 00:00:00",
+  "inner_training_periods": 89,
+  "inner_max_training_label_end": "2019-12-09 00:00:00",
+  "selected_penalty": 0.1,
+  "validation_fallback": true,
+  "early_history_fallback": false,
+  "unsettled_claim_fallback": false,
+  "validation_failure": null,
+  "validation_start": "2020-01-09",
+  "validation_end": "2021-12-31",
+  "validation_reference_audit": {
+    "arithmetic_passed": true,
+    "validated_performance": false,
+    "execution_clock": "next_close",
+    "exposure_clock": "after next-session close execution; end-of-day exposure",
+    "provisional_sessions": 1,
+    "unresolved_terminal_assets": [],
+    "issues": [
+      {
+        "date": "2020-11-06",
+        "ticker": "BIIB.OQ",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2020-11-06",
+        "ticker": "BIIB.OQ",
+        "kind": "unpriced_held_close"
+      }
+    ],
+    "aborted_order_batches": 1,
+    "corporate_cash_events": 202,
+    "reserved_scored": false,
+    "delayed_distribution_events": [],
+    "cash_termination_canceled_legs": 0,
+    "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+    "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+    "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+    "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+    "limitations": [
+      "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+      "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+    ],
+    "declared_gross_cap": 1.0,
+    "declared_position_cap": 0.15,
+    "dollar_neutral": false,
+    "beta_neutral": false,
+    "gross_guard": 1.1,
+    "known_eligibility_frame_supplied": true,
+    "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+    "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+    "data_cutoff_exclusive": "2022-01-01",
+    "requested_start": "2020-01-09",
+    "requested_end": "2021-12-31",
+    "first_observed_session": "2020-01-09",
+    "last_observed_session": "2021-12-31",
+    "source_numeric_prefix_only": true,
+    "legacy_class_specific_bypass": false,
+    "spy_benchmark": false,
+    "position_output_streamed": true,
+    "streamed_position_rows": 504000,
+    "repair_stale_risk": true,
+    "controlled_long_bias": false,
+    "stale_risk_repairs": 0,
+    "repaired_excluded_names": 0,
+    "v46_selection_qualified": false,
+    "mandate": "broad_long",
+    "directional_limits": {
+      "long_only": true,
+      "min_net": 0.0,
+      "max_net": 0.99,
+      "max_abs_beta": 1.0,
+      "guard_tolerance": 0.05
+    }
+  },
+  "selection": [],
+  "training": {
+    "annual_log_growth": 0.15609685413946844,
+    "annual_mean": 0.16324446490987513,
+    "mean_target_gross": 0.9443283415805547,
+    "mean_target_net": 0.9443283415805547,
+    "trace": [
+      {
+        "epoch": 0,
+        "loss": -0.029233062658011764,
+        "gradient_norm": 1.5227275662481847
+      },
+      {
+        "epoch": 20,
+        "loss": -0.12935385048279605,
+        "gradient_norm": 0.07108881939410203
+      },
+      {
+        "epoch": 40,
+        "loss": -0.14430176510757264,
+        "gradient_norm": 0.7046620257727766
+      },
+      {
+        "epoch": 60,
+        "loss": -0.14600918976474062,
+        "gradient_norm": 0.1733495738762952
+      },
+      {
+        "epoch": 80,
+        "loss": -0.14797253077933056,
+        "gradient_norm": 0.07206417060149758
+      },
+      {
+        "epoch": 99,
+        "loss": -0.1479381535423392,
+        "gradient_norm": 0.13476452620031057
+      }
+    ]
+  },
+  "seconds": 16.65700000000652
+}

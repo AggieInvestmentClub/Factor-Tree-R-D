@@ -1,0 +1,23 @@
+[
+  {
+    "date": "2015-05-12",
+    "ticker": "VRTX.OQ",
+    "value": 0.001448850269839281,
+    "unpriced": true,
+    "segment_break": false
+  },
+  {
+    "date": "2015-06-09",
+    "ticker": "REGN.OQ",
+    "value": 0.003538694855444833,
+    "unpriced": true,
+    "segment_break": false
+  },
+  {
+    "date": "2020-11-06",
+    "ticker": "BIIB.OQ",
+    "value": 0.004483372264593095,
+    "unpriced": true,
+    "segment_break": false
+  }
+]

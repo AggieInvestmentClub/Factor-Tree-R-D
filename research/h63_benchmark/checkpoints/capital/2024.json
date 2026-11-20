@@ -1,0 +1,391 @@
+{
+  "mode": "long_only",
+  "year": 2024,
+  "protocol_sha256": "9a8f4a4838a54fbef507ca308d93c8815028e3210d0f17baae05a19640279dfb",
+  "weights_sha256": "c7849bbbf36c1dfa8955e91b7c946288e8c1de674d9de1a3e223165d42d6f56f",
+  "training_periods": 106,
+  "max_training_label_end": "2023-12-11 00:00:00",
+  "inner_max_training_label_end": "2021-12-08 00:00:00",
+  "selected_penalty": 0.1,
+  "validation_fallback": true,
+  "validation_reference_audit": {
+    "arithmetic_passed": true,
+    "validated_performance": false,
+    "execution_clock": "next_close",
+    "exposure_clock": "after next-session close execution; end-of-day exposure",
+    "provisional_sessions": 18,
+    "unresolved_terminal_assets": [],
+    "issues": [
+      {
+        "date": "2022-12-22",
+        "ticker": "ABMD.OQ^L22",
+        "kind": "unresolved_conditional_corporate_value",
+        "raw_share_equivalent": 2.64250002309772e-06,
+        "reason": "Unpriced contingent rights; explicit cash-only scenario",
+        "cvr_upper": 35.0
+      },
+      {
+        "date": "2023-03-10",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-10",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-13",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-13",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-13",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-13",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-14",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-14",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-14",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-14",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-15",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-15",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-15",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-15",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-16",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-16",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-16",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-16",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-17",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-17",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-17",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-17",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-20",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-20",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-20",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-20",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-21",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-21",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-21",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-21",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-22",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-22",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-22",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-22",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-23",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-23",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-23",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-23",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-24",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-24",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-24",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-24",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-27",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-27",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-03-27",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-27",
+        "ticker": "SIVB.OQ^C23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-03-28",
+        "ticker": "SBNY.OQ^C23",
+        "kind": "unresolved_conditional_corporate_value",
+        "raw_share_equivalent": 1.0637121442886876e-05,
+        "reason": "No executable marks during documented halt; resumed OTC opening payout verified, interim NAV requires stated mark sensitivity",
+        "cvr_upper": null
+      },
+      {
+        "date": "2023-05-01",
+        "ticker": "FRC.N^E23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-05-01",
+        "ticker": "FRC.N^E23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-05-02",
+        "ticker": "FRC.N^E23",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-05-02",
+        "ticker": "FRC.N^E23",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2023-05-03",
+        "ticker": "FRC.N^E23",
+        "kind": "unresolved_conditional_corporate_value",
+        "raw_share_equivalent": 0.00013669893298951037,
+        "reason": "No executable marks during documented halt; resumed OTC opening payout verified, interim NAV requires stated mark sensitivity",
+        "cvr_upper": null
+      },
+      {
+        "date": "2023-06-09",
+        "ticker": "BIIB.OQ",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2023-06-09",
+        "ticker": "BIIB.OQ",
+        "kind": "unpriced_held_close"
+      }
+    ],
+    "aborted_order_batches": 12,
+    "corporate_cash_events": 216,
+    "reserved_scored": false,
+    "delayed_distribution_events": [],
+    "cash_termination_canceled_legs": 0,
+    "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+    "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+    "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+    "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+    "limitations": [
+      "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+      "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+    ],
+    "declared_gross_cap": 1.0,
+    "declared_position_cap": 0.15,
+    "dollar_neutral": false,
+    "beta_neutral": false,
+    "gross_guard": 1.1,
+    "known_eligibility_frame_supplied": true,
+    "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+    "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+    "data_cutoff_exclusive": "2024-01-01",
+    "requested_start": "2022-01-07",
+    "requested_end": "2023-12-29",
+    "first_observed_session": "2022-01-07",
+    "last_observed_session": "2023-12-29",
+    "source_numeric_prefix_only": true,
+    "legacy_class_specific_bypass": false,
+    "spy_benchmark": false,
+    "position_output_streamed": true,
+    "streamed_position_rows": 500976,
+    "repair_stale_risk": true,
+    "controlled_long_bias": false,
+    "stale_risk_repairs": 0,
+    "repaired_excluded_names": 0,
+    "v46_selection_qualified": false,
+    "mandate": "broad_long",
+    "directional_limits": {
+      "long_only": true,
+      "min_net": 0.0,
+      "max_net": 0.99,
+      "max_abs_beta": 1.0,
+      "guard_tolerance": 0.05
+    }
+  },
+  "validation_start": "2022-01-07",
+  "validation_end": "2023-12-29",
+  "training": {
+    "annual_log_growth": 0.11550328100277174,
+    "annual_mean": 0.12376915301028407,
+    "mean_target_gross": 0.9502563909032676,
+    "mean_target_net": 0.9502563909032676,
+    "trace": [
+      {
+        "epoch": 0,
+        "loss": -0.018509896279002975,
+        "gradient_norm": 1.0051414261059033
+      },
+      {
+        "epoch": 20,
+        "loss": -0.0906978227653418,
+        "gradient_norm": 0.07484207268046855
+      },
+      {
+        "epoch": 40,
+        "loss": -0.10438172813571943,
+        "gradient_norm": 0.140203403094971
+      },
+      {
+        "epoch": 60,
+        "loss": -0.09958024213460584,
+        "gradient_norm": 0.15487769108182642
+      },
+      {
+        "epoch": 80,
+        "loss": -0.10521902365511822,
+        "gradient_norm": 0.1811423159217723
+      },
+      {
+        "epoch": 99,
+        "loss": -0.10379999292214898,
+        "gradient_norm": 0.1568796953098618
+      }
+    ]
+  },
+  "selection": [],
+  "seconds": 28.64100000000326
+}

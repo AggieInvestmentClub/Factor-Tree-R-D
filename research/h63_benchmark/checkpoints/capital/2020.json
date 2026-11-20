@@ -1,0 +1,125 @@
+{
+  "mode": "long_only",
+  "year": 2020,
+  "protocol_sha256": "19539ce741b53987369e770d8682d9dd3b15e908d02b6e8764414bd7aa2d6dc9",
+  "weights_sha256": "cf0a0184061a8b889cf8ff4fb234bf42bb5c9ad954e1cb1a43491bd0a29d83b8",
+  "scores_sha256": "273641440ffb64f468ecf6b1c5f630ef6e9c4d829b0c768096bfaf82e2026696",
+  "training_periods": 112,
+  "max_training_label_end": "2019-12-09 00:00:00",
+  "inner_training_periods": 89,
+  "inner_max_training_label_end": "2017-12-06 00:00:00",
+  "selected_penalty": 0.1,
+  "validation_fallback": true,
+  "early_history_fallback": false,
+  "unsettled_claim_fallback": false,
+  "validation_failure": null,
+  "validation_start": "2018-01-08",
+  "validation_end": "2019-12-31",
+  "validation_reference_audit": {
+    "arithmetic_passed": true,
+    "validated_performance": false,
+    "execution_clock": "next_close",
+    "exposure_clock": "after next-session close execution; end-of-day exposure",
+    "provisional_sessions": 2,
+    "unresolved_terminal_assets": [],
+    "issues": [
+      {
+        "date": "2018-10-01",
+        "ticker": "ANDV.N^J18",
+        "kind": "unresolved_conditional_corporate_value",
+        "raw_share_equivalent": 1.2859273925712074e-05,
+        "reason": "Final issuer release reports approximately87pct stock/no-election proration, not exact fraction. Use rounded central scenario; .865-.875 fraction sensitivity required.",
+        "cvr_upper": null
+      },
+      {
+        "date": "2019-06-11",
+        "ticker": "BMS.N^F19",
+        "kind": "unresolved_cash_action_factor"
+      }
+    ],
+    "aborted_order_batches": 0,
+    "corporate_cash_events": 189,
+    "reserved_scored": false,
+    "delayed_distribution_events": [],
+    "cash_termination_canceled_legs": 0,
+    "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+    "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+    "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+    "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+    "limitations": [
+      "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+      "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+    ],
+    "declared_gross_cap": 1.0,
+    "declared_position_cap": 0.15,
+    "dollar_neutral": false,
+    "beta_neutral": false,
+    "gross_guard": 1.1,
+    "known_eligibility_frame_supplied": true,
+    "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+    "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+    "data_cutoff_exclusive": "2020-01-01",
+    "requested_start": "2018-01-08",
+    "requested_end": "2019-12-31",
+    "first_observed_session": "2018-01-08",
+    "last_observed_session": "2019-12-31",
+    "source_numeric_prefix_only": true,
+    "legacy_class_specific_bypass": false,
+    "spy_benchmark": false,
+    "position_output_streamed": true,
+    "streamed_position_rows": 502992,
+    "repair_stale_risk": true,
+    "controlled_long_bias": false,
+    "stale_risk_repairs": 0,
+    "repaired_excluded_names": 0,
+    "v46_selection_qualified": false,
+    "mandate": "broad_long",
+    "directional_limits": {
+      "long_only": true,
+      "min_net": 0.0,
+      "max_net": 0.99,
+      "max_abs_beta": 1.0,
+      "guard_tolerance": 0.05
+    }
+  },
+  "selection": [],
+  "training": {
+    "annual_log_growth": 0.14893806937014875,
+    "annual_mean": 0.15559087880354494,
+    "mean_target_gross": 0.9646714318630716,
+    "mean_target_net": 0.9646714318630716,
+    "trace": [
+      {
+        "epoch": 0,
+        "loss": -0.026741269751402428,
+        "gradient_norm": 1.399416319607876
+      },
+      {
+        "epoch": 20,
+        "loss": -0.12018849452684577,
+        "gradient_norm": 0.07571413580049187
+      },
+      {
+        "epoch": 40,
+        "loss": -0.13545498410686607,
+        "gradient_norm": 0.11273509060636275
+      },
+      {
+        "epoch": 60,
+        "loss": -0.1397670251237888,
+        "gradient_norm": 0.1409122298989886
+      },
+      {
+        "epoch": 80,
+        "loss": -0.14126102372159,
+        "gradient_norm": 0.2046430580084174
+      },
+      {
+        "epoch": 99,
+        "loss": -0.14137283431501993,
+        "gradient_norm": 0.16027854341562842
+      }
+    ]
+  },
+  "seconds": 16.73399999999674
+}

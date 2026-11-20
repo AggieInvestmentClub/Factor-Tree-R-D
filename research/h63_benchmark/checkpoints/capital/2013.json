@@ -1,0 +1,510 @@
+{
+  "mode": "long_only",
+  "year": 2013,
+  "protocol_sha256": "19539ce741b53987369e770d8682d9dd3b15e908d02b6e8764414bd7aa2d6dc9",
+  "weights_sha256": "2d2a4638ee1ace16ba6f5d79602cfcb974ff6ab06e2d0725950f2c61c6eb281d",
+  "scores_sha256": "5738b870969db7bbe56358693c5188e7d4b21c909b6fea4d5759eb8137665ed7",
+  "training_periods": 89,
+  "max_training_label_end": "2012-12-05 00:00:00",
+  "inner_training_periods": 66,
+  "inner_max_training_label_end": "2010-12-03 00:00:00",
+  "selected_penalty": 0.01,
+  "validation_fallback": false,
+  "early_history_fallback": false,
+  "unsettled_claim_fallback": false,
+  "validation_failure": null,
+  "validation_start": "2011-01-04",
+  "validation_end": "2012-12-31",
+  "validation_reference_audit": {
+    "arithmetic_passed": true,
+    "validated_performance": false,
+    "execution_clock": "next_close",
+    "exposure_clock": "after next-session close execution; end-of-day exposure",
+    "provisional_sessions": 12,
+    "unresolved_terminal_assets": [],
+    "issues": [
+      {
+        "date": "2011-12-14",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-15",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-16",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-19",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-20",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-21",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-22",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-23",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-27",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-28",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-29",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      },
+      {
+        "date": "2011-12-30",
+        "ticker": "SHLD.OQ^J18",
+        "kind": "unresolved_distribution_claim_mark",
+        "raw_share_equivalent": 1.0098990035459764e-05,
+        "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+      }
+    ],
+    "aborted_order_batches": 0,
+    "corporate_cash_events": 106,
+    "reserved_scored": false,
+    "delayed_distribution_events": [
+      {
+        "ticker": "SHLD.OQ^J18",
+        "date": "2011-12-14",
+        "kind": "entitlement_created",
+        "raw_parent_shares": 1.0098990035459764e-05
+      },
+      {
+        "ticker": "SHLD.OQ^J18",
+        "date": "2012-01-03",
+        "kind": "observed_receiver_liquidation",
+        "raw_parent_shares": 1.0098990035459764e-05,
+        "cashflow": 1.1484740772742713e-05,
+        "cost": 2.2969481545485428e-09,
+        "source": "https://infomemo.theocc.com/infomemos?date=201112&number=29943"
+      }
+    ],
+    "cash_termination_canceled_legs": 0,
+    "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+    "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+    "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+    "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+    "limitations": [
+      "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+      "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+    ],
+    "declared_gross_cap": 1.0,
+    "declared_position_cap": 0.15,
+    "dollar_neutral": false,
+    "beta_neutral": false,
+    "gross_guard": 1.1,
+    "known_eligibility_frame_supplied": true,
+    "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+    "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+    "data_cutoff_exclusive": "2013-01-01",
+    "requested_start": "2011-01-04",
+    "requested_end": "2012-12-31",
+    "first_observed_session": "2011-01-04",
+    "last_observed_session": "2012-12-31",
+    "source_numeric_prefix_only": true,
+    "legacy_class_specific_bypass": false,
+    "spy_benchmark": false,
+    "position_output_streamed": true,
+    "streamed_position_rows": 505008,
+    "repair_stale_risk": true,
+    "controlled_long_bias": false,
+    "stale_risk_repairs": 0,
+    "repaired_excluded_names": 0,
+    "v46_selection_qualified": true,
+    "mandate": "broad_long",
+    "directional_limits": {
+      "long_only": true,
+      "min_net": 0.0,
+      "max_net": 0.99,
+      "max_abs_beta": 1.0,
+      "guard_tolerance": 0.05
+    }
+  },
+  "selection": [
+    {
+      "penalty": 0.1,
+      "qualified": true,
+      "annual_log_growth": 0.05145686445281841,
+      "incremental_log_growth": -0.006780737176293752,
+      "audit": {
+        "arithmetic_passed": true,
+        "validated_performance": false,
+        "execution_clock": "next_close",
+        "exposure_clock": "after next-session close execution; end-of-day exposure",
+        "provisional_sessions": 12,
+        "unresolved_terminal_assets": [],
+        "issues": [
+          {
+            "date": "2011-12-14",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          },
+          {
+            "date": "2011-12-15",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          },
+          {
+            "date": "2011-12-16",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          },
+          {
+            "date": "2011-12-19",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          },
+          {
+            "date": "2011-12-20",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          },
+          {
+            "date": "2011-12-21",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          },
+          {
+            "date": "2011-12-22",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          },
+          {
+            "date": "2011-12-23",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          },
+          {
+            "date": "2011-12-27",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          },
+          {
+            "date": "2011-12-28",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          },
+          {
+            "date": "2011-12-29",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          },
+          {
+            "date": "2011-12-30",
+            "ticker": "SHLD.OQ^J18",
+            "kind": "unresolved_distribution_claim_mark",
+            "raw_share_equivalent": 1.4280909691002716e-05,
+            "reason": "Entitled distributed shares not yet tradable; explicit zero-mark scenario, not observed NAV"
+          }
+        ],
+        "aborted_order_batches": 0,
+        "corporate_cash_events": 106,
+        "reserved_scored": false,
+        "delayed_distribution_events": [
+          {
+            "ticker": "SHLD.OQ^J18",
+            "date": "2011-12-14",
+            "kind": "entitlement_created",
+            "raw_parent_shares": 1.4280909691002716e-05
+          },
+          {
+            "ticker": "SHLD.OQ^J18",
+            "date": "2012-01-03",
+            "kind": "observed_receiver_liquidation",
+            "raw_parent_shares": 1.4280909691002716e-05,
+            "cashflow": 1.6240489912776573e-05,
+            "cost": 3.248097982555315e-09,
+            "source": "https://infomemo.theocc.com/infomemos?date=201112&number=29943"
+          }
+        ],
+        "cash_termination_canceled_legs": 1,
+        "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+        "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+        "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+        "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+        "limitations": [
+          "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+          "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+        ],
+        "declared_gross_cap": 1.0,
+        "declared_position_cap": 0.15,
+        "dollar_neutral": false,
+        "beta_neutral": false,
+        "gross_guard": 1.1,
+        "known_eligibility_frame_supplied": true,
+        "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+        "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+        "data_cutoff_exclusive": "2013-01-01",
+        "requested_start": "2011-01-04",
+        "requested_end": "2012-12-31",
+        "first_observed_session": "2011-01-04",
+        "last_observed_session": "2012-12-31",
+        "source_numeric_prefix_only": true,
+        "legacy_class_specific_bypass": false,
+        "spy_benchmark": false,
+        "position_output_streamed": true,
+        "streamed_position_rows": 505008,
+        "repair_stale_risk": true,
+        "controlled_long_bias": false,
+        "stale_risk_repairs": 0,
+        "repaired_excluded_names": 0,
+        "v46_selection_qualified": true,
+        "mandate": "long_only",
+        "directional_limits": {
+          "long_only": true,
+          "min_net": 0.0,
+          "max_net": 0.99,
+          "max_abs_beta": 1.0,
+          "guard_tolerance": 0.05
+        }
+      },
+      "error": null,
+      "training": {
+        "annual_log_growth": 0.140244682399777,
+        "annual_mean": 0.15377530203461953,
+        "mean_target_gross": 0.8262382714042573,
+        "mean_target_net": 0.8262382714042573,
+        "trace": [
+          {
+            "epoch": 0,
+            "loss": -0.010405614990352224,
+            "gradient_norm": 1.0176311609239095
+          },
+          {
+            "epoch": 20,
+            "loss": -0.10281474567604416,
+            "gradient_norm": 0.06999956432629106
+          },
+          {
+            "epoch": 40,
+            "loss": -0.11889821335144066,
+            "gradient_norm": 0.13890984149187519
+          },
+          {
+            "epoch": 60,
+            "loss": -0.12536702649572318,
+            "gradient_norm": 0.19061275665964772
+          },
+          {
+            "epoch": 80,
+            "loss": -0.12715620676421124,
+            "gradient_norm": 0.18475395740264047
+          },
+          {
+            "epoch": 99,
+            "loss": -0.12722223963508406,
+            "gradient_norm": 0.48192905249465107
+          }
+        ]
+      }
+    },
+    {
+      "penalty": 0.01,
+      "qualified": true,
+      "annual_log_growth": 0.05456318850507692,
+      "incremental_log_growth": -0.003674413124035242,
+      "audit": {
+        "arithmetic_passed": true,
+        "validated_performance": true,
+        "execution_clock": "next_close",
+        "exposure_clock": "after next-session close execution; end-of-day exposure",
+        "provisional_sessions": 0,
+        "unresolved_terminal_assets": [],
+        "issues": [],
+        "aborted_order_batches": 0,
+        "corporate_cash_events": 106,
+        "reserved_scored": false,
+        "delayed_distribution_events": [],
+        "cash_termination_canceled_legs": 0,
+        "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+        "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+        "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+        "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+        "limitations": [
+          "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+          "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+        ],
+        "declared_gross_cap": 1.0,
+        "declared_position_cap": 0.15,
+        "dollar_neutral": false,
+        "beta_neutral": false,
+        "gross_guard": 1.1,
+        "known_eligibility_frame_supplied": true,
+        "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+        "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+        "data_cutoff_exclusive": "2013-01-01",
+        "requested_start": "2011-01-04",
+        "requested_end": "2012-12-31",
+        "first_observed_session": "2011-01-04",
+        "last_observed_session": "2012-12-31",
+        "source_numeric_prefix_only": true,
+        "legacy_class_specific_bypass": false,
+        "spy_benchmark": false,
+        "position_output_streamed": true,
+        "streamed_position_rows": 505008,
+        "repair_stale_risk": true,
+        "controlled_long_bias": false,
+        "stale_risk_repairs": 0,
+        "repaired_excluded_names": 0,
+        "v46_selection_qualified": true,
+        "mandate": "long_only",
+        "directional_limits": {
+          "long_only": true,
+          "min_net": 0.0,
+          "max_net": 0.99,
+          "max_abs_beta": 1.0,
+          "guard_tolerance": 0.05
+        }
+      },
+      "error": null,
+      "training": {
+        "annual_log_growth": 0.17004051682140942,
+        "annual_mean": 0.18512464978130405,
+        "mean_target_gross": 0.8310367344404771,
+        "mean_target_net": 0.8310367344404771,
+        "trace": [
+          {
+            "epoch": 0,
+            "loss": -0.012621409216204017,
+            "gradient_norm": 1.0192196059580718
+          },
+          {
+            "epoch": 20,
+            "loss": -0.1134034602314678,
+            "gradient_norm": 0.03531505578681963
+          },
+          {
+            "epoch": 40,
+            "loss": -0.1260668411361015,
+            "gradient_norm": 0.05953208451535942
+          },
+          {
+            "epoch": 60,
+            "loss": -0.14871183524749168,
+            "gradient_norm": 0.10692303858459504
+          },
+          {
+            "epoch": 80,
+            "loss": -0.15544566714786684,
+            "gradient_norm": 0.12232453652443902
+          },
+          {
+            "epoch": 99,
+            "loss": -0.1578135467409621,
+            "gradient_norm": 0.0439395926200862
+          }
+        ]
+      }
+    }
+  ],
+  "training": {
+    "annual_log_growth": 0.15270343558924662,
+    "annual_mean": 0.16514706839339843,
+    "mean_target_gross": 0.8428795289027774,
+    "mean_target_net": 0.8428795289027774,
+    "trace": [
+      {
+        "epoch": 0,
+        "loss": -0.013025072929278684,
+        "gradient_norm": 0.9487000266494954
+      },
+      {
+        "epoch": 20,
+        "loss": -0.09967858679359175,
+        "gradient_norm": 0.044108522298745415
+      },
+      {
+        "epoch": 40,
+        "loss": -0.11409152470782792,
+        "gradient_norm": 0.07373936535054344
+      },
+      {
+        "epoch": 60,
+        "loss": -0.1338782472870947,
+        "gradient_norm": 0.1795444761034655
+      },
+      {
+        "epoch": 80,
+        "loss": -0.138960561493761,
+        "gradient_norm": 0.09467744021419952
+      },
+      {
+        "epoch": 99,
+        "loss": -0.1403941656805312,
+        "gradient_norm": 0.011530382116821796
+      }
+    ]
+  },
+  "seconds": 36.6869999999908
+}

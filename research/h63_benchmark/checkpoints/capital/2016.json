@@ -1,0 +1,132 @@
+{
+  "mode": "long_only",
+  "year": 2016,
+  "protocol_sha256": "19539ce741b53987369e770d8682d9dd3b15e908d02b6e8764414bd7aa2d6dc9",
+  "weights_sha256": "26158060bf47ddcb9d1604894d0199f50a078c50f2818da49159e17c429a9c3a",
+  "scores_sha256": "425b18262aaea5ba0ba561a5a3ffb6db228536982bec6fbcbdc4f76899121e45",
+  "training_periods": 102,
+  "max_training_label_end": "2015-12-07 00:00:00",
+  "inner_training_periods": 83,
+  "inner_max_training_label_end": "2013-12-05 00:00:00",
+  "selected_penalty": 0.1,
+  "validation_fallback": true,
+  "early_history_fallback": false,
+  "unsettled_claim_fallback": false,
+  "validation_failure": null,
+  "validation_start": "2014-01-07",
+  "validation_end": "2015-12-31",
+  "validation_reference_audit": {
+    "arithmetic_passed": true,
+    "validated_performance": false,
+    "execution_clock": "next_close",
+    "exposure_clock": "after next-session close execution; end-of-day exposure",
+    "provisional_sessions": 2,
+    "unresolved_terminal_assets": [],
+    "issues": [
+      {
+        "date": "2015-05-12",
+        "ticker": "VRTX.OQ",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2015-05-12",
+        "ticker": "VRTX.OQ",
+        "kind": "unpriced_held_close"
+      },
+      {
+        "date": "2015-06-09",
+        "ticker": "REGN.OQ",
+        "kind": "unpriced_held_open"
+      },
+      {
+        "date": "2015-06-09",
+        "ticker": "REGN.OQ",
+        "kind": "unpriced_held_close"
+      }
+    ],
+    "aborted_order_batches": 0,
+    "corporate_cash_events": 133,
+    "reserved_scored": false,
+    "delayed_distribution_events": [],
+    "cash_termination_canceled_legs": 2,
+    "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+    "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+    "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+    "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+    "limitations": [
+      "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+      "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+    ],
+    "declared_gross_cap": 1.0,
+    "declared_position_cap": 0.15,
+    "dollar_neutral": false,
+    "beta_neutral": false,
+    "gross_guard": 1.1,
+    "known_eligibility_frame_supplied": true,
+    "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+    "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+    "data_cutoff_exclusive": "2016-01-01",
+    "requested_start": "2014-01-07",
+    "requested_end": "2015-12-31",
+    "first_observed_session": "2014-01-07",
+    "last_observed_session": "2015-12-31",
+    "source_numeric_prefix_only": true,
+    "legacy_class_specific_bypass": false,
+    "spy_benchmark": false,
+    "position_output_streamed": true,
+    "streamed_position_rows": 505008,
+    "repair_stale_risk": true,
+    "controlled_long_bias": false,
+    "stale_risk_repairs": 0,
+    "repaired_excluded_names": 0,
+    "v46_selection_qualified": false,
+    "mandate": "broad_long",
+    "directional_limits": {
+      "long_only": true,
+      "min_net": 0.0,
+      "max_net": 0.99,
+      "max_abs_beta": 1.0,
+      "guard_tolerance": 0.05
+    }
+  },
+  "selection": [],
+  "training": {
+    "annual_log_growth": 0.11875701650839152,
+    "annual_mean": 0.12778304560646483,
+    "mean_target_gross": 0.904784769038878,
+    "mean_target_net": 0.904784769038878,
+    "trace": [
+      {
+        "epoch": 0,
+        "loss": -0.0197245671270701,
+        "gradient_norm": 1.3502565301372758
+      },
+      {
+        "epoch": 20,
+        "loss": -0.09400404874019062,
+        "gradient_norm": 0.05249347452310048
+      },
+      {
+        "epoch": 40,
+        "loss": -0.11105428272972029,
+        "gradient_norm": 0.09527654365657351
+      },
+      {
+        "epoch": 60,
+        "loss": -0.11240252464318856,
+        "gradient_norm": 0.20468603793313708
+      },
+      {
+        "epoch": 80,
+        "loss": -0.11282441113098733,
+        "gradient_norm": 0.777825642293242
+      },
+      {
+        "epoch": 99,
+        "loss": -0.10957491503987263,
+        "gradient_norm": 0.09900221090902411
+      }
+    ]
+  },
+  "seconds": 15.312999999994645
+}

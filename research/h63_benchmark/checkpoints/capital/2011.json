@@ -1,0 +1,308 @@
+{
+  "mode": "long_only",
+  "year": 2011,
+  "protocol_sha256": "19539ce741b53987369e770d8682d9dd3b15e908d02b6e8764414bd7aa2d6dc9",
+  "weights_sha256": "43dfc234a4d1b9c65939db2d09c4da09a43f63b6e6b0440fb0da41f9f67080bd",
+  "scores_sha256": "4119f03ab9c278bdb2e6457e86dcf2599722ab4fc28d0ecabbc15b4f7ce2471f",
+  "training_periods": 72,
+  "max_training_label_end": "2010-12-03 00:00:00",
+  "inner_training_periods": 48,
+  "inner_max_training_label_end": "2008-12-03 00:00:00",
+  "selected_penalty": 0.1,
+  "validation_fallback": false,
+  "early_history_fallback": false,
+  "unsettled_claim_fallback": false,
+  "validation_failure": null,
+  "validation_start": "2009-01-05",
+  "validation_end": "2010-12-31",
+  "validation_reference_audit": {
+    "arithmetic_passed": true,
+    "validated_performance": true,
+    "execution_clock": "next_close",
+    "exposure_clock": "after next-session close execution; end-of-day exposure",
+    "provisional_sessions": 0,
+    "unresolved_terminal_assets": [],
+    "issues": [],
+    "aborted_order_batches": 0,
+    "corporate_cash_events": 86,
+    "reserved_scored": false,
+    "delayed_distribution_events": [],
+    "cash_termination_canceled_legs": 0,
+    "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+    "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+    "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+    "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+    "limitations": [
+      "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+      "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+    ],
+    "declared_gross_cap": 1.0,
+    "declared_position_cap": 0.15,
+    "dollar_neutral": false,
+    "beta_neutral": false,
+    "gross_guard": 1.1,
+    "known_eligibility_frame_supplied": true,
+    "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+    "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+    "data_cutoff_exclusive": "2011-01-01",
+    "requested_start": "2009-01-05",
+    "requested_end": "2010-12-31",
+    "first_observed_session": "2009-01-05",
+    "last_observed_session": "2010-12-31",
+    "source_numeric_prefix_only": true,
+    "legacy_class_specific_bypass": false,
+    "spy_benchmark": false,
+    "position_output_streamed": true,
+    "streamed_position_rows": 507024,
+    "repair_stale_risk": true,
+    "controlled_long_bias": false,
+    "stale_risk_repairs": 0,
+    "repaired_excluded_names": 0,
+    "v46_selection_qualified": true,
+    "mandate": "broad_long",
+    "directional_limits": {
+      "long_only": true,
+      "min_net": 0.0,
+      "max_net": 0.99,
+      "max_abs_beta": 1.0,
+      "guard_tolerance": 0.05
+    }
+  },
+  "selection": [
+    {
+      "penalty": 0.1,
+      "qualified": true,
+      "annual_log_growth": 0.0,
+      "incremental_log_growth": -0.18304400609192248,
+      "audit": {
+        "arithmetic_passed": true,
+        "validated_performance": true,
+        "execution_clock": "next_close",
+        "exposure_clock": "after next-session close execution; end-of-day exposure",
+        "provisional_sessions": 0,
+        "unresolved_terminal_assets": [],
+        "issues": [],
+        "aborted_order_batches": 0,
+        "corporate_cash_events": 86,
+        "reserved_scored": false,
+        "delayed_distribution_events": [],
+        "cash_termination_canceled_legs": 0,
+        "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+        "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+        "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+        "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+        "limitations": [
+          "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+          "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+        ],
+        "declared_gross_cap": 1.0,
+        "declared_position_cap": 0.15,
+        "dollar_neutral": false,
+        "beta_neutral": false,
+        "gross_guard": 1.1,
+        "known_eligibility_frame_supplied": true,
+        "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+        "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+        "data_cutoff_exclusive": "2011-01-01",
+        "requested_start": "2009-01-05",
+        "requested_end": "2010-12-31",
+        "first_observed_session": "2009-01-05",
+        "last_observed_session": "2010-12-31",
+        "source_numeric_prefix_only": true,
+        "legacy_class_specific_bypass": false,
+        "spy_benchmark": false,
+        "position_output_streamed": true,
+        "streamed_position_rows": 507024,
+        "repair_stale_risk": true,
+        "controlled_long_bias": false,
+        "stale_risk_repairs": 0,
+        "repaired_excluded_names": 0,
+        "v46_selection_qualified": true,
+        "mandate": "long_only",
+        "directional_limits": {
+          "long_only": true,
+          "min_net": 0.0,
+          "max_net": 0.99,
+          "max_abs_beta": 1.0,
+          "guard_tolerance": 0.05
+        }
+      },
+      "error": null,
+      "training": {
+        "annual_log_growth": 0.0,
+        "annual_mean": 0.0,
+        "mean_target_gross": 0.026544969905172133,
+        "mean_target_net": 0.026544969905172133,
+        "trace": [
+          {
+            "epoch": 0,
+            "loss": 0.03021603857395515,
+            "gradient_norm": 1.1759071416473896
+          },
+          {
+            "epoch": 20,
+            "loss": 0.0030357853616257875,
+            "gradient_norm": 0.024640557467824415
+          },
+          {
+            "epoch": 40,
+            "loss": 0.0008316483537308037,
+            "gradient_norm": 0.01289688608719798
+          },
+          {
+            "epoch": 60,
+            "loss": 0.00011992185256108921,
+            "gradient_norm": 0.004897384047858392
+          },
+          {
+            "epoch": 80,
+            "loss": 7.717228202265343e-06,
+            "gradient_norm": 0.00124235487701907
+          },
+          {
+            "epoch": 99,
+            "loss": 8.793360460198531e-07,
+            "gradient_norm": 0.0004193652455842885
+          }
+        ]
+      }
+    },
+    {
+      "penalty": 0.01,
+      "qualified": true,
+      "annual_log_growth": 0.0,
+      "incremental_log_growth": -0.18304400609192248,
+      "audit": {
+        "arithmetic_passed": true,
+        "validated_performance": true,
+        "execution_clock": "next_close",
+        "exposure_clock": "after next-session close execution; end-of-day exposure",
+        "provisional_sessions": 0,
+        "unresolved_terminal_assets": [],
+        "issues": [],
+        "aborted_order_batches": 0,
+        "corporate_cash_events": 86,
+        "reserved_scored": false,
+        "delayed_distribution_events": [],
+        "cash_termination_canceled_legs": 0,
+        "quote_policy": "No forward-filled execution quotes; execution-slot quote checked independently; stale valuation marks provisional only",
+        "event_clock": "Effective session open before market orders; raw cash times last verified adjusted/raw factor",
+        "terminated_order_policy": "Cancel terminated queued target legs at execution without rescaling others; target dollar/beta constraints may temporarily drift until next known-close guard",
+        "costs": "One-way on actual market traded notional; cash-merger consideration has no fee; stock-merger received shares liquidated at recipient regular-session open with one-way fee/turnover",
+        "limitations": [
+          "Daily Sharpe/drawdown/performance must not be validated when any session uses a provisional held mark.",
+          "Estimated-beta constraints and next-open safeguards do not guarantee realized or instantaneous neutrality."
+        ],
+        "declared_gross_cap": 1.0,
+        "declared_position_cap": 0.15,
+        "dollar_neutral": false,
+        "beta_neutral": false,
+        "gross_guard": 1.1,
+        "known_eligibility_frame_supplied": true,
+        "funding": "No cash loans; neutral gross3 may hold long1.5/short1.5 using existing short-proceeds/cash accounting; all interest0",
+        "target_basis": "fractions of actual post-fee NAV, not scaled NAV returns; caps constrain targets, held exposure may drift",
+        "data_cutoff_exclusive": "2011-01-01",
+        "requested_start": "2009-01-05",
+        "requested_end": "2010-12-31",
+        "first_observed_session": "2009-01-05",
+        "last_observed_session": "2010-12-31",
+        "source_numeric_prefix_only": true,
+        "legacy_class_specific_bypass": false,
+        "spy_benchmark": false,
+        "position_output_streamed": true,
+        "streamed_position_rows": 507024,
+        "repair_stale_risk": true,
+        "controlled_long_bias": false,
+        "stale_risk_repairs": 0,
+        "repaired_excluded_names": 0,
+        "v46_selection_qualified": true,
+        "mandate": "long_only",
+        "directional_limits": {
+          "long_only": true,
+          "min_net": 0.0,
+          "max_net": 0.99,
+          "max_abs_beta": 1.0,
+          "guard_tolerance": 0.05
+        }
+      },
+      "error": null,
+      "training": {
+        "annual_log_growth": 0.0,
+        "annual_mean": 0.0,
+        "mean_target_gross": 0.0,
+        "mean_target_net": 0.0,
+        "trace": [
+          {
+            "epoch": 0,
+            "loss": 0.02800024434810336,
+            "gradient_norm": 1.1735321512078225
+          },
+          {
+            "epoch": 20,
+            "loss": 0.0009148334091776918,
+            "gradient_norm": 0.004277460482991495
+          },
+          {
+            "epoch": 40,
+            "loss": 0.000693205436359447,
+            "gradient_norm": 0.003723453870694377
+          },
+          {
+            "epoch": 60,
+            "loss": 0.00047187595570810566,
+            "gradient_norm": 0.003072054542836457
+          },
+          {
+            "epoch": 80,
+            "loss": 0.0003300406495495364,
+            "gradient_norm": 0.0025692047390176455
+          },
+          {
+            "epoch": 99,
+            "loss": 0.00024103151965229554,
+            "gradient_norm": 0.00219559340339825
+          }
+        ]
+      }
+    }
+  ],
+  "training": {
+    "annual_log_growth": 0.1122958022616776,
+    "annual_mean": 0.12598199457079523,
+    "mean_target_gross": 0.8233272741895786,
+    "mean_target_net": 0.8233272741895786,
+    "trace": [
+      {
+        "epoch": 0,
+        "loss": -0.007686945915192929,
+        "gradient_norm": 0.8732431367880644
+      },
+      {
+        "epoch": 20,
+        "loss": -0.08046410798776572,
+        "gradient_norm": 0.09850838077853943
+      },
+      {
+        "epoch": 40,
+        "loss": -0.09649078345032186,
+        "gradient_norm": 0.17427158312297344
+      },
+      {
+        "epoch": 60,
+        "loss": -0.09820239953487962,
+        "gradient_norm": 0.10081430971843353
+      },
+      {
+        "epoch": 80,
+        "loss": -0.09631229405294582,
+        "gradient_norm": 0.3208553287164066
+      },
+      {
+        "epoch": 99,
+        "loss": -0.09838365365830086,
+        "gradient_norm": 0.11846654114518824
+      }
+    ]
+  },
+  "seconds": 19.436999999990803
+}
